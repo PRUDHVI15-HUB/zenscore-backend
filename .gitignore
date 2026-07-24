@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+logs
+*.log
+uploads
+temp
+.vscode
+.DS_Store
+Thumbs.db
+firebase-adminsdk*.json
+serviceAccountKey.json
