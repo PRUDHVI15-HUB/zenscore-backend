@@ -145,7 +145,7 @@ const isolateTable = (rawText) => {
     const { found } = findCourseCodeNearStart(line)
     if (found) {
       // Look 1-2 lines back for a header row that might have been missed
-      startLineIndex = Math.max(0, i - 2)
+      startLineIndex = i
       break
     }
   }

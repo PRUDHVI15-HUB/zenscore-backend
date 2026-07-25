@@ -37,7 +37,7 @@ const PARSER_VERSION = '3.1.0'
  */
 const isCourseCode = (word) => {
   if (!word || typeof word !== 'string') return false
-  const clean = word.replace(/^[|\[\]\s●▪·─═│]+|[|\[\]\s●▪·─═│]+$/g, '').trim()
+  const clean = word.replace(/^[|\[\]\(\)\s●▪·─═│\.,;:'"€\$¢®§]+|[|\[\]\(\)\s●▪·─═│\.,;:'"€\$¢®§]+$/g, '').trim()
   if (clean.length < 5 || clean.length > 12) return false
 
   const lower = clean.toLowerCase()
@@ -600,11 +600,30 @@ const parseRules = (tableLines, rawText, profile) => {
     .map(l => l.trim())
     .filter(l => l.length > 0)
 
-  const semesterCandidates = extractSemesterCandidates(allLines.length > 0 ? allLines : tableLines)
-  const semesterNumber     = semesterCandidates.length > 0 ? semesterCandidates[0].num : null
-  const semesterLabel      = semesterCandidates.length > 0 ? semesterCandidates[0].label : (semesterNumber ? SEMESTER_LABELS[semesterNumber] : null)
+  let semesterCandidates = extractSemesterCandidates(allLines.length > 0 ? allLines : tableLines)
+  let semesterNumber     = semesterCandidates.length > 0 ? semesterCandidates[0].num : null
+  let semesterLabel      = semesterCandidates.length > 0 ? semesterCandidates[0].label : (semesterNumber ? SEMESTER_LABELS[semesterNumber] : null)
 
   const { subjects, parsingIssues, confidenceContexts } = extractSubjectsFromTable(tableLines, profile)
+
+  // Fallback: If top header scanning missed semester number due to OCR blur/crop, infer from course code digits
+  if (!semesterNumber && subjects.length > 0) {
+    const codeDigits = subjects
+      .map(s => s.code ? (s.code.match(/22[A-Z]{2}(\d)/i)?.[1] || s.code.match(/[A-Z]{2}(\d)\d{2}/i)?.[1]) : null)
+      .filter(Boolean)
+    if (codeDigits.length > 0) {
+      const counts = {}
+      codeDigits.forEach(d => counts[d] = (counts[d] || 0) + 1)
+      const topDigit = parseInt(Object.keys(counts).sort((a, b) => counts[b] - counts[a])[0], 10)
+      if (topDigit >= 1 && topDigit <= 8) {
+        semesterNumber = topDigit
+        const romanLabels = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII']
+        semesterLabel = romanLabels[topDigit - 1] || String(topDigit)
+        semesterCandidates = [{ num: topDigit, label: semesterLabel }]
+      }
+    }
+  }
+
   flagDuplicates(subjects)
 
   return {
