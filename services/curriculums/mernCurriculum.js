@@ -1947,9 +1947,9 @@ async function connectDatabase() {
             difficulty: 'Beginner',
             problemStatement: 'Write a valid MongoDB Atlas SRV URI string for user `zenscore_user` with password `secretpass` on host `cluster0.abc.mongodb.net` for database `production_db`.',
             instructions: 'Use the mongodb+srv:// protocol format.',
-            requirements: ['mongodb+srv://zenscore_user:secretpass@cluster0.abc.mongodb.net/production_db?retryWrites=true&w=majority'],
+            requirements: ['mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/production_db?retryWrites=true&w=majority'],
             starterCode: `const URI = "mongodb+srv://";`,
-            solutionCode: `const URI = "mongodb+srv://zenscore_user:secretpass@cluster0.abc.mongodb.net/production_db?retryWrites=true&w=majority";`,
+            solutionCode: `const URI = "mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/production_db?retryWrites=true&w=majority";`,
             hints: ['mongodb+srv://<user>:<password>@<host>/<database>?retryWrites=true&w=majority']
           }
         }
