@@ -6,8 +6,8 @@ const mongoose = require('mongoose')
 
 const connectDB = async () => {
   const mongoUriEnv = process.env.MONGO_URI
-  const username = process.env.MONGO_USERNAME || 'prudhvirajuchinthala15_user'
-  const password = process.env.MONGO_PASSWORD || 'PRUDHVIRAJUCHINTHALA1523PR'
+  const username = process.env.MONGO_USERNAME || 'prudhvi114489_db_user'
+  const password = process.env.MONGO_PASSWORD || 'PRUDHVI123PR'
   const localUri = process.env.LOCAL_MONGO_URI || 'mongodb://127.0.0.1:27017/zenscore'
 
   const encodedUsername = encodeURIComponent(username)
