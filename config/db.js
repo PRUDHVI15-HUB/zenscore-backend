@@ -5,12 +5,15 @@ require('dotenv').config({
 const mongoose = require('mongoose')
 
 const connectDB = async () => {
+  const mongoUriEnv = process.env.MONGO_URI
   const username = process.env.MONGO_USERNAME
   const password = process.env.MONGO_PASSWORD
   const localUri = process.env.LOCAL_MONGO_URI || 'mongodb://127.0.0.1:27017/zenscore'
 
   let atlasUri = ''
-  if (username && password) {
+  if (mongoUriEnv && mongoUriEnv.trim().startsWith('mongodb')) {
+    atlasUri = mongoUriEnv.trim()
+  } else if (username && password) {
     const encodedUsername = encodeURIComponent(username)
     const encodedPassword = encodeURIComponent(password)
     atlasUri =
