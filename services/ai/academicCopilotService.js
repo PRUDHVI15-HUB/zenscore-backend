@@ -1,4 +1,4 @@
-const analyticsService = require('../intelligence/analyticsService')
+﻿const analyticsService = require('../intelligence/analyticsService')
 const { buildContext } = require('./contextBuilder')
 const { buildCombinedPrompt, classifyQuestion, detectPromptInjection } = require('./promptBuilder')
 const { generateResponse } = require('./aiProvider')
@@ -11,9 +11,10 @@ const { formatResponse } = require('./responseFormatter')
  * @param {Object} record - The student's AcademicRecord document or object
  * @param {string} question - The query text entered by the student
  * @param {Array<Object>} conversationHistory - The optional conversation memory history array
+ * @param {Object} [profiles] - Optional { studentProfile, careerProfile }
  * @returns {Promise<Object>} The formatted standardized Copilot response
  */
-const queryCopilot = async (record, question, conversationHistory = []) => {
+const queryCopilot = async (record, question, conversationHistory = [], profiles = {}) => {
   let context = null
   let classification = 'Unknown'
   
@@ -39,10 +40,15 @@ const queryCopilot = async (record, question, conversationHistory = []) => {
     const trimmedHistory = (conversationHistory || []).slice(-12)
 
     // 3. Invoke the existing Academic Analytics Service
-    const analytics = await analyticsService(record)
+    let analytics = null
+    try {
+      analytics = await analyticsService(record)
+    } catch (e) {
+      analytics = null
+    }
 
-    // 4. Build the academic context
-    context = buildContext(record, analytics)
+    // 4. Build the academic context including profile data
+    context = buildContext(record, analytics, profiles)
 
     // 5. Generate the AI prompt
     const prompt = buildCombinedPrompt(context, question, trimmedHistory)
@@ -53,7 +59,7 @@ const queryCopilot = async (record, question, conversationHistory = []) => {
     // 7. Format the AI response (includes fabrication checks)
     const formatted = formatResponse(rawResponse, context)
 
-    // Save classification internally for analytical tracking in future modules
+    // Save classification internally for analytical tracking
     formatted._internalClassification = classification
 
     return formatted

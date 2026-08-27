@@ -20,9 +20,11 @@
     "morgan": "^1.10.0",
     "multer": "^2.2.0",
     "pdf-parse": "^2.4.5",
+    "resend": "^6.18.1",
     "tesseract.js": "^7.0.0"
   },
   "devDependencies": {
+    "mongodb-memory-server": "^11.2.0",
     "nodemon": "^3.0.3"
   }
 }

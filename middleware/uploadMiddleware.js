@@ -25,7 +25,7 @@ const storage = multer.memoryStorage()
 // Multer File filtering logic
 const fileFilter = (req, file, cb) => {
   if (!file) {
-    return cb(new Error('No transcript file was uploaded.'))
+    return cb(new Error('No memo file was uploaded.'))
   }
   if (!isValidMimeType(file.mimetype)) {
     return cb(new Error('Only PDF, PNG, JPG and JPEG files are supported.'))
@@ -55,7 +55,7 @@ const uploadTranscript = (req, res, next) => {
     if (!req.file) {
       return res.status(400).json({
         success: false,
-        message: 'No transcript file was uploaded.',
+        message: 'No memo file was uploaded.',
         errors: []
       })
     }

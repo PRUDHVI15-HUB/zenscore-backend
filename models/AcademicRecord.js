@@ -134,7 +134,7 @@ const academicRecordSchema = new mongoose.Schema({
   },
   targetCGPA: {
     type: Number,
-    default: 8.0,
+    default: null,
     min: 0,
     max: 10
   },

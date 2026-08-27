@@ -1,46 +1,100 @@
-const express = require('express')
+﻿const express = require('express')
 const router = express.Router()
 const { protect } = require('../middleware/authMiddleware')
+const { chatWithPersonalBrain } = require('../services/ai/personalBrain')
+const {
+  getConversations,
+  createConversation,
+  getConversationById,
+  updateConversation,
+  deleteConversation
+} = require('../controllers/aiTutorConversationController')
 
 router.use(protect)
 
+// In-memory sliding-window rate limiter: 20 requests per 60 seconds per user
+const rateLimitMap = new Map()
+const RATE_LIMIT_WINDOW_MS = 60 * 1000
+const RATE_LIMIT_MAX_REQUESTS = 20
+
+const checkAITutorRateLimit = (userId) => {
+  const now = Date.now()
+  const userTimestamps = rateLimitMap.get(userId) || []
+  const validTimestamps = userTimestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
+
+  if (validTimestamps.length >= RATE_LIMIT_MAX_REQUESTS) {
+    rateLimitMap.set(userId, validTimestamps)
+    return false
+  }
+
+  validTimestamps.push(now)
+  rateLimitMap.set(userId, validTimestamps)
+  return true
+}
+
+const getRateLimitRetryAfter = (userId) => {
+  const now = Date.now()
+  const userTimestamps = rateLimitMap.get(userId) || []
+  if (userTimestamps.length === 0) return 0
+  const oldest = userTimestamps[0]
+  const elapsed = now - oldest
+  return Math.max(1, Math.ceil((RATE_LIMIT_WINDOW_MS - elapsed) / 1000))
+}
+
+/**
+ * Conversation Persistence CRUD Endpoints
+ */
+router.get('/conversations', getConversations)
+router.post('/conversations', createConversation)
+router.get('/conversations/:id', getConversationById)
+router.patch('/conversations/:id', updateConversation)
+router.delete('/conversations/:id', deleteConversation)
+
+/**
+ * POST /api/ai-tutor/chat
+ * Central Personal AI Brain Chat Endpoint with 20 req/min rate limiting.
+ */
 router.post('/chat', async (req, res) => {
   try {
-    const { messages } = req.body
-    if (!messages || !Array.isArray(messages)) {
-      return res.status(400).json({ error: 'Messages array required' })
+    const userId = req.user?._id?.toString() || req.user?.id?.toString()
+    if (!userId) {
+      return res.status(401).json({ success: false, error: 'Authenticated user required' })
     }
 
-    const Groq = require('groq-sdk')
-    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY })
+    // Enforce 20 req/60s rate limit
+    if (!checkAITutorRateLimit(userId)) {
+      const retryAfter = getRateLimitRetryAfter(userId)
+      console.warn(`[AITutorRoute] Rate limit exceeded | userId=${userId}`)
+      return res.status(429).json({
+        success: false,
+        error: 'Too many requests. Please wait a moment before sending more messages.',
+        retryAfter,
+        retryPossible: true
+      })
+    }
 
-    const completion = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
-      messages: [
-        {
-          role: 'system',
-          content: `You are an expert engineering tutor helping undergraduate students in India.
-You specialize in DSA, Operating Systems, DBMS, Computer Networks, Electronics, Signals & Systems, DevOps, Mathematics, Python, and all core engineering subjects.
-Explain concepts clearly with real-world examples. Use **bold** for key terms.
-Structure your responses well with proper sections when needed.
-Be thorough, helpful, and friendly like a senior student explaining to a junior.
-End every response with exactly this on a new line: [YT:4 word youtube search query]`
-        },
-        ...messages.map(m => ({
-          role: m.role === 'assistant' ? 'assistant' : 'user',
-          content: m.content
-        }))
-      ],
-      max_tokens: 1024,
-      temperature: 0.7
+    const { messages, conversationId } = req.body
+    if (!messages || !Array.isArray(messages)) {
+      return res.status(400).json({ success: false, error: 'Messages array required' })
+    }
+
+    const result = await chatWithPersonalBrain({
+      userId,
+      messages,
+      conversationId
     })
 
-    const reply = completion.choices[0]?.message?.content || 'Sorry, could not generate a response.'
-    res.json({ reply })
-
+    return res.status(200).json({
+      success: true,
+      reply: result.reply,
+      intent: result.intent,
+      studentName: result.studentName,
+      timestamp: result.timestamp,
+      conversationId
+    })
   } catch (err) {
-    console.error('AI Tutor error:', err)
-    res.status(500).json({ error: err.message || 'AI Tutor failed' })
+    console.error('[AITutorRoute] Error in chatWithPersonalBrain:', err)
+    return res.status(500).json({ success: false, error: err.message || 'AI Tutor failed' })
   }
 })
 

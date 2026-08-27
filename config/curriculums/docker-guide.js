@@ -632,10 +632,10 @@ module.exports = {
       ],
       "video": {
         "title": "Docker Networking Drivers Overview",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "pTFZFxd4hOI",
         "duration": "1h 05m",
         "channel": "TechWorld with Nana",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/pTFZFxd4hOI/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Docker Networking Drivers & Port Publishing\n\nIn this section, we study how **Docker** manages *Docker Networking Drivers & Port Publishing*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Docker Networking Drivers & Port Publishing active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

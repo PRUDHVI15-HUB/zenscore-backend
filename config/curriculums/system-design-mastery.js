@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "System Design Scaling Crash Course",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "xpDnVSmNfx0",
         "duration": "40 mins",
         "channel": "Alex Xu",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/xpDnVSmNfx0/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Horizontal vs Vertical Scaling, server redundancies design\n\nIn this section, we study how **System Design** manages *Horizontal vs Vertical Scaling, server redundancies design*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Horizontal vs Vertical Scaling, server redundancies design active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

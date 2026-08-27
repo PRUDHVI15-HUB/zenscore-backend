@@ -1,3 +1,4 @@
+const { createNotificationIfNotExists } = require('../services/notificationService')
 /**
  * OCR Controller — 16-Stage Transcript Intelligence Engine (v3.1)
  *
@@ -80,18 +81,18 @@ const validatePreSave = (subjects, summary, semesterNumber) => {
     errors.push(`Invalid semester number: ${semesterNumber}`)
   }
 
-  // Credit totals consistency
+  // Credit totals consistency — non-blocking warning
   if (summary) {
     const summedCredits = subjects.reduce((acc, s) => acc + (typeof s.credits === 'number' ? s.credits : 0), 0)
     if (Math.abs(summedCredits - (summary.totalCredits || 0)) > 0.5) {
-      errors.push(`Credit total mismatch: subjects sum to ${summedCredits} but summary reports ${summary.totalCredits}`)
+      errors.push(`WARNING: Credit total mismatch: subjects sum to ${summedCredits} but summary reports ${summary.totalCredits}`)
     }
   }
 
-  // Null grade guard — warn on > 50% null grades
+  // Null grade guard — non-blocking warning
   const nullGradeCount = subjects.filter(s => s.finalGrade === null || s.finalGrade === undefined).length
   if (nullGradeCount > subjects.length * 0.5) {
-    errors.push(`More than 50% of subjects have null grades (${nullGradeCount}/${subjects.length}) — data may be corrupted.`)
+    errors.push(`WARNING: More than 50% of subjects have null grades (${nullGradeCount}/${subjects.length}) — data may be corrupted.`)
   }
 
   // Invalid grade range guard
@@ -171,7 +172,7 @@ const uploadAndProcessTranscript = async (req, res) => {
         return res.status(200).json({
           success: true,
           duplicate: true,
-          message: 'This transcript has already been imported.',
+          message: 'This memo has already been imported.',
           data: {
             existingSession,
             options: ['REPLACE', 'KEEP_BOTH', 'CANCEL']
@@ -278,7 +279,7 @@ const uploadAndProcessTranscript = async (req, res) => {
     } catch (parseErr) {
       return res.status(422).json({
         success: false,
-        message: 'Transcript parser failed to extract academic data.',
+        message: 'Memo parser failed to extract academic data.',
         errors: [stageError('RULE_PARSER', parseErr.message)],
         metadata: { failedStage: 'RULE_PARSER', requestId }
       })
@@ -333,26 +334,7 @@ const uploadAndProcessTranscript = async (req, res) => {
     }
     timings.validation = ms(valStart)
 
-    // ── STAGE 12.5: Pre-Save Integrity Check ─────────────────────────────
-    currentStage = 'PRE_SAVE_INTEGRITY'
-    const { valid: integrityOk, errors: integrityErrors } = validatePreSave(
-      parserResult.subjects,
-      parserResult.summary,
-      parserResult.semesterNumber
-    )
-
-    // Blocking errors (not warnings) prevent save
-    const blockingIntegrityErrors = integrityErrors.filter(e => !e.startsWith('WARNING'))
-    if (!integrityOk && blockingIntegrityErrors.length > 0) {
-      return res.status(422).json({
-        success: false,
-        message: 'Extracted data failed integrity checks.',
-        errors: blockingIntegrityErrors.map(e => stageError('PRE_SAVE_INTEGRITY', e)),
-        metadata: { failedStage: 'PRE_SAVE_INTEGRITY', requestId }
-      })
-    }
-
-    // ── STAGE 13: Groq Verification ──────────────────────────────────────
+    // ── STAGE 13: Groq Verification & AI Table Fallback ──────────────────
     currentStage = 'GROQ_VERIFY'
     const groqStart = Date.now()
     let groqMeta = { groqCalled: false, groqSkipped: true, skipReason: 'HIGH_CONFIDENCE' }
@@ -360,9 +342,9 @@ const uploadAndProcessTranscript = async (req, res) => {
 
     const { lowConfidence } = partitionByConfidence(parserResult.subjects)
 
-    if (lowConfidence.length > 0) {
+    if (lowConfidence.length > 0 || (parserResult.subjects || []).length < 3) {
       try {
-        const groqResult = await verifyWithGroq(tableText, lowConfidence)
+        const groqResult = await verifyWithGroq(rawText || tableText, lowConfidence.length > 0 ? lowConfidence : parserResult.subjects)
         subjectsCorrectedByGroq = groqResult.repairLog?.filter(r => !r.startsWith('REJECTED')).length || 0
         groqMeta = {
           groqCalled:       groqResult.groqCalled,
@@ -376,7 +358,6 @@ const uploadAndProcessTranscript = async (req, res) => {
 
         if (groqResult.groqCalled && !groqResult.groqError) {
           parserResult.source = 'Groq'
-          // Re-map grades and re-score only if Groq actually made repairs
           if (subjectsCorrectedByGroq > 0) {
             parserResult = gradeMappingService.mapGrades(parserResult)
             parserResult.subjects = addResultFlags(parserResult.subjects)
@@ -386,6 +367,31 @@ const uploadAndProcessTranscript = async (req, res) => {
         }
       } catch (groqErr) {
         groqMeta = { groqCalled: false, groqSkipped: true, groqError: groqErr.message }
+      }
+    }
+    timings.groqVerify = ms(groqStart)
+
+    // ── STAGE 12.5: Pre-Save Integrity Check ─────────────────────────────
+    currentStage = 'PRE_SAVE_INTEGRITY'
+    const { valid: integrityOk, errors: integrityErrors } = validatePreSave(
+      parserResult.subjects,
+      parserResult.summary,
+      parserResult.semesterNumber
+    )
+
+    // Non-blocking warnings allow session creation for human review
+    const blockingIntegrityErrors = integrityErrors.filter(e => !e.startsWith('WARNING'))
+    if (!integrityOk && blockingIntegrityErrors.length > 0) {
+      // If semesterNumber missing or subject list empty, default semester and allow review
+      if (parserResult.subjects && parserResult.subjects.length > 0) {
+        if (!parserResult.semesterNumber) parserResult.semesterNumber = 1
+      } else {
+        return res.status(422).json({
+          success: false,
+          message: 'Extracted data failed integrity checks. Please ensure the grade card is clear and readable.',
+          errors: blockingIntegrityErrors.map(e => stageError('PRE_SAVE_INTEGRITY', e)),
+          metadata: { failedStage: 'PRE_SAVE_INTEGRITY', requestId }
+        })
       }
     }
     timings.groqVerify = ms(groqStart)
@@ -491,7 +497,7 @@ const uploadAndProcessTranscript = async (req, res) => {
     // ── STAGE 15: Response ────────────────────────────────────────────────
     return res.status(201).json({
       success: true,
-      message: 'Transcript processed successfully.',
+      message: 'Memo processed successfully.',
       data: {
         sessionId:         session._id,
         confidence:        parserResult.confidence,
@@ -608,9 +614,12 @@ const confirmImportSession = async (req, res) => {
       })
     }
 
-    // Guard: empty subject list
-    const parsedSubjects = session.parsedData?.subjects || []
-    if (parsedSubjects.length === 0) {
+    // Guard: empty subject list — accept user edited subjects from req.body if provided
+    const incomingSubjects = (Array.isArray(req.body?.subjects) && req.body.subjects.length > 0)
+      ? req.body.subjects
+      : (session.parsedData?.subjects || [])
+
+    if (incomingSubjects.length === 0) {
       return res.status(422).json({
         success: false,
         message: 'Cannot confirm an import session with no subjects.',
@@ -618,10 +627,16 @@ const confirmImportSession = async (req, res) => {
       })
     }
 
-    // Semester number resolution: req.body -> session -> default 4
-    let semNum = req.body?.semesterNumber || session.parsedData?.semesterNumber
-    if (!semNum || typeof semNum !== 'number' || semNum < 1 || semNum > 8) {
-      semNum = 4
+    // Semester number resolution: req.body -> session -> default 1 (with Roman numeral mapping)
+    const romanMap = {
+      'I': 1, 'II': 2, 'III': 3, 'IV': 4, 'V': 5, 'VI': 6, 'VII': 7, 'VIII': 8,
+      '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8,
+      'I-I': 1, 'I-II': 2, 'II-I': 3, 'II-II': 4, 'III-I': 5, 'III-II': 6, 'IV-I': 7, 'IV-II': 8
+    }
+    const rawSem = req.body?.semesterNumber || session.parsedData?.semesterNumber || session.parsedData?.semesterLabel
+    let semNum = romanMap[String(rawSem).trim().toUpperCase()] || parseInt(rawSem, 10) || 1
+    if (!semNum || typeof semNum !== 'number' || isNaN(semNum) || semNum < 1 || semNum > 8) {
+      semNum = 1
     }
 
     const AcademicRecord = require('../models/AcademicRecord')
@@ -639,13 +654,16 @@ const confirmImportSession = async (req, res) => {
       targetSem = record.semesters.find(s => s.semesterNumber === semNum)
     }
 
-    // Merge subjects — update existing, add new
-    parsedSubjects.forEach(parsedSub => {
+    // Merge subjects — update existing, add new with failed backlog detection
+    incomingSubjects.forEach(parsedSub => {
       if (!parsedSub.name) return   // Skip nameless subjects
 
       const existingSub = targetSem.subjects.find(
         s => s.name && s.name.toLowerCase().trim() === parsedSub.name.toLowerCase().trim()
       )
+
+      const rawG = String(parsedSub.rawGrade || parsedSub.grade || '').toUpperCase()
+      const isSubFailed = parsedSub.isFailed === true || parsedSub.result === 'FAIL' || rawG === 'F' || rawG === 'FAIL' || rawG === 'FAILED' || rawG === 'AB' || parsedSub.finalGrade === 0 || (parsedSub.credits === 0)
 
       if (existingSub) {
         if (parsedSub.credits !== null && parsedSub.credits !== undefined) {
@@ -654,11 +672,15 @@ const confirmImportSession = async (req, res) => {
         if (parsedSub.finalGrade !== null && parsedSub.finalGrade !== undefined) {
           existingSub.finalGrade = parsedSub.finalGrade
         }
+        existingSub.isFailed = isSubFailed
+        existingSub.result = isSubFailed ? 'FAIL' : 'PASS'
       } else {
         targetSem.subjects.push({
           name:        parsedSub.name,
           credits:     parsedSub.credits ?? 3,
-          finalGrade:  parsedSub.finalGrade ?? 0,
+          finalGrade:  parsedSub.finalGrade ?? (isSubFailed ? 0 : 7),
+          isFailed:    isSubFailed,
+          result:      isSubFailed ? 'FAIL' : 'PASS',
           attendance:  100,
           assessments: [],
           lastStudied: null
@@ -677,17 +699,35 @@ const confirmImportSession = async (req, res) => {
     await record.save()
 
     try {
+      const { invalidateSnapshotCache } = require('../services/ai/personalBrain/studentSnapshotService')
+      invalidateSnapshotCache(req.user._id)
+    } catch (_) {}
+
+    try {
       await User.findByIdAndUpdate(req.user._id, { cgpa: record.currentCGPA })
     } catch {
       // Non-fatal — CGPA field update failure doesn't block the confirm
     }
 
+    try {
+      createNotificationIfNotExists({
+        userId: req.user._id,
+        type: 'academic',
+        eventKey: `acad-import-${session._id}`,
+        title: 'Academic Transcript Imported',
+        message: `Semester ${session.extractedData?.semesterNumber || targetSem.semesterNumber} marks imported. Current CGPA is ${Number(record.currentCGPA).toFixed(2)}.`,
+        icon: '🎓',
+        route: '/academics/transcript',
+        entityId: session._id,
+        metadata: { semesterNumber: targetSem.semesterNumber, cgpa: record.currentCGPA }
+      }).catch(() => {})
+    } catch (_) {}
     session.status = 'Confirmed'
     await session.save()
 
     return res.status(200).json({
       success: true,
-      message: 'Transcript imported successfully.',
+      message: 'Memo marks imported successfully.',
       data: record
     })
 

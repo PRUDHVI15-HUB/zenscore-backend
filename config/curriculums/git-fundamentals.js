@@ -193,10 +193,10 @@ module.exports = {
       ],
       "video": {
         "title": "Git Init, Add, and Commit Basics",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "RGOj5yH7evE",
         "duration": "40 mins",
         "channel": "Amigoscode",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/RGOj5yH7evE/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Repository Initialization, Staging & Commit Flow\n\nIn this section, we study how **Git** manages *Repository Initialization, Staging & Commit Flow*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Repository Initialization, Staging & Commit Flow active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

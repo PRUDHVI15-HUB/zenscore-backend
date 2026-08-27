@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Algorithm Complexity Big O Notation",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "8hly31xKLI0",
         "duration": "35 mins",
         "channel": "Bro Code",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/8hly31xKLI0/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Algorithm Asymptotic Complexity, Big O notation calculations\n\nIn this section, we study how **Data Structures** manages *Algorithm Asymptotic Complexity, Big O notation calculations*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Algorithm Asymptotic Complexity, Big O notation calculations active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

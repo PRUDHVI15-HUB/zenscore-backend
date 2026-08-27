@@ -218,7 +218,7 @@ const parseCredits = (creditStr, courseName, creditRange = [0, 6]) => {
   const decimalMap = {
     '300': 3, '30': 3, '3.00': 3, '3.0': 3,
     '200': 2, '20': 2, '2.00': 2, '2.0': 2,
-    '100': 1, '10': 1, '1.00': 1, '1.0': 1,
+    '1.5': 1.5, '1.50': 1.5, '15': 1.5, '100': 1, '10': 1, '1.00': 1, '1.0': 1,
     '000': 0, '00': 0, '0.00': 0, '0.0': 0,
     '400': 4, '40': 4, '4.00': 4,
     '500': 5, '50': 5, '5.00': 5,
@@ -239,9 +239,9 @@ const parseCredits = (creditStr, courseName, creditRange = [0, 6]) => {
   }
 
   // Plain integer
-  const intMatch = clean.match(/^(\d+)$/)
+  const intMatch = clean.match(/^(\d+(?:\.\d+)?)$/)
   if (intMatch) {
-    const val = parseInt(intMatch[1], 10)
+    const val = parseFloat(intMatch[1])
     if (val >= minC && val <= maxC) {
       return { credits: val, usedFuzzyCredit: false, usedCreditHeuristic: false }
     }

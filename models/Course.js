@@ -1,5 +1,21 @@
 const mongoose = require('mongoose')
 
+const checkpointSchema = new mongoose.Schema({
+  question: { type: String, default: '' },
+  options: [{ type: String }],
+  correctAnswer: { type: Number, default: 0 },
+  explanation: { type: String, default: '' },
+  hint: { type: String, default: '' }
+}, { _id: false })
+
+const recommendedResourceSchema = new mongoose.Schema({
+  title: { type: String, default: '' },
+  provider: { type: String, default: '' },
+  type: { type: String, default: '' },
+  description: { type: String, default: '' },
+  url: { type: String, default: '' }
+}, { _id: false })
+
 const videoSchema = new mongoose.Schema({
   title: { type: String, required: true },
   youtubeId: { type: String, required: true },
@@ -29,25 +45,49 @@ const quizQuestionSchema = new mongoose.Schema({
   options: [{ type: String, required: true }],
   correctAnswer: { type: Number, required: true },
   explanation: { type: String, default: '' },
-  difficulty: { type: String, default: 'Easy' }
+  difficulty: { type: String, default: 'Medium' },
+  type: { type: String, default: 'multiple_choice' },
+  points: { type: Number, default: 10 }
 })
 
+const testCaseSchema = new mongoose.Schema({
+  input: { type: String, default: '' },
+  expected: { type: String, default: '' },
+  description: { type: String, default: '' },
+  isHidden: { type: Boolean, default: false }
+}, { _id: false })
+
 const codingExerciseSchema = new mongoose.Schema({
+  title: { type: String, default: '' },
   problem: { type: String, required: true },
+  language: { type: String, default: 'javascript' },
+  difficulty: { type: String, default: 'Intermediate' },
   starterCode: { type: String, default: '' },
+  solutionStub: { type: String, default: '' },
   expectedOutput: { type: String, default: '' },
+  exampleInput: { type: String, default: '' },
+  requirements: [{ type: String }],
+  constraints: [{ type: String }],
   hints: [{ type: String }],
-  hiddenTestCases: [{
-    input: { type: String },
-    expected: { type: String }
-  }]
+  testCases: [testCaseSchema],
+  points: { type: Number, default: 20 },
+  passingThreshold: { type: Number, default: 100 }
 })
 
 const assignmentSchema = new mongoose.Schema({
   title: { type: String, required: true },
   description: { type: String, required: true },
-  submissionType: { type: String, default: 'text' }, // text, file, github
-  evaluationCriteria: [{ type: String }]
+  objective: { type: String, default: '' },
+  difficulty: { type: String, default: 'Medium' },
+  requirements: [{ type: String }],
+  starterCode: { type: String, default: '' },
+  expectedOutput: { type: String, default: '' },
+  allowedLanguages: [{ type: String }],
+  evaluationCriteria: [{ type: String }],
+  testCases: [testCaseSchema],
+  minimumScore: { type: Number, default: 70 },
+  timeEstimate: { type: String, default: '30-45 mins' },
+  submissionType: { type: String, default: 'code' }
 })
 
 const miniProjectSchema = new mongoose.Schema({
@@ -61,6 +101,29 @@ const interviewQuestionSchema = new mongoose.Schema({
   difficulty: { type: String, default: 'Medium' }
 })
 
+
+const projectSpecSchema = new mongoose.Schema({
+  title: { type: String, default: '' },
+  description: { type: String, default: '' },
+  objective: { type: String, default: '' },
+  difficulty: { type: String, default: 'Intermediate' },
+  timeEstimate: { type: String, default: '30 mins' },
+  allowedLanguages: [{ type: String }],
+  requirements: [{ type: String }],
+  rubric: [{
+    criterion: { type: String },
+    weight: { type: Number },
+    description: { type: String }
+  }],
+  starterCode: { type: String, default: '' },
+  testCases: [{
+    input: { type: String },
+    expected: { type: String },
+    description: { type: String },
+    hidden: { type: Boolean, default: false }
+  }]
+}, { _id: false });
+
 const moduleSchema = new mongoose.Schema({
   moduleNumber: { type: Number, required: true },
   title: { type: String, required: true },
@@ -68,12 +131,15 @@ const moduleSchema = new mongoose.Schema({
   estimatedTime: { type: String, default: '1h 30m' },
   difficulty: { type: String, default: 'Intermediate' },
   learningObjectives: [{ type: String }],
+  checkpoint: checkpointSchema,
+  recommendedResources: [recommendedResourceSchema],
   video: videoSchema,
   notes: notesSchema,
   resources: resourcesSchema,
   quiz: [quizQuestionSchema],
   codingExercise: codingExerciseSchema,
   assignment: assignmentSchema,
+  projectSpec: projectSpecSchema,
   miniProject: miniProjectSchema,
   interviewQuestions: [interviewQuestionSchema],
   revisionNotes: { type: String, default: '' },
@@ -83,8 +149,8 @@ const moduleSchema = new mongoose.Schema({
 const courseSchema = new mongoose.Schema({
   title: { type: String, required: true },
   slug: { type: String, required: true, unique: true },
-  category: { type: String, required: true }, // programming, datascience, webdev, devops, cloud, aiml
-  difficulty: { type: String, required: true }, // Beginner, Intermediate, Advanced
+  category: { type: String, required: true },
+  difficulty: { type: String, required: true },
   instructor: { type: String, required: true },
   estimatedHours: { type: String, default: '12 hrs' },
   prerequisites: [{ type: String }],

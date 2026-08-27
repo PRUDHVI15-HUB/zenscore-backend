@@ -96,9 +96,9 @@ const ImportSessionSchema = new mongoose.Schema({
         default: null,
         validate: {
           validator: function (v) {
-            return v === null || (Number.isInteger(v) && v >= 0 && v <= 6)
+            return v === null || (typeof v === 'number' && !isNaN(v) && v >= 0 && v <= 10)
           },
-          message: 'Credits must be an integer between 0 and 6, or null'
+          message: 'Credits must be a number between 0 and 10, or null'
         }
       },
       rawGrade: {

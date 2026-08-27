@@ -47,10 +47,10 @@ module.exports = {
       ],
       "video": {
         "title": "Microsoft Azure Fundamentals AZ-900",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "NKEFWyqJ5XA",
         "duration": "35 mins",
         "channel": "freeCodeCamp.org",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/NKEFWyqJ5XA/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Introduction to Microsoft Azure Portal & Subscriptions\n\nIn this section, we study how **Azure** manages *Introduction to Microsoft Azure Portal & Subscriptions*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Introduction to Microsoft Azure Portal & Subscriptions active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

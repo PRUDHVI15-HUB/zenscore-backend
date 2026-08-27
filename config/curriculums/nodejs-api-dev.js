@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Node.js Tutorial for Beginners",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "fBNz5xF-gIY",
         "duration": "35 mins",
         "channel": "Programming with Mosh",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/fBNz5xF-gIY/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Node.js V8 Runtime, Non-Blocking Event Loop model\n\nIn this section, we study how **Node.js** manages *Node.js V8 Runtime, Non-Blocking Event Loop model*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Node.js V8 Runtime, Non-Blocking Event Loop model active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

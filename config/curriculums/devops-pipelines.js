@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Terraform IaC Crash Course DevOps",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "hQcFE0RD0cQ",
         "duration": "35 mins",
         "channel": "TechWorld with Nana",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/hQcFE0RD0cQ/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Infrastructure as Code: Writing custom Terraform configurations\n\nIn this section, we study how **Terraform** manages *Infrastructure as Code: Writing custom Terraform configurations*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Infrastructure as Code: Writing custom Terraform configurations active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

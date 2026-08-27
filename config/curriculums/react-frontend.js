@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "React JS Crash Course for Beginners",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "bMknfKXIFA8",
         "duration": "40 mins",
         "channel": "Net Ninja",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/bMknfKXIFA8/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: React JSX, Virtual DOM, Rendering Engine mechanics\n\nIn this section, we study how **React** manages *React JSX, Virtual DOM, Rendering Engine mechanics*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: React JSX, Virtual DOM, Rendering Engine mechanics active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

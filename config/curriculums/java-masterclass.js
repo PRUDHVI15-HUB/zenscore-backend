@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Java Tutorial for Beginners",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "eIrMbAQSU34",
         "duration": "2h 30m",
         "channel": "Programming with Mosh",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/eIrMbAQSU34/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Java Virtual Machine (JVM) & JDK Setup\n\nIn this section, we study how **Java** manages *Java Virtual Machine (JVM) & JDK Setup*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Java Virtual Machine (JVM) & JDK Setup active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

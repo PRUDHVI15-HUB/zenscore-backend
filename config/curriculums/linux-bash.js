@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Linux Filesystem absolute vs relative path",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "wBp0Rb-ZJak",
         "duration": "35 mins",
         "channel": "LearnLinuxTV",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/wBp0Rb-ZJak/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Linux Filesystem structure, absolute vs relative paths\n\nIn this section, we study how **Linux** manages *Linux Filesystem structure, absolute vs relative paths*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Linux Filesystem structure, absolute vs relative paths active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

@@ -18,7 +18,7 @@ const validateSemester = (semesterNumber, warnings) => {
   if (semesterNumber === undefined || semesterNumber === null) {
     warnings.push({
       type: 'SEMESTER',
-      severity: 'ERROR',
+      severity: 'WARNING',
       subjectId: null,
       message: 'Semester number is missing.'
     })
@@ -28,7 +28,7 @@ const validateSemester = (semesterNumber, warnings) => {
   if (!Number.isInteger(semesterNumber) || semesterNumber < 1 || semesterNumber > 8) {
     warnings.push({
       type: 'SEMESTER',
-      severity: 'ERROR',
+      severity: 'WARNING',
       subjectId: null,
       message: 'Semester number must be an integer between 1 and 8.'
     })

@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "SQL Tutorial for Beginners",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "HXV3zeQKqGY",
         "duration": "35 mins",
         "channel": "Programming with Mosh",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/HXV3zeQKqGY/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Relational Database Principles, keys & schema schemas\n\nIn this section, we study how **SQL** manages *Relational Database Principles, keys & schema schemas*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Relational Database Principles, keys & schema schemas active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

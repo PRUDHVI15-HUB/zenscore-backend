@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "AI Search Trees BFS DFS algorithms",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "aircAruvnKk",
         "duration": "40 mins",
         "channel": "Stanford Online",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/aircAruvnKk/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Search Tree structures & Breadth-First Depth-First search\n\nIn this section, we study how **AI** manages *Search Tree structures & Breadth-First Depth-First search*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Search Tree structures & Breadth-First Depth-First search active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

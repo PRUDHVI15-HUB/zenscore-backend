@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Cryptography SHA-256 RSA keys exchange",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "inWWhr5tnEA",
         "duration": "35 mins",
         "channel": "NetworkChuck",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/inWWhr5tnEA/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Cryptography Foundations: SHA-256 hashes, RSA keys exchange\n\nIn this section, we study how **Security** manages *Cryptography Foundations: SHA-256 hashes, RSA keys exchange*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Cryptography Foundations: SHA-256 hashes, RSA keys exchange active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",

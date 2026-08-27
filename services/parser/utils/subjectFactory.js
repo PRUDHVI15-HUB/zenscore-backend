@@ -37,7 +37,7 @@ const createSubject = ({
   
   let credits = null
   if (rawCredits !== undefined && rawCredits !== null) {
-    const parsed = parseInt(rawCredits)
+    const parsed = parseFloat(rawCredits)
     if (!isNaN(parsed)) {
       credits = parsed
     }

@@ -1,12 +1,20 @@
 const express = require('express')
 const router = express.Router()
-const { protect } = require('../middleware/authMiddleware')
-const { addFocusLog, getAnalytics, getAISuggestion } = require('../controllers/productivityController')
+const { protect, optionalAuth } = require('../middleware/authMiddleware')
+const {
+  addFocusLog,
+  getFocusLogs,
+  deleteFocusLog,
+  getAnalytics,
+  getAISuggestion,
+  getProductivityCoach
+} = require('../controllers/productivityController')
 
-router.use(protect)
-
-router.post('/focus-log', addFocusLog)
-router.get('/analytics', getAnalytics)
-router.post('/ai-suggestion', getAISuggestion)
+router.post('/focus-log', protect, addFocusLog)
+router.get('/focus-log', protect, getFocusLogs)
+router.delete('/focus-log/:id', protect, deleteFocusLog)
+router.get('/analytics', protect, getAnalytics)
+router.post('/ai-suggestion', protect, getAISuggestion)
+router.post('/coach', optionalAuth, getProductivityCoach)
 
 module.exports = router

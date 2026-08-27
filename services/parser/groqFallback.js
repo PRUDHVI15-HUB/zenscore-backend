@@ -74,7 +74,7 @@ const callGroqVerify = async (prompt) => {
 
   const requestPromise = groq.chat.completions.create({
     messages: [{ role: 'user', content: prompt }],
-    model: 'llama-3.3-70b-versatile',
+    model: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
     temperature: 0.02,     // Near-zero — deterministic factual lookup only
     max_tokens: 800,       // Limit output space to reduce hallucination surface
     response_format: { type: 'json_object' }

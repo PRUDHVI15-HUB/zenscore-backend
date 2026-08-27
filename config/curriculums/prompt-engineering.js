@@ -48,10 +48,10 @@ module.exports = {
       ],
       "video": {
         "title": "Prompt Engineering for Developers",
-        "youtubeId": "Ke90Tje7VS0",
+        "youtubeId": "_ZvnD73u40o",
         "duration": "30 mins",
         "channel": "DeepLearning.AI",
-        "thumbnail": "https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg"
+        "thumbnail": "https://img.youtube.com/vi/_ZvnD73u40o/0.jpg"
       },
       "notes": {
         "markdown": "### Lesson Guide: Large Language Models (LLMs) history, token tokenizers\n\nIn this section, we study how **LLM** manages *Large Language Models (LLMs) history, token tokenizers*.\n\n#### Core Foundations\n1. **Environment Verification**: Validate environment parameters dynamically.\n2. **Type/Reference Safety**: Follow clean declarations standards.\n3. **Optimization Guidelines**: Avoid redundant CPU cycles or memory allocation blocks.\n\n```javascript\n// Diagnostic verification script\nconst runLmsLessonCheck = () => {\n  console.log('LMS Verification Check: Large Language Models (LLMs) history, token tokenizers active.');\n  return 100;\n};\nrunLmsLessonCheck();\n```\n\nReview the resources listed below before attempting the quiz.",
