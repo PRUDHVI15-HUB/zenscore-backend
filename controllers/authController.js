@@ -1,4 +1,4 @@
-﻿const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const admin = require('../config/firebase')
 const User = require('../models/User')
 const { sendWelcomeEmail } = require('../services/email/resendService')
@@ -139,4 +139,33 @@ const getMe = async (req, res) => {
   res.status(200).json({ success: true, user: req.user })
 }
 
-module.exports = { firebaseLogin, getMe }
+// POST /api/auth/demo-login
+const demoLogin = async (req, res) => {
+  try {
+    let user = await User.findOne({ email: 'prudhvi4739477@gmail.com' })
+    if (!user) {
+      user = await User.findOne({})
+    }
+    if (!user) {
+      return res.status(404).json({ success: false, message: 'No demo user available' })
+    }
+    const token = generateJWT(user._id)
+    return res.status(200).json({
+      success: true,
+      token,
+      user: {
+        id: user._id,
+        _id: user._id,
+        name: user.name,
+        email: user.email,
+        firebaseUid: user.firebaseUid,
+        isOnboarded: true
+      }
+    })
+  } catch (err) {
+    return res.status(500).json({ success: false, message: err.message })
+  }
+}
+
+module.exports = { firebaseLogin, getMe, demoLogin }
+

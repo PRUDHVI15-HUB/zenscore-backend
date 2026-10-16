@@ -1,0 +1,4082 @@
+[
+  {
+    "id": "TR01",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_001   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | A+ | 9 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | A | 8 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | A+ | 9 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | B+ | 7 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | O | 10 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | O | 10 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | A+ | 9 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | A | 8 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.71\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.61\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_1_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_1_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.71,
+      "cgpa": 8.61
+    }
+  },
+  {
+    "id": "TR02",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_002   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | A | 8 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | A+ | 9 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | B+ | 7 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | O | 10 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | O | 10 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | A+ | 9 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | A | 8 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.67\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.67\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_2_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_2_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.67,
+      "cgpa": 8.67
+    }
+  },
+  {
+    "id": "TR03",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 3,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 3 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_003   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | A+ | 9 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | B+ | 7 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | O | 10 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | O | 10 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | A+ | 9 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | A | 8 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.97\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.07\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_3_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_3_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_3_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_3_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_3_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_3_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_3_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.97,
+      "cgpa": 9.07
+    }
+  },
+  {
+    "id": "TR04",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 4,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 4 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_004   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | B+ | 7 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | als | — | 4.00 | PASS\n3 | 21(553 | DATABASE MANAGEMENT SYSTEM | O | 10 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | 0 | ? | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | A | 8 | 1,50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | A+ | 9 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | B+ | 7 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.92\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.12\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_4_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_4_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_4_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_4_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_4_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_4_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_4_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.92,
+      "cgpa": 9.12
+    }
+  },
+  {
+    "id": "TR05",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 5,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 5 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_005   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_5_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_5_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_5_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_5_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_5_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_5_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_5_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR06",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 6,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 6 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_006   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | O | 10 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | A+ | 9 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | A | 8 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | A+ | 9 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | B+ | 7 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | O | 10 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | O | 10 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.84\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.74\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_6_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_6_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.84,
+      "cgpa": 8.74
+    }
+  },
+  {
+    "id": "TR07",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 7,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 7 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_007   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | A+ | 9 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | A | 8 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | A+ | 9 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | B+ | 7 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | O | 10 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | O | 10 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | A+ | 9 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | A | 8 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.69\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.69\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_7_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_7_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.69,
+      "cgpa": 8.69
+    }
+  },
+  {
+    "id": "TR08",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 8,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 8 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_008   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | A | 8 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | als | — | 3.00 | PASS\n3 | 21(5E303 | OBJECT ORIENTED PROGRAMMING USING JAVA | B+ | 7 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | 0 | ? | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | O | 10 | 0,00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | A+ | 9 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | A | 8 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.56\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.66\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_8_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_8_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_8_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_8_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_8_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_8_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_8_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.56,
+      "cgpa": 8.66
+    }
+  },
+  {
+    "id": "TR09",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_009   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | A+ | 9 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | B+ | 7 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | O | 10 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | O | 10 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | A+ | 9 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | A | 8 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.86\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.06\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_9_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_9_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_9_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_9_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_9_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_9_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_9_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.86,
+      "cgpa": 9.06
+    }
+  },
+  {
+    "id": "TR10",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_010   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_10_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_10_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_10_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_10_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_10_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_10_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_10_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR11",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 3,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 3 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_011   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | O | 10 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | O | 10 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | A+ | 9 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | A | 8 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | A+ | 9 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | B+ | 7 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | O | 10 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | O | 10 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.13\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.03\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_11_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_11_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 9.13,
+      "cgpa": 9.03
+    }
+  },
+  {
+    "id": "TR12",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 4,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 4 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_012   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | O | 10 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | als | — | 4.00 | PASS\n3 | (5503PC | COMPUTER NETWORKS | A | 8 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | 0 | ? | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | B+ | 7 | 3,00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | O | 10 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | O | 10 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.87\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.87\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_12_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_12_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.87,
+      "cgpa": 8.87
+    }
+  },
+  {
+    "id": "TR13",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 5,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 5 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_013   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | A+ | 9 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | A | 8 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | A+ | 9 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | B+ | 7 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | O | 10 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | O | 10 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.44\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.54\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_13_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_13_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_13_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_13_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_13_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_13_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_13_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.44,
+      "cgpa": 8.54
+    }
+  },
+  {
+    "id": "TR14",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 6,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 6 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_014   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | A | 8 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | A+ | 9 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | B+ | 7 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | O | 10 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | O | 10 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | A+ | 9 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | A | 8 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.58\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.78\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_14_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_14_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_14_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_14_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_14_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_14_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_14_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.58,
+      "cgpa": 8.78
+    }
+  },
+  {
+    "id": "TR15",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 7,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 7 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_015   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_15_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_15_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_15_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_15_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_15_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_15_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_15_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR16",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 8,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 8 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_016   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | B+ | 7 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | als | — | 3.00 | PASS\n3 | 22(5403PC | OPERATING SYSTEMS | O | 10 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | 0 | ? | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | A | 8 | 3,00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | A+ | 9 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | B+ | 7 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | O | 10 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.74\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.64\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_16_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_16_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.74,
+      "cgpa": 8.64
+    }
+  },
+  {
+    "id": "TR17",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_017   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | O | 10 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | O | 10 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | A+ | 9 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | A | 8 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | A+ | 9 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | B+ | 7 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | O | 10 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | O | 10 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.22\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.22\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_17_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_17_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 9.22,
+      "cgpa": 9.22
+    }
+  },
+  {
+    "id": "TR18",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_018   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | O | 10 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | A+ | 9 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | A | 8 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | A+ | 9 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | B+ | 7 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | O | 10 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | O | 10 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.24\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.34\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_18_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_18_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_18_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_18_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_18_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_18_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_18_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 9.24,
+      "cgpa": 9.34
+    }
+  },
+  {
+    "id": "TR19",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 3,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 3 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_019   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | A+ | 9 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | A | 8 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | A+ | 9 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | B+ | 7 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | O | 10 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | O | 10 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.61\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.81\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_19_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_19_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_19_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_19_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_19_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_19_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_19_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.61,
+      "cgpa": 8.81
+    }
+  },
+  {
+    "id": "TR20",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 4,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 4 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_020   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | als | — | 4.00 | PASS\n3 | (53492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | 0 | ? | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2,00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_20_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_20_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_20_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_20_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_20_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_20_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_20_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR21",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 5,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 5 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_021   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | A+ | 9 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | B+ | 7 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | O | 10 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | O | 10 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | A+ | 9 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | A | 8 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | A+ | 9 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | B+ | 7 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.82\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.72\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_21_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_21_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.82,
+      "cgpa": 8.72
+    }
+  },
+  {
+    "id": "TR22",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 6,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 6 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_022   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | B+ | 7 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | O | 10 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | O | 10 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | A+ | 9 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | A | 8 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | A+ | 9 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | B+ | 7 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | O | 10 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.80\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.80\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_22_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_22_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.8,
+      "cgpa": 8.8
+    }
+  },
+  {
+    "id": "TR23",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 7,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 7 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_023   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | O | 10 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | O | 10 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | A+ | 9 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | A | 8 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | A+ | 9 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | B+ | 7 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | O | 10 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.09\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.19\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_23_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_23_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_23_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_23_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_23_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_23_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_23_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 9.09,
+      "cgpa": 9.19
+    }
+  },
+  {
+    "id": "TR24",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 8,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 8 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_024   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | O | 10 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | als | — | 4.00 | PASS\n3 | 21(553 | DATABASE MANAGEMENT SYSTEM | A | 8 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | 0 | ? | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | B+ | 7 | 1,50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | O | 10 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | O | 10 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.92\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.12\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_24_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_24_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_24_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_24_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_24_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_24_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_24_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.92,
+      "cgpa": 9.12
+    }
+  },
+  {
+    "id": "TR25",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_025   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_25_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_25_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_25_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_25_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_25_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_25_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_25_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR26",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_026   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | A | 8 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | A+ | 9 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | B+ | 7 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | O | 10 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | O | 10 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | A+ | 9 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | A | 8 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.76\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.66\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_26_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_26_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.76,
+      "cgpa": 8.66
+    }
+  },
+  {
+    "id": "TR27",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 3,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 3 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_027   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | A+ | 9 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | B+ | 7 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | O | 10 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | O | 10 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | A+ | 9 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | A | 8 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | A+ | 9 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.76\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.76\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_27_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_27_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.76,
+      "cgpa": 8.76
+    }
+  },
+  {
+    "id": "TR28",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 4,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 4 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_028   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | B+ | 7 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | als | — | 3.00 | PASS\n3 | 21(5E303 | OBJECT ORIENTED PROGRAMMING USING JAVA | O | 10 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | 0 | ? | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | A | 8 | 0,00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | A+ | 9 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.71\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.81\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_28_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_28_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_28_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_28_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_28_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_28_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_28_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.71,
+      "cgpa": 8.81
+    }
+  },
+  {
+    "id": "TR29",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 5,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 5 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_029   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | O | 10 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | O | 10 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | A+ | 9 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | A | 8 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | A+ | 9 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | B+ | 7 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | O | 10 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.11\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.31\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_29_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_29_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_29_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_29_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_29_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_29_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_29_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 9.11,
+      "cgpa": 9.31
+    }
+  },
+  {
+    "id": "TR30",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 6,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 6 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_030   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_30_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_30_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_30_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_30_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_30_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_30_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_30_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR31",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 7,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 7 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_031   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | A+ | 9 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | A | 8 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | A+ | 9 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | B+ | 7 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | O | 10 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | O | 10 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | A+ | 9 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | A | 8 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.71\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.61\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_31_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_31_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.71,
+      "cgpa": 8.61
+    }
+  },
+  {
+    "id": "TR32",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 8,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 8 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_032   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | A | 8 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | als | — | 4.00 | PASS\n3 | (5503PC | COMPUTER NETWORKS | B+ | 7 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | 0 | ? | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | O | 10 | 3,00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | A+ | 9 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | A | 8 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.67\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.67\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_32_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_32_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.67,
+      "cgpa": 8.67
+    }
+  },
+  {
+    "id": "TR33",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_033   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | A+ | 9 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | B+ | 7 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | O | 10 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | O | 10 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | A+ | 9 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | A | 8 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.97\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.07\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_33_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_33_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_33_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_33_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_33_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_33_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_33_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.97,
+      "cgpa": 9.07
+    }
+  },
+  {
+    "id": "TR34",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_034   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | B+ | 7 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | O | 10 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | O | 10 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | A+ | 9 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | A | 8 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | A+ | 9 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | B+ | 7 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.92\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.12\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_34_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_34_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_34_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_34_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_34_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_34_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_34_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.92,
+      "cgpa": 9.12
+    }
+  },
+  {
+    "id": "TR35",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 3,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 3 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_035   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_35_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_35_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_35_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_35_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_35_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_35_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_35_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR36",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 4,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 4 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_036   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | O | 10 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | als | — | 3.00 | PASS\n3 | 22(5403PC | OPERATING SYSTEMS | A | 8 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | 0 | ? | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | B+ | 7 | 3,00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | O | 10 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | O | 10 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.84\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.74\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_36_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_36_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.84,
+      "cgpa": 8.74
+    }
+  },
+  {
+    "id": "TR37",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 5,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 5 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_037   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | A+ | 9 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | A | 8 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | A+ | 9 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | B+ | 7 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | O | 10 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | O | 10 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | A+ | 9 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | A | 8 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.69\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.69\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_37_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_37_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.69,
+      "cgpa": 8.69
+    }
+  },
+  {
+    "id": "TR38",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 6,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 6 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_038   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | A | 8 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | A+ | 9 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | B+ | 7 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | O | 10 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | O | 10 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | A+ | 9 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | A | 8 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.56\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.66\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_38_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_38_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_38_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_38_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_38_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_38_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_38_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.56,
+      "cgpa": 8.66
+    }
+  },
+  {
+    "id": "TR39",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 7,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 7 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_039   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | A+ | 9 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | B+ | 7 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | O | 10 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | O | 10 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | A+ | 9 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | A | 8 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.86\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.06\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_39_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_39_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_39_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_39_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_39_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_39_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_39_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.86,
+      "cgpa": 9.06
+    }
+  },
+  {
+    "id": "TR40",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 8,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 8 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_040   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | als | — | 4.00 | PASS\n3 | (53492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | 0 | ? | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2,00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_40_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_40_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_40_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_40_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_40_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_40_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_40_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR41",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_041   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | O | 10 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | O | 10 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | A+ | 9 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | A | 8 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | A+ | 9 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | B+ | 7 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | O | 10 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | O | 10 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.13\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.03\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_41_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_41_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 9.13,
+      "cgpa": 9.03
+    }
+  },
+  {
+    "id": "TR42",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_042   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | O | 10 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | A+ | 9 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | A | 8 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | A+ | 9 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | B+ | 7 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | O | 10 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | O | 10 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.87\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.87\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_42_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_42_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 8.87,
+      "cgpa": 8.87
+    }
+  },
+  {
+    "id": "TR43",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 3,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 3 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_043   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | A+ | 9 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | A | 8 | 3.00 | PASS\n3 | 21CSE303 | OBJECT ORIENTED PROGRAMMING USING JAVA | A+ | 9 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | B+ | 7 | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | O | 10 | 0.00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | O | 10 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | A+ | 9 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.44\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.54\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_43_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_43_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_43_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_43_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_43_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_43_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_43_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 8.44,
+      "cgpa": 8.54
+    }
+  },
+  {
+    "id": "TR44",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 4,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 4 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_044   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | A | 8 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | als | — | 4.00 | PASS\n3 | 21(553 | DATABASE MANAGEMENT SYSTEM | B+ | 7 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | 0 | ? | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | O | 10 | 1,50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | A+ | 9 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | A | 8 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.58\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.78\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_44_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_44_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_44_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_44_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_44_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_44_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_44_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.58,
+      "cgpa": 8.78
+    }
+  },
+  {
+    "id": "TR45",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 5,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 5 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_045   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_45_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_45_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_45_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_45_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_45_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_45_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_45_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  },
+  {
+    "id": "TR46",
+    "university": "JNTUH_R22",
+    "universityLabel": "JNTU Hyderabad (R22 Regulation)",
+    "semesterNumber": 6,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R22 REGULATION)\nB.TECH SEMESTER 6 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_046   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 22CS401PC | DISCRETE MATHEMATICS | B+ | 7 | 3.00 | PASS\n2 | 22CS402PC | DATABASE MANAGEMENT SYSTEMS | O | 10 | 3.00 | PASS\n3 | 22CS403PC | OPERATING SYSTEMS | O | 10 | 3.00 | PASS\n4 | 22CS404PC | WEB TECHNOLOGIES | A+ | 9 | 3.00 | PASS\n5 | 22CS405PC | SOFTWARE ENGINEERING | A | 8 | 3.00 | PASS\n6 | 22CS406PC | DATABASE MANAGEMENT SYSTEMS LAB | A+ | 9 | 1.50 | PASS\n7 | 22CS407PC | WEB TECHNOLOGIES LAB | B+ | 7 | 1.50 | PASS\n8 | 22CS408PC | DATA VISUALIZATION - R PROGRAMMING | O | 10 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.74\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.64\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_46_1",
+        "code": "22CS401PC",
+        "name": "DISCRETE MATHEMATICS",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_2",
+        "code": "22CS402PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_3",
+        "code": "22CS403PC",
+        "name": "OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_4",
+        "code": "22CS404PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_5",
+        "code": "22CS405PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_6",
+        "code": "22CS406PC",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "credits": 1.5,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_7",
+        "code": "22CS407PC",
+        "name": "WEB TECHNOLOGIES LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_46_8",
+        "code": "22CS408PC",
+        "name": "DATA VISUALIZATION - R PROGRAMMING",
+        "credits": 1,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 8.74,
+      "cgpa": 8.64
+    }
+  },
+  {
+    "id": "TR47",
+    "university": "JNTUH_R18",
+    "universityLabel": "JNTU Hyderabad (R18 Regulation)",
+    "semesterNumber": 7,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nJNTU HYDERABAD (R18 REGULATION)\nB.TECH SEMESTER 7 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_047   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS501PC | FORMAL LANGUAGES AND AUTOMATA THEORY | O | 10 | 4.00 | PASS\n2 | CS502PC | SOFTWARE ENGINEERING | O | 10 | 4.00 | PASS\n3 | CS503PC | COMPUTER NETWORKS | A+ | 9 | 4.00 | PASS\n4 | CS504PC | WEB TECHNOLOGIES | A | 8 | 3.00 | PASS\n5 | CS505PC | PROFESSIONAL ELECTIVE-I | A+ | 9 | 3.00 | PASS\n6 | CS506PC | SOFTWARE ENGINEERING LAB | B+ | 7 | 1.50 | PASS\n7 | CS507PC | COMPUTER NETWORKS LAB | O | 10 | 1.50 | PASS\n8 | CS508PC | ADVANCED COMMUNICATION SKILLS LAB | O | 10 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.22\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.22\nTOTAL CREDITS EARNED: 22.50\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_47_1",
+        "code": "CS501PC",
+        "name": "FORMAL LANGUAGES AND AUTOMATA THEORY",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_2",
+        "code": "CS502PC",
+        "name": "SOFTWARE ENGINEERING",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_3",
+        "code": "CS503PC",
+        "name": "COMPUTER NETWORKS",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_4",
+        "code": "CS504PC",
+        "name": "WEB TECHNOLOGIES",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_5",
+        "code": "CS505PC",
+        "name": "PROFESSIONAL ELECTIVE-I",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_6",
+        "code": "CS506PC",
+        "name": "SOFTWARE ENGINEERING LAB",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_7",
+        "code": "CS507PC",
+        "name": "COMPUTER NETWORKS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_47_8",
+        "code": "CS508PC",
+        "name": "ADVANCED COMMUNICATION SKILLS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 22.5,
+      "sgpa": 9.22,
+      "cgpa": 9.22
+    }
+  },
+  {
+    "id": "TR48",
+    "university": "AUTONOMOUS",
+    "universityLabel": "Autonomous Engineering College (UGC Affiliated)",
+    "semesterNumber": 8,
+    "isDegraded": true,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nAUTONOMOUS ENGINEERING COLLEGE (UGC AFFILIATED)\nB.TECH SEMESTER 8 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_048   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CSE301 | DESIGN AND ANALYSIS OF ALGORITHMS | O | 10 | 4.00 | PASS\n2 | 21CSE302 | COMPUTER ORGANIZATION AND ARCHITECTURE | als | — | 3.00 | PASS\n3 | 21(5E303 | OBJECT ORIENTED PROGRAMMING USING JAVA | A | 8 | 3.00 | PASS\n4 | 21CSE304 | PROBABILITY AND QUEUING THEORY | 0 | ? | 4.00 | PASS\n5 | 21CSE305 | ENVIRONMENTAL SCIENCE AND SUSTAINABILITY | B+ | 7 | 0,00 | PASS\n6 | 21CSL306 | ALGORITHMS AND DATA STRUCTURES LAB | O | 10 | 1.50 | PASS\n7 | 21CSL307 | JAVA AND WEB APPLICATIONS LAB | O | 10 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 9.24\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 9.34\nTOTAL CREDITS EARNED: 17.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_48_1",
+        "code": "21CSE301",
+        "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+        "credits": 4,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_48_2",
+        "code": "21CSE302",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_48_3",
+        "code": "21CSE303",
+        "name": "OBJECT ORIENTED PROGRAMMING USING JAVA",
+        "credits": 3,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_48_4",
+        "code": "21CSE304",
+        "name": "PROBABILITY AND QUEUING THEORY",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_48_5",
+        "code": "21CSE305",
+        "name": "ENVIRONMENTAL SCIENCE AND SUSTAINABILITY",
+        "credits": 0,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_48_6",
+        "code": "21CSL306",
+        "name": "ALGORITHMS AND DATA STRUCTURES LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_48_7",
+        "code": "21CSL307",
+        "name": "JAVA AND WEB APPLICATIONS LAB",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 17,
+      "sgpa": 9.24,
+      "cgpa": 9.34
+    }
+  },
+  {
+    "id": "TR49",
+    "university": "VTU",
+    "universityLabel": "Visvesvaraya Technological University (VTU Belagavi)",
+    "semesterNumber": 1,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nVISVESVARAYA TECHNOLOGICAL UNIVERSITY (VTU BELAGAVI)\nB.TECH SEMESTER 1 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_049   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | 21CS51 | MANAGEMENT AND ENTREPRENEURSHIP | A+ | 9 | 3.00 | PASS\n2 | 21CS52 | COMPUTER NETWORKS AND SECURITY | A | 8 | 4.00 | PASS\n3 | 21CS53 | DATABASE MANAGEMENT SYSTEM | A+ | 9 | 4.00 | PASS\n4 | 21CS54 | AUTOMATA THEORY AND COMPILER DESIGN | B+ | 7 | 3.00 | PASS\n5 | 21CSL55 | DBMS LABORATORY WITH MINI PROJECT | O | 10 | 1.50 | PASS\n6 | 21CSL56 | COMPUTER NETWORKS LABORATORY | O | 10 | 1.50 | PASS\n7 | 21CIV57 | ENVIRONMENTAL STUDIES | A+ | 9 | 1.00 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 8.61\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 8.81\nTOTAL CREDITS EARNED: 18.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_49_1",
+        "code": "21CS51",
+        "name": "MANAGEMENT AND ENTREPRENEURSHIP",
+        "credits": 3,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_49_2",
+        "code": "21CS52",
+        "name": "COMPUTER NETWORKS AND SECURITY",
+        "credits": 4,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_49_3",
+        "code": "21CS53",
+        "name": "DATABASE MANAGEMENT SYSTEM",
+        "credits": 4,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_49_4",
+        "code": "21CS54",
+        "name": "AUTOMATA THEORY AND COMPILER DESIGN",
+        "credits": 3,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_49_5",
+        "code": "21CSL55",
+        "name": "DBMS LABORATORY WITH MINI PROJECT",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_49_6",
+        "code": "21CSL56",
+        "name": "COMPUTER NETWORKS LABORATORY",
+        "credits": 1.5,
+        "grade": "O",
+        "gradePoints": 10,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_49_7",
+        "code": "21CIV57",
+        "name": "ENVIRONMENTAL STUDIES",
+        "credits": 1,
+        "grade": "A+",
+        "gradePoints": 9,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 18,
+      "sgpa": 8.61,
+      "cgpa": 8.81
+    }
+  },
+  {
+    "id": "TR50",
+    "university": "ANNA_UNIV",
+    "universityLabel": "Anna University Chennai (Regulation 2021)",
+    "semesterNumber": 2,
+    "isDegraded": false,
+    "rawText": "EXAMINATION RESULTS / GRADE CARD\nANNA UNIVERSITY CHENNAI (REGULATION 2021)\nB.TECH SEMESTER 2 REGULAR EXAMINATIONS\nSTUDENT ANONYMIZED_RECORD_050   MONTH/YEAR: MAY 2025\n\nCOURSE CODE | COURSE TITLE | CREDITS | GRADE | GRADE POINTS | RESULT\n1 | CS3451 | INTRODUCTION TO OPERATING SYSTEMS | B | 6 | 3.00 | PASS\n2 | CS3491 | ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING | B+ | 7 | 4.00 | PASS\n3 | CS3492 | DATABASE MANAGEMENT SYSTEMS | C | 5 | 3.00 | PASS\n4 | CS3401 | ALGORITHMS | F | 0 | 4.00 | FAIL\n5 | GE3451 | ENVIRONMENTAL SCIENCES AND SUSTAINABILITY | A | 8 | 2.00 | PASS\n6 | CS3461 | OPERATING SYSTEMS LABORATORY | B | 6 | 1.50 | PASS\n7 | CS3481 | DATABASE MANAGEMENT SYSTEMS LABORATORY | B+ | 7 | 1.50 | PASS\n\nSEMESTER GRADE POINT AVERAGE (SGPA): 5.08\nCUMULATIVE GRADE POINT AVERAGE (CGPA): 6.00\nTOTAL CREDITS EARNED: 19.00\nCONTROLLER OF EXAMINATIONS\n",
+    "groundTruth": [
+      {
+        "id": "sub_50_1",
+        "code": "CS3451",
+        "name": "INTRODUCTION TO OPERATING SYSTEMS",
+        "credits": 3,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_50_2",
+        "code": "CS3491",
+        "name": "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING",
+        "credits": 4,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_50_3",
+        "code": "CS3492",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "credits": 3,
+        "grade": "C",
+        "gradePoints": 5,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_50_4",
+        "code": "CS3401",
+        "name": "ALGORITHMS",
+        "credits": 4,
+        "grade": "F",
+        "gradePoints": 0,
+        "result": "FAIL"
+      },
+      {
+        "id": "sub_50_5",
+        "code": "GE3451",
+        "name": "ENVIRONMENTAL SCIENCES AND SUSTAINABILITY",
+        "credits": 2,
+        "grade": "A",
+        "gradePoints": 8,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_50_6",
+        "code": "CS3461",
+        "name": "OPERATING SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B",
+        "gradePoints": 6,
+        "result": "PASS"
+      },
+      {
+        "id": "sub_50_7",
+        "code": "CS3481",
+        "name": "DATABASE MANAGEMENT SYSTEMS LABORATORY",
+        "credits": 1.5,
+        "grade": "B+",
+        "gradePoints": 7,
+        "result": "PASS"
+      }
+    ],
+    "summary": {
+      "totalCredits": 19,
+      "sgpa": 5.08,
+      "cgpa": 6
+    }
+  }
+]

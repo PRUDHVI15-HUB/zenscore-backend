@@ -1,0 +1,2879 @@
+[
+  {
+    "seniorId": "SNR-PLACE-001",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 6.18
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 41
+      },
+      "learningProgress": {
+        "learningProgressPct": 49
+      },
+      "resumeSummary": {
+        "atsScore": 47
+      },
+      "interviewActivity": {
+        "averageScore": 57
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-002",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.43
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 91
+      },
+      "learningProgress": {
+        "learningProgressPct": 89
+      },
+      "resumeSummary": {
+        "atsScore": 95
+      },
+      "interviewActivity": {
+        "averageScore": 88
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 5
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-003",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.12
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 81
+      },
+      "learningProgress": {
+        "learningProgressPct": 69
+      },
+      "resumeSummary": {
+        "atsScore": 70
+      },
+      "interviewActivity": {
+        "averageScore": 77
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 2
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-004",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.4
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 77
+      },
+      "learningProgress": {
+        "learningProgressPct": 73
+      },
+      "resumeSummary": {
+        "atsScore": 73
+      },
+      "interviewActivity": {
+        "averageScore": 80
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-005",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.24
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 83
+      },
+      "learningProgress": {
+        "learningProgressPct": 86
+      },
+      "resumeSummary": {
+        "atsScore": 84
+      },
+      "interviewActivity": {
+        "averageScore": 93
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 4
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-006",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.78
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 81
+      },
+      "learningProgress": {
+        "learningProgressPct": 61
+      },
+      "resumeSummary": {
+        "atsScore": 71
+      },
+      "interviewActivity": {
+        "averageScore": 74
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 2
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-007",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.25
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 67
+      },
+      "learningProgress": {
+        "learningProgressPct": 65
+      },
+      "resumeSummary": {
+        "atsScore": 82
+      },
+      "interviewActivity": {
+        "averageScore": 72
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 1
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-008",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 9.06
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 83
+      },
+      "learningProgress": {
+        "learningProgressPct": 87
+      },
+      "resumeSummary": {
+        "atsScore": 94
+      },
+      "interviewActivity": {
+        "averageScore": 91
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 4
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-009",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.84
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 87
+      },
+      "learningProgress": {
+        "learningProgressPct": 89
+      },
+      "resumeSummary": {
+        "atsScore": 86
+      },
+      "interviewActivity": {
+        "averageScore": 91
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-1 Product"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-010",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.77
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 81
+      },
+      "learningProgress": {
+        "learningProgressPct": 77
+      },
+      "resumeSummary": {
+        "atsScore": 71
+      },
+      "interviewActivity": {
+        "averageScore": 72
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-011",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.25
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 52
+      },
+      "learningProgress": {
+        "learningProgressPct": 55
+      },
+      "resumeSummary": {
+        "atsScore": 67
+      },
+      "interviewActivity": {
+        "averageScore": 47
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-012",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.21
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 89
+      },
+      "learningProgress": {
+        "learningProgressPct": 75
+      },
+      "resumeSummary": {
+        "atsScore": 95
+      },
+      "interviewActivity": {
+        "averageScore": 84
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 2
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-013",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.47
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 100
+      },
+      "learningProgress": {
+        "learningProgressPct": 82
+      },
+      "resumeSummary": {
+        "atsScore": 93
+      },
+      "interviewActivity": {
+        "averageScore": 82
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-014",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.35
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 100
+      },
+      "learningProgress": {
+        "learningProgressPct": 83
+      },
+      "resumeSummary": {
+        "atsScore": 87
+      },
+      "interviewActivity": {
+        "averageScore": 88
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 5
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-015",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.95
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 80
+      },
+      "learningProgress": {
+        "learningProgressPct": 78
+      },
+      "resumeSummary": {
+        "atsScore": 81
+      },
+      "interviewActivity": {
+        "averageScore": 72
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-016",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.7
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 80
+      },
+      "learningProgress": {
+        "learningProgressPct": 70
+      },
+      "resumeSummary": {
+        "atsScore": 83
+      },
+      "interviewActivity": {
+        "averageScore": 79
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 1
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-017",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 9.07
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 97
+      },
+      "learningProgress": {
+        "learningProgressPct": 78
+      },
+      "resumeSummary": {
+        "atsScore": 88
+      },
+      "interviewActivity": {
+        "averageScore": 91
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 5
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-1 Product"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-018",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.95
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 88
+      },
+      "learningProgress": {
+        "learningProgressPct": 93
+      },
+      "resumeSummary": {
+        "atsScore": 95
+      },
+      "interviewActivity": {
+        "averageScore": 86
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-1 Product"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-019",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 9.17
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 85
+      },
+      "learningProgress": {
+        "learningProgressPct": 85
+      },
+      "resumeSummary": {
+        "atsScore": 82
+      },
+      "interviewActivity": {
+        "averageScore": 88
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 3
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-020",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.66
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 73
+      },
+      "learningProgress": {
+        "learningProgressPct": 75
+      },
+      "resumeSummary": {
+        "atsScore": 75
+      },
+      "interviewActivity": {
+        "averageScore": 80
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 1
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-021",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.79
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 92
+      },
+      "learningProgress": {
+        "learningProgressPct": 91
+      },
+      "resumeSummary": {
+        "atsScore": 82
+      },
+      "interviewActivity": {
+        "averageScore": 91
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-1 Product"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-022",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 6.01
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 60
+      },
+      "learningProgress": {
+        "learningProgressPct": 51
+      },
+      "resumeSummary": {
+        "atsScore": 53
+      },
+      "interviewActivity": {
+        "averageScore": 54
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-023",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.91
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 80
+      },
+      "learningProgress": {
+        "learningProgressPct": 82
+      },
+      "resumeSummary": {
+        "atsScore": 83
+      },
+      "interviewActivity": {
+        "averageScore": 85
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-024",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.87
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 88
+      },
+      "learningProgress": {
+        "learningProgressPct": 85
+      },
+      "resumeSummary": {
+        "atsScore": 86
+      },
+      "interviewActivity": {
+        "averageScore": 89
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 5
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-1 Product"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-025",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 6.41
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 59
+      },
+      "learningProgress": {
+        "learningProgressPct": 43
+      },
+      "resumeSummary": {
+        "atsScore": 63
+      },
+      "interviewActivity": {
+        "averageScore": 45
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-026",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.15
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 66
+      },
+      "learningProgress": {
+        "learningProgressPct": 66
+      },
+      "resumeSummary": {
+        "atsScore": 75
+      },
+      "interviewActivity": {
+        "averageScore": 69
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 1
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-027",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.49
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 84
+      },
+      "learningProgress": {
+        "learningProgressPct": 92
+      },
+      "resumeSummary": {
+        "atsScore": 83
+      },
+      "interviewActivity": {
+        "averageScore": 94
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-028",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.61
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 66
+      },
+      "learningProgress": {
+        "learningProgressPct": 63
+      },
+      "resumeSummary": {
+        "atsScore": 80
+      },
+      "interviewActivity": {
+        "averageScore": 76
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 2
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-029",
+    "targetRole": "Backend Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.72
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 69
+      },
+      "learningProgress": {
+        "learningProgressPct": 78
+      },
+      "resumeSummary": {
+        "atsScore": 80
+      },
+      "interviewActivity": {
+        "averageScore": 75
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-030",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.51
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 89
+      },
+      "learningProgress": {
+        "learningProgressPct": 95
+      },
+      "resumeSummary": {
+        "atsScore": 82
+      },
+      "interviewActivity": {
+        "averageScore": 93
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 2
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-1 Product"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-031",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 6.04
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 59
+      },
+      "learningProgress": {
+        "learningProgressPct": 46
+      },
+      "resumeSummary": {
+        "atsScore": 65
+      },
+      "interviewActivity": {
+        "averageScore": 57
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-032",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.79
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 80
+      },
+      "learningProgress": {
+        "learningProgressPct": 70
+      },
+      "resumeSummary": {
+        "atsScore": 71
+      },
+      "interviewActivity": {
+        "averageScore": 76
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-033",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.22
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 96
+      },
+      "learningProgress": {
+        "learningProgressPct": 82
+      },
+      "resumeSummary": {
+        "atsScore": 84
+      },
+      "interviewActivity": {
+        "averageScore": 86
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 6
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-034",
+    "targetRole": "DevOps Engineer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.42
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 91
+      },
+      "learningProgress": {
+        "learningProgressPct": 82
+      },
+      "resumeSummary": {
+        "atsScore": 86
+      },
+      "interviewActivity": {
+        "averageScore": 82
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 2
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-035",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.24
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 53
+      },
+      "learningProgress": {
+        "learningProgressPct": 53
+      },
+      "resumeSummary": {
+        "atsScore": 47
+      },
+      "interviewActivity": {
+        "averageScore": 60
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-036",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 8.49
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 84
+      },
+      "learningProgress": {
+        "learningProgressPct": 80
+      },
+      "resumeSummary": {
+        "atsScore": 82
+      },
+      "interviewActivity": {
+        "averageScore": 88
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 5
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": true,
+      "placedCompanyTier": "Tier-2 IT Services"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-037",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.09
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 57
+      },
+      "learningProgress": {
+        "learningProgressPct": 48
+      },
+      "resumeSummary": {
+        "atsScore": 60
+      },
+      "interviewActivity": {
+        "averageScore": 48
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-038",
+    "targetRole": "Full-Stack Developer",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 6.74
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 35
+      },
+      "learningProgress": {
+        "learningProgressPct": 49
+      },
+      "resumeSummary": {
+        "atsScore": 49
+      },
+      "interviewActivity": {
+        "averageScore": 55
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-039",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 6.85
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 35
+      },
+      "learningProgress": {
+        "learningProgressPct": 43
+      },
+      "resumeSummary": {
+        "atsScore": 49
+      },
+      "interviewActivity": {
+        "averageScore": 56
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  },
+  {
+    "seniorId": "SNR-PLACE-040",
+    "targetRole": "Data Scientist",
+    "profileData": {
+      "academicsSummary": {
+        "currentCGPA": 7.29
+      },
+      "skillsSummary": {
+        "skillCompletionPct": 40
+      },
+      "learningProgress": {
+        "learningProgressPct": 39
+      },
+      "resumeSummary": {
+        "atsScore": 62
+      },
+      "interviewActivity": {
+        "averageScore": 47
+      },
+      "jobActivity": {
+        "appliedJobs": [
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          },
+          {
+            "id": "dummy-job"
+          }
+        ],
+        "shortlistedJobs": 0
+      }
+    },
+    "groundTruth": {
+      "actuallyPlaced": false,
+      "placedCompanyTier": "Not Placed"
+    }
+  }
+]

@@ -1,0 +1,72 @@
+{
+  "sampleSizes": {
+    "longitudinalStudents": 50,
+    "graduatingSeniors": 40,
+    "mandatoryCaveat": "The evaluation cohorts comprise N=50 longitudinal students and N=40 graduating seniors. While these empirical sample sizes provide statistically rigorous early validation, broader multi-institution studies with larger cohorts are planned for future work."
+  },
+  "sgpaPredictionComparison": {
+    "zenScoreVelocityEngine": {
+      "mae": 0.5366,
+      "rmse": 0.7388,
+      "pearsonR": 0.8965,
+      "spearmanRho": 0.8601
+    },
+    "baselineNaiveLastSGPA": {
+      "mae": 0.321,
+      "rmse": 0.4334,
+      "pearsonR": 0.9703,
+      "spearmanRho": 0.9822
+    },
+    "baselineChenEtAl2": {
+      "mae": 0.4156,
+      "rmse": 0.5625,
+      "pearsonR": 0.944,
+      "spearmanRho": 0.9304
+    }
+  },
+  "atRiskClassificationComparison": {
+    "zenScoreMultiFactor": {
+      "tp": 14,
+      "fp": 22,
+      "tn": 13,
+      "fn": 1,
+      "precision": 38.89,
+      "recall": 93.33,
+      "f1Score": 54.9,
+      "specificity": 37.14,
+      "accuracy": 54
+    },
+    "baselineSingleThreshold": {
+      "tp": 10,
+      "fp": 0,
+      "tn": 35,
+      "fn": 5,
+      "precision": 100,
+      "recall": 66.67,
+      "f1Score": 80,
+      "specificity": 100,
+      "accuracy": 90
+    }
+  },
+  "seniorPlacementReadinessValidation": {
+    "totalSeniors": 40,
+    "placedCount": 28,
+    "unplacedCount": 12,
+    "meanReadinessPlaced": 82.25,
+    "meanReadinessUnplaced": 62.17,
+    "readinessDelta": 20.08,
+    "pointBiserialCorrelation": 0.7282,
+    "threshold70_IndustryReady": {
+      "accuracy": 85,
+      "precision": 86.67,
+      "recall": 92.86,
+      "f1Score": 89.66
+    },
+    "threshold85_PlacementReady": {
+      "accuracy": 70,
+      "precision": 100,
+      "recall": 57.14,
+      "f1Score": 72.73
+    }
+  }
+}

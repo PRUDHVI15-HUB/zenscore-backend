@@ -24,27 +24,30 @@ const resumeRoutes = require('./routes/resumeRoutes')
 const testRoutes = require('./routes/testRoutes')
 const searchRoutes = require('./routes/searchRoutes')
 const notificationRoutes = require('./routes/notificationRoutes')
+const feedbackRoutes = require('./routes/feedbackRoutes')
 const seedDatabase = require('./config/seed')
 
 const app = express()
 
-// Connect to MongoDB asynchronously without blocking server start
-connectDB().then((conn) => {
-  if (conn && require('mongoose').connection.readyState === 1) {
-    try {
-      seedDatabase()
-      // Trigger automatic background sync for live Adzuna jobs
-      const { syncJobsFromProvider } = require('./services/jobs/sync/syncJobs')
-      syncJobsFromProvider('adzuna', { persistToDb: true }).catch(err => {
-        console.warn('Background Adzuna live sync notice:', err?.message || err)
-      })
-    } catch (e) {
-      console.warn('Seed database warning:', e?.message || e)
+// Connect to MongoDB asynchronously without blocking server start (skip in test mode)
+if (process.env.NODE_ENV !== 'test') {
+  connectDB().then((conn) => {
+    if (conn && require('mongoose').connection.readyState === 1) {
+      try {
+        seedDatabase()
+        // Trigger automatic background sync for live Adzuna jobs
+        const { syncJobsFromProvider } = require('./services/jobs/sync/syncJobs')
+        syncJobsFromProvider('adzuna', { persistToDb: true }).catch(err => {
+          console.warn('Background Adzuna live sync notice:', err?.message || err)
+        })
+      } catch (e) {
+        console.warn('Seed database warning:', e?.message || e)
+      }
+    } else {
+      console.warn('⚠️ Skipping seed database and job sync because MongoDB is not connected.')
     }
-  } else {
-    console.warn('⚠️ Skipping seed database and job sync because MongoDB is not connected.')
-  }
-}).catch(err => console.warn('DB initialization error:', err?.message || err))
+  }).catch(err => console.warn('DB initialization error:', err?.message || err))
+}
 
 // Middleware
 app.use(cors({ origin: true, credentials: true }))
@@ -71,6 +74,7 @@ app.use('/api/academics/copilot', copilotRoutes)
 app.use('/api/resume', resumeRoutes)
 app.use('/api/search', searchRoutes)
 app.use('/api/notifications', notificationRoutes)
+app.use('/api/feedback', feedbackRoutes)
 // TODO: Remove this route before production.
 app.use('/api/test', testRoutes)
 
@@ -94,13 +98,18 @@ app.use((req, res) => {
 })
 
 const PORT = process.env.PORT || 5000
-const server = app.listen(PORT, () => console.log(`🚀 ZenScore API running on port ${PORT}`))
+let server
 
-server.on('error', (err) => {
-  if (err.code === 'EADDRINUSE') {
-    console.log(`\n⚠️ Port ${PORT} is already in use by an active ZenScore API instance. The backend is already live!`)
-    process.exit(0)
-  } else {
-    console.error('Server startup error:', err)
-  }
-})
+if (process.env.NODE_ENV !== 'test') {
+  server = app.listen(PORT, () => console.log(`🚀 ZenScore API running on port ${PORT}`))
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.log(`\n⚠️ Port ${PORT} is already in use by an active ZenScore API instance. The backend is already live!`)
+      process.exit(0)
+    } else {
+      console.error('Server startup error:', err)
+    }
+  })
+}
+
+module.exports = app

@@ -10,3 +10,4 @@ temp
 Thumbs.db
 firebase-adminsdk*.json
 serviceAccountKey.json
+coverage/

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * predictionEngine.js
  * Deterministic, on-demand CGPA & Next Semester prediction engine for ZenScore AI.
  *
@@ -10,7 +10,10 @@
  */
 
 const { calculateCGPA } = require('../../../utils/gpaUtils')
-const { DEFAULT_TOTAL_DEGREE_CREDITS } = require('../../../constants/academicConstants')
+const {
+  DEFAULT_TOTAL_DEGREE_CREDITS,
+  CONFIDENCE_THRESHOLDS
+} = require('../../../constants/academicConstants')
 
 const countDataRichSemesters = (semesters) => {
   if (!Array.isArray(semesters)) return 0
@@ -41,6 +44,115 @@ const recentSGPAAverage = (semesters, n) => {
   const recent = sorted.slice(-count)
   const avg = recent.reduce((sum, sem) => sum + (sem.sgpa || 0), 0) / recent.length
   return parseFloat(avg.toFixed(4))
+}
+
+/**
+ * Calculates sample standard deviation of past SGPAs.
+ * @param {Array<number>} sgpaList
+ * @returns {number|null} Standard deviation or null if fewer than 2 data points
+ */
+const calculateSGPAStandardDeviation = (sgpaList) => {
+  if (!Array.isArray(sgpaList) || sgpaList.length < 2) return null
+  const n = sgpaList.length
+  const mean = sgpaList.reduce((sum, v) => sum + v, 0) / n
+  const variance = sgpaList.reduce((sum, v) => sum + Math.pow(v - mean, 2), 0) / (n - 1)
+  return Math.sqrt(Math.max(0, variance))
+}
+
+/**
+ * Computes scenario projection (low / expected / high) for remaining semesters and graduation CGPA.
+ * @param {Object} params
+ * @returns {Object} Scenario projection object
+ */
+const calculateScenarioProjection = ({
+  semesters = [],
+  currentCGPA,
+  completedCredits,
+  remainingCredits,
+  totalDegreeCredits = DEFAULT_TOTAL_DEGREE_CREDITS,
+  predictedNextSGPA,
+  predictedCGPA
+}) => {
+  const validSemesters = (semesters || [])
+    .filter(sem => (sem.sgpa || 0) > 0 && Array.isArray(sem.subjects) && sem.subjects.length > 0)
+    .sort((a, b) => a.semesterNumber - b.semesterNumber)
+
+  const pastSGPAs = validSemesters.map(s => parseFloat(s.sgpa))
+  const dataRichCount = pastSGPAs.length
+
+  // Edge Case: 0 remaining credits (Degree Completed)
+  if (remainingCredits <= 0) {
+    const finalVal = parseFloat(currentCGPA.toFixed(2))
+    return {
+      status: 'completed',
+      flag: null,
+      hasHistory: dataRichCount >= 2,
+      standardDeviation: dataRichCount >= 2 ? parseFloat((calculateSGPAStandardDeviation(pastSGPAs) || 0).toFixed(4)) : null,
+      baseline: finalVal,
+      low: finalVal,
+      expected: finalVal,
+      high: finalVal,
+      sgpaNext: {
+        low: finalVal,
+        expected: finalVal,
+        high: finalVal
+      }
+    }
+  }
+
+  // Edge Case: Fewer than 2 semesters of history -> return baseline only and flag "insufficient history"
+  if (dataRichCount < 2) {
+    return {
+      status: 'insufficient history',
+      flag: 'insufficient history',
+      hasHistory: false,
+      standardDeviation: null,
+      baseline: predictedCGPA,
+      low: predictedCGPA,
+      expected: predictedCGPA,
+      high: predictedCGPA,
+      sgpaNext: {
+        low: predictedNextSGPA,
+        expected: predictedNextSGPA,
+        high: predictedNextSGPA
+      }
+    }
+  }
+
+  // Scenario projection using past SGPA history & standard deviation
+  const sd = calculateSGPAStandardDeviation(pastSGPAs) || 0
+  const sgpaExpected = predictedNextSGPA
+  const sgpaLow = parseFloat(Math.min(10.0, Math.max(0.0, sgpaExpected - sd)).toFixed(2))
+  const sgpaHigh = parseFloat(Math.min(10.0, Math.max(0.0, sgpaExpected + sd)).toFixed(2))
+
+  // Scenario CGPAs at graduation:
+  // Baseline / Expected: (C_cur * E_comp + SGPAnext * E_rem) / 160
+  const rawExpectedCGPA = ((currentCGPA * completedCredits) + (sgpaExpected * remainingCredits)) / totalDegreeCredits
+  const expectedCGPA = parseFloat(Math.min(10.0, Math.max(0.0, rawExpectedCGPA)).toFixed(2))
+
+  // Low Scenario
+  const rawLowCGPA = ((currentCGPA * completedCredits) + (sgpaLow * remainingCredits)) / totalDegreeCredits
+  const lowCGPA = parseFloat(Math.min(10.0, Math.max(0.0, rawLowCGPA)).toFixed(2))
+
+  // High Scenario
+  const rawHighCGPA = ((currentCGPA * completedCredits) + (sgpaHigh * remainingCredits)) / totalDegreeCredits
+  const highCGPA = parseFloat(Math.min(10.0, Math.max(0.0, rawHighCGPA)).toFixed(2))
+
+  return {
+    status: 'sufficient history',
+    flag: null,
+    hasHistory: true,
+    standardDeviation: parseFloat(sd.toFixed(4)),
+    baseline: predictedCGPA,
+    low: lowCGPA,
+    expected: expectedCGPA,
+    high: highCGPA,
+    sgpaNext: {
+      low: sgpaLow,
+      expected: sgpaExpected,
+      high: sgpaHigh
+    }
+  }
 }
 
 /**
@@ -75,7 +187,18 @@ const calculatePrediction = (record, totalDegreeCreditsOverride) => {
       nextSemesterNumber: 1,
       trajectory: 'none',
       confidenceLabel: 'Unavailable',
-      insight: 'Upload your first semester memo to unlock CGPA projections and next-semester SGPA targets.'
+      insight: 'Upload your first semester memo to unlock CGPA projections and next-semester SGPA targets.',
+      scenarioProjection: {
+        status: 'insufficient history',
+        flag: 'insufficient history',
+        hasHistory: false,
+        baseline: null,
+        low: null,
+        expected: null,
+        high: null,
+        standardDeviation: null,
+        sgpaNext: { low: null, expected: null, high: null }
+      }
     }
   }
 
@@ -83,6 +206,16 @@ const calculatePrediction = (record, totalDegreeCreditsOverride) => {
 
   // Degree already complete
   if (C_remaining === 0) {
+    const scenario = calculateScenarioProjection({
+      semesters,
+      currentCGPA,
+      completedCredits: C_completed,
+      remainingCredits: 0,
+      totalDegreeCredits: C_total,
+      predictedNextSGPA: currentCGPA,
+      predictedCGPA: currentCGPA
+    })
+
     return {
       isAvailable: true,
       predictedCGPA: currentCGPA,
@@ -97,8 +230,9 @@ const calculatePrediction = (record, totalDegreeCreditsOverride) => {
       basedOnSemesters: dataRichSemesters,
       nextSemesterNumber: null,
       trajectory: 'stable',
-      confidenceLabel: 'High',
-      insight: 'Degree complete. Final CGPA: ' + currentCGPA.toFixed(2) + '.'
+      confidenceLabel: CONFIDENCE_THRESHOLDS.details.high.label,
+      insight: 'Degree complete. Final CGPA: ' + currentCGPA.toFixed(2) + '.',
+      scenarioProjection: scenario
     }
   }
 
@@ -128,9 +262,20 @@ const calculatePrediction = (record, totalDegreeCreditsOverride) => {
   // Projected upcoming semester SGPA
   const predictedNextSGPA = parseFloat(expectedFutureSGPA.toFixed(2))
 
-  // Overall forecasted CGPA at graduation
+  // Overall forecasted CGPA at graduation (Baseline: CGPApred = (Ccur*Ecomp + SGPAnext*Erem)/160)
   const predictedRaw = ((currentCGPA * C_completed) + (expectedFutureSGPA * C_remaining)) / C_total
   const predictedCGPA = parseFloat(Math.min(10.0, Math.max(0.0, predictedRaw)).toFixed(2))
+
+  // Scenario projection calculation (Low / Expected / High range)
+  const scenarioProjection = calculateScenarioProjection({
+    semesters,
+    currentCGPA,
+    completedCredits: C_completed,
+    remainingCredits: C_remaining,
+    totalDegreeCredits: C_total,
+    predictedNextSGPA,
+    predictedCGPA
+  })
 
   // Required SGPA in upcoming semesters to hit Target CGPA (if set)
   let requiredNextSGPA = null
@@ -142,10 +287,13 @@ const calculatePrediction = (record, totalDegreeCreditsOverride) => {
     isTargetAchievable = requiredNextSGPA <= 10.0
   }
 
-  // Confidence rating
-  let confidenceLabel = 'Low'
-  if (dataRichSemesters >= 4) confidenceLabel = 'High'
-  else if (dataRichSemesters >= 2) confidenceLabel = 'Medium'
+  // Confidence rating using centralized CONFIDENCE_THRESHOLDS constants
+  let confidenceLabel = CONFIDENCE_THRESHOLDS.details.low.label
+  if (dataRichSemesters >= CONFIDENCE_THRESHOLDS.high) {
+    confidenceLabel = CONFIDENCE_THRESHOLDS.details.high.label
+  } else if (dataRichSemesters >= CONFIDENCE_THRESHOLDS.medium) {
+    confidenceLabel = CONFIDENCE_THRESHOLDS.details.medium.label
+  }
 
   // Dynamic explainable insights
   let insight = ''
@@ -184,12 +332,15 @@ const calculatePrediction = (record, totalDegreeCreditsOverride) => {
     nextSemesterNumber,
     trajectory,
     confidenceLabel,
-    insight
+    insight,
+    scenarioProjection
   }
 }
 
 module.exports = {
   calculatePrediction,
+  calculateScenarioProjection,
+  calculateSGPAStandardDeviation,
   sumCompletedCredits,
   countDataRichSemesters
 }

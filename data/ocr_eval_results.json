@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "totalTranscripts": 50,
+    "totalRows": 370,
+    "lowConfidenceRows": 88
+  },
+  "pipelineWithoutGroq": {
+    "subjectCode": "94.86%",
+    "subjectName": "86.49%",
+    "credits": "89.73%",
+    "grade": "83.51%",
+    "result": "93.51%",
+    "overallRowAccuracy": "81.62%"
+  },
+  "pipelineWithGroq": {
+    "subjectCode": "98.11%",
+    "subjectName": "93.78%",
+    "credits": "94.32%",
+    "grade": "90.27%",
+    "result": "96.22%",
+    "overallRowAccuracy": "88.92%"
+  },
+  "reviewerR2_2_LowConfidenceSubset": {
+    "totalLowConfidenceRows": 88,
+    "withoutGroqAccuracy": "22.73%",
+    "withGroqAccuracy": "53.41%",
+    "groqRecoveryDelta": "+30.68%"
+  },
+  "baselinePlainTesseract": {
+    "subjectCode": "88.38%",
+    "subjectName": "79.46%",
+    "credits": "82.43%",
+    "grade": "80.81%",
+    "result": "92.16%",
+    "overallRowAccuracy": "79.46%"
+  }
+}

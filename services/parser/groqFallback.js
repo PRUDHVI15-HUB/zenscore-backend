@@ -194,6 +194,17 @@ const verifyWithGroq = async (isolatedTableText, lowConfidenceSubjects) => {
     return { repairedSubjects: [], repairLog: [], groqCalled: false, groqError: null }
   }
 
+  // Toggle switch to enable/disable Groq fallback dynamically
+  if (process.env.DISABLE_GROQ_FALLBACK === 'true') {
+    return {
+      repairedSubjects: lowConfidenceSubjects,
+      repairLog: ['GROQ_FALLBACK_DISABLED_BY_SWITCH'],
+      groqCalled: false,
+      groqError: null,
+      executionTimeMs: 0
+    }
+  }
+
   const startTime = Date.now()
   let groqError = null
   let repairLog = []

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://zenscore.ai/schemas/transcript-ground-truth-v1.json",
+  "sheetId": "sample_sheet_01",
+  "filename": "sample_mark_sheet.png",
+  "university": "JNTUH",
+  "semester": 4,
+  "sgpa": 9.40,
+  "cgpa": 8.51,
+  "subjects": [
+    {
+      "code": "22CS401PC",
+      "name": "DISCRETE MATHEMATICS",
+      "credits": 3.0,
+      "attendance": 85,
+      "grade": "A",
+      "gradePoints": 9
+    },
+    {
+      "code": "22CS402PC",
+      "name": "DATABASE MANAGEMENT SYSTEMS",
+      "credits": 3.0,
+      "attendance": 90,
+      "grade": "A",
+      "gradePoints": 8
+    },
+    {
+      "code": "22CS403PC",
+      "name": "OPERATING SYSTEMS",
+      "credits": 3.0,
+      "attendance": 88,
+      "grade": "A+",
+      "gradePoints": 9
+    },
+    {
+      "code": "22CS404PC",
+      "name": "WEB TECHNOLOGIES",
+      "credits": 3.0,
+      "attendance": 95,
+      "grade": "O",
+      "gradePoints": 10
+    },
+    {
+      "code": "22CS405PC",
+      "name": "SOFTWARE ENGINEERING",
+      "credits": 3.0,
+      "attendance": 92,
+      "grade": "O",
+      "gradePoints": 10
+    }
+  ],
+  "rawText": "CMR TECHNICAL CAMPUS\nAUTONOMOUS\nGRADE CARD\nBTECH IV SEMESTER R22\nCOMPUTER SCIENCE AND ENGINEERING\nCHINTHAPALLI PRUDHVI Month & Year of Exam: JUNE 2025\n\nCOURSE CODE\n1 22CS401PC DISCRETE MATHEMATICS A 9 3.00\n2 22CS402PC DATABASE MANAGEMENT SYSTEMS A 8 3.00\n3 22CS403PC OPERATING SYSTEMS A+ 9 3.00\n4 22CS404PC WEB TECHNOLOGIES O 10 3.00\n5 22CS405PC SOFTWARE ENGINEERING O 10 3.00\n\nSemester Grade Point Average (SGPA): 9.40\nCumulative Grade Point Average (CGPA): 8.51\nCONTROLLER OF EXAMINATIONS"
+}

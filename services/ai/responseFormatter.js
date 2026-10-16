@@ -137,6 +137,42 @@ const validateResponse = (answer, context) => {
     }
   }
 
+  // 3. Numeric Guardrail: Check for claimed CGPA not present in deterministic context
+  const cgpaRegex = /(?:cgpa|gpa)\s*(?:is|of|:)?\s*([0-9]+(?:\.[0-9]+)?)/gi
+  let cgpaMatch
+  while ((cgpaMatch = cgpaRegex.exec(cleanAns)) !== null) {
+    const val = parseFloat(cgpaMatch[1])
+    const matchesContext = (context.cgpa?.current !== undefined && Math.abs(val - parseFloat(context.cgpa.current)) < 0.05) ||
+                           (context.cgpa?.target !== undefined && Math.abs(val - parseFloat(context.cgpa.target)) < 0.05) ||
+                           (context.cgpa?.predicted !== undefined && Math.abs(val - parseFloat(context.cgpa.predicted)) < 0.05)
+    if (!matchesContext) {
+      return false // Fabricated CGPA detected
+    }
+  }
+
+  // 4. Numeric Guardrail: Check for claimed attendance not present in deterministic context
+  const attendanceRegex = /(?:attendance)\s*(?:is|of|:)?\s*([0-9]+(?:\.[0-9]+)?)\s*%/gi
+  let attMatch
+  while ((attMatch = attendanceRegex.exec(cleanAns)) !== null) {
+    const val = parseFloat(attMatch[1])
+    const matchesContext = (context.stats?.attendance !== undefined && Math.abs(val - parseFloat(context.stats.attendance)) < 0.5) ||
+                           (context.subjects?.courses && context.subjects.courses.some(c => c.attendance != null && Math.abs(val - parseFloat(c.attendance)) < 0.5))
+    if (!matchesContext) {
+      return false // Fabricated attendance detected
+    }
+  }
+
+  // 5. Numeric Guardrail: Check for claimed grade not present in deterministic context
+  const gradeRegex = /(?:final grade|grade)\s*(?:is|of|:)?\s*([0-9]+(?:\.[0-9]+)?)/gi
+  let gradeMatch
+  while ((gradeMatch = gradeRegex.exec(cleanAns)) !== null) {
+    const val = parseFloat(gradeMatch[1])
+    const matchesContext = context.subjects?.courses && context.subjects.courses.some(c => c.grade != null && Math.abs(val - parseFloat(c.grade)) < 0.05)
+    if (!matchesContext) {
+      return false // Fabricated grade detected
+    }
+  }
+
   return true
 }
 

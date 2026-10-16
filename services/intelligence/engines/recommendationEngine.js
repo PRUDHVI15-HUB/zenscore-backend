@@ -20,14 +20,14 @@ const generateRecommendations = (record) => {
   let totalAttendanceSum = 0
   let totalAttendanceCount = 0
 
-  // Helper to compute risk score locally to avoid importing other engines
+  // Helper to compute risk score using bounded formulas
   const getSubjectRiskScore = (sub) => {
     const attendance = sub.attendance !== undefined && sub.attendance !== null ? sub.attendance : 100
     let attendanceRisk = 0
     if (attendance < 75) {
       attendanceRisk = 100
-    } else if (attendance < 85) {
-      attendanceRisk = ((85 - attendance) / 10) * 100
+    } else if (attendance <= 85) {
+      attendanceRisk = Math.min(100, Math.max(0, ((85 - attendance) / 10) * 100))
     }
 
     const grade = sub.finalGrade !== undefined && sub.finalGrade !== null ? sub.finalGrade : 0
@@ -35,13 +35,14 @@ const generateRecommendations = (record) => {
     if (grade < 6.0) {
       gradeRisk = 100
     } else if (grade < 8.5) {
-      gradeRisk = ((8.5 - grade) / 2.5) * 100
+      gradeRisk = Math.min(100, Math.max(0, ((8.5 - grade) / 2.5) * 100))
     }
 
-    const credits = sub.credits || 3
-    const creditRisk = (credits / 6) * 100
+    const credits = sub.credits !== undefined && sub.credits !== null ? sub.credits : 3
+    const creditRisk = Math.min(100, Math.max(0, (credits / 6) * 100))
 
-    return Math.round((0.40 * attendanceRisk) + (0.40 * gradeRisk) + (0.20 * creditRisk))
+    const rawScore = (0.40 * attendanceRisk) + (0.40 * gradeRisk) + (0.20 * creditRisk)
+    return Math.round(Math.min(100, Math.max(0, rawScore)))
   }
 
   // Helper to generate a unique deterministic ID

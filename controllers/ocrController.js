@@ -340,9 +340,13 @@ const uploadAndProcessTranscript = async (req, res) => {
     let groqMeta = { groqCalled: false, groqSkipped: true, skipReason: 'HIGH_CONFIDENCE' }
     let subjectsCorrectedByGroq = 0
 
+    const isGroqDisabled = process.env.DISABLE_GROQ_FALLBACK === 'true' || req.query?.disableGroq === 'true' || req.body?.disableGroq === true
+
     const { lowConfidence } = partitionByConfidence(parserResult.subjects)
 
-    if (lowConfidence.length > 0 || (parserResult.subjects || []).length < 3) {
+    if (isGroqDisabled) {
+      groqMeta = { groqCalled: false, groqSkipped: true, skipReason: 'FEATURE_FLAG_DISABLED' }
+    } else if (lowConfidence.length > 0 || (parserResult.subjects || []).length < 3) {
       try {
         const groqResult = await verifyWithGroq(rawText || tableText, lowConfidence.length > 0 ? lowConfidence : parserResult.subjects)
         subjectsCorrectedByGroq = groqResult.repairLog?.filter(r => !r.startsWith('REJECTED')).length || 0
