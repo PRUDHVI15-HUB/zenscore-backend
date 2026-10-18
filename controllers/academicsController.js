@@ -104,6 +104,13 @@ const getDashboard = async (req, res) => {
       intelligence = { healthStatus: 'Healthy' }
     }
 
+    let totalCredits = enriched.totalCredits || 0
+    if (!totalCredits && enriched.semesters) {
+      totalCredits = enriched.semesters.reduce((acc, sem) => {
+        return acc + (sem.subjects || []).reduce((sAcc, sub) => sAcc + (Number(sub.credits) || 0), 0)
+      }, 0)
+    }
+
     return res.status(200).json({
       success: true,
       message: 'Dashboard loaded successfully.',
@@ -115,6 +122,7 @@ const getDashboard = async (req, res) => {
         weakSubjects: enriched.weakSubjects || [],
         semesters: enriched.semesters || [],
         studyPlans: enriched.studyPlans || [],
+        totalCredits,
         intelligence
       }
     })
