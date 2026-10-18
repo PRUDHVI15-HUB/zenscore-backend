@@ -1,0 +1,103 @@
+{
+  "sheet_id": "cmr_237R1A05AD_sem3",
+  "filename": "cmr_237R1A05AD_sem3.jpg",
+  "university": "JNTUH",
+  "profile": "JNTUH R22",
+  "institution": "CMR Technical Campus (UGC Autonomous)",
+  "examination": "B.TECH III SEMESTER, R22 REGULAR",
+  "hall_ticket_no": "237R1A05AD",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "22MA301BS",
+      "name": "COMPUTER ORIENTED STATISTICAL METHODS",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22EC302ES",
+      "name": "DIGITAL ELECTRONICS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS303PC",
+      "name": "PROGRAMMING WITH PYTHON",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS304PC",
+      "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS305PC",
+      "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS306PC",
+      "name": "PYTHON LAB",
+      "credits": 1.5,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS307PC",
+      "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB",
+      "credits": 1.5,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS308PC",
+      "name": "NODEJS/REACTJS/DJANGO",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22EN309MC",
+      "name": "GENDER SENSITIZATION LAB",
+      "credits": 0,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    }
+  ],
+  "summary": {
+    "total_registered": 9,
+    "total_passed": 9,
+    "total_credits": 20.0,
+    "sgpa": 9.05,
+    "cgpa": 8.22
+  },
+  "raw_text": null
+}

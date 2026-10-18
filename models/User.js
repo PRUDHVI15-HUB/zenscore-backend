@@ -14,6 +14,8 @@ const userSchema = new mongoose.Schema({
   xp: { type: Number, default: 0 },
   coins: { type: Number, default: 0 },
   level: { type: Number, default: 1 },
+  role: { type: String, default: 'student', enum: ['student', 'admin'] },
+  isAdmin: { type: Boolean, default: false },
   badges: [{
     name: { type: String },
     icon: { type: String },

@@ -1,0 +1,423 @@
+{
+  "mode": "rule_only",
+  "elapsedMs": 5,
+  "rawText": "CMR TECHNICAL CAMPUS -\n\nR TOC AUTONOMOUS 29 |\n\nCRAR Aeron ATE Xu Act ty Na AC with re 8-8\n\n0 ne =\nMeee. <A 065026 rod oe:\n\nsane 6300 = ==]\n\n'BTECH IV SEMESTER R22 REGULAR | | amas \"\nExamination | mangas:\n\nCOMPUTER SCIENCE AND ENGINEERING l a\nbo cHNTHAPALL RUDI dig Nt NETS\nName: J tyke cor\n\nTeh |\ncourse #\ncove\n\n&\n1 | 22cs401pc | DISCRETE MATHEMATICS as | 9 3.00 -\n| | 2 |22csa02pc | DATABASE MANAGEMENT SYSTEMS A 8 300 | |\n| | 3 |22csa03pc | operaTING SYSTEMS a | 9 300 | |\n| | 4 |22csaospc | wes TECHNOLOGIES o | 10 200 | |\n| | 5 | 22cs40spc| sortware encinesring o | 00 | |\n| | & |22csa0spc | DATABASE MANAGEMENT SYSTEMS LAB o | 10 1.00\nEE 7 | 22CS407PC | WEB TECHNOLOGIES LAB o 10 1.00 |\n|\n| | & |22cse0spc | oama visuaLZATION - R PROGRAMMING POWER 81 o | 10 100 | |\n| | 5 | 2acsaoppc | REAL IME RESEARCH PROJECT/SOCIETAL RELATED a Bh on\n1 PROJECTS\n| | 10 |z2enat0mc| consTTUTION OF NDIA Be | 7 000\n| [sbiecsregisered: 10 Appeared 10 Pamedi10 Toul 2 | |\nA Medium of Instruction and Examinations in English\n| Semester Grade Point Average (SGPA) : 9.40 |\nCumulative Grade Point Average (CGPA) : 8.51\nQn A pe\nweston: 02/09/2028 uity CONTROLLER OF EXAMINATIONS\n",
+  "cleanedText": "CMR TECHNICAL CAMPUS -\nR TOC AUTONOMOUS 29 |\nCRAR Aeron ATE Xu Act ty Na AC with re 8-8\n0 ne =\nMeee. <A 065026 rod oe:\nsane 6300 = ==]\n'BTECH IV SEMESTER R22 REGULAR | | amas \"\nExamination | mangas:\nCOMPUTER SCIENCE AND ENGINEERING l a\nbo cHNTHAPALL RUDI dig Nt NETS\nName: J tyke cor\nTeh |\ncourse #\ncove\n&\n1 | 22cs401pc | DISCRETE MATHEMATICS as | 9 3.00 -\n| | 2 |22csa02pc | DATABASE MANAGEMENT SYSTEMS A 8 300 | |\n| | 3 |22csa03pc | operaTING SYSTEMS a | 9 300 | |\n| | 4 |22csaospc | wes TECHNOLOGIES o | 10 200 | |\n| | 5 | 22cs40spc| sortware encinesring o | 00 | |\n| | & |22csa0spc | DATABASE MANAGEMENT SYSTEMS LAB o | 10 1.00\nEE 7 | 22CS407PC | WEB TECHNOLOGIES LAB o 10 1.00 |\n|\n| | & |22cse0spc | oama visuaLZATION - R PROGRAMMING POWER 81 o | 10 100 | |\n| | 5 | 2acsaoppc | REAL IME RESEARCH PROJECT/SOCIETAL RELATED a Bh on\n1 PROJECTS\n| | 10 |z2enat0mc| consTTUTION OF NDIA Be | 7 000\n| [sbiecsregisered: 10 Appeared 10 Pamedi10 Toul 2 | |\nA Medium of Instruction and Examinations in English\n| Semester Grade Point Average (SGPA) : 9.40 |\nCumulative Grade Point Average (CGPA) : 8.51\nQn A pe\nweston: 02/09/2028 uity CONTROLLER OF EXAMINATIONS",
+  "profileId": "JNTUH_R22",
+  "hash": "d65a31ddf31d4193fc28ca6d36a5bdfb3b1037596ed5a0ce44c692ee47554db3",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "DISCRETE MATHEMATICS as",
+      "rawCredits": "3.00",
+      "credits": 3,
+      "rawGrade": "A+",
+      "finalGrade": 9,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "1 | 22cs401pc | DISCRETE MATHEMATICS as | 9 3.00 -",
+      "code": "22cs401pc"
+    },
+    {
+      "id": "subject_2",
+      "name": "DATABASE MANAGEMENT SYSTEMS",
+      "rawCredits": "300",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 2 |22csa02pc | DATABASE MANAGEMENT SYSTEMS A 8 300 | |",
+      "code": "22csa02pc"
+    },
+    {
+      "id": "subject_3",
+      "name": "operaTING SYSTEMS",
+      "rawCredits": "300",
+      "credits": 3,
+      "rawGrade": "A+",
+      "finalGrade": 9,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 3 |22csa03pc | operaTING SYSTEMS a | 9 300 | |",
+      "code": "22csa03pc"
+    },
+    {
+      "id": "subject_4",
+      "name": "wes TECHNOLOGIES",
+      "rawCredits": "200",
+      "credits": 2,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 4 |22csaospc | wes TECHNOLOGIES o | 10 200 | |",
+      "code": "22csaospc"
+    },
+    {
+      "id": "subject_5",
+      "name": "sortware encinesring",
+      "rawCredits": "00",
+      "credits": 0,
+      "rawGrade": "F",
+      "finalGrade": 0,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 5 | 22cs40spc| sortware encinesring o | 00 | |",
+      "code": "22cs40spc"
+    },
+    {
+      "id": "subject_6",
+      "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+      "rawCredits": "1.00",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | & |22csa0spc | DATABASE MANAGEMENT SYSTEMS LAB o | 10 1.00",
+      "code": "22csa0spc"
+    },
+    {
+      "id": "subject_7",
+      "name": "WEB TECHNOLOGIES LAB",
+      "rawCredits": "1.00",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "EE 7 | 22CS407PC | WEB TECHNOLOGIES LAB o 10 1.00 |",
+      "code": "22CS407PC"
+    },
+    {
+      "id": "subject_8",
+      "name": "oama visuaLZATION R PROGRAMMING POWER",
+      "rawCredits": "100",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | & |22cse0spc | oama visuaLZATION - R PROGRAMMING POWER 81 o | 10 100 | |",
+      "code": "22cse0spc"
+    },
+    {
+      "id": "subject_9",
+      "name": "REAL IME RESEARCH PROJECT SOCIETAL RELATED",
+      "rawCredits": "on",
+      "credits": 2,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 5 | 2acsaoppc | REAL IME RESEARCH PROJECT/SOCIETAL RELATED a Bh on",
+      "code": "2acsaoppc"
+    },
+    {
+      "id": "subject_10",
+      "name": "consTTUTION OF NDIA Be",
+      "rawCredits": "000",
+      "credits": 0,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 10 |z2enat0mc| consTTUTION OF NDIA Be | 7 000",
+      "code": "z2enat0mc"
+    }
+  ],
+  "output": {
+    "semesterNumber": 4,
+    "semesterLabel": "IV",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "DISCRETE MATHEMATICS as",
+        "rawCredits": "3.00",
+        "credits": 3,
+        "rawGrade": "A+",
+        "finalGrade": 9,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "1 | 22cs401pc | DISCRETE MATHEMATICS as | 9 3.00 -",
+        "code": "22cs401pc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "DATABASE MANAGEMENT SYSTEMS",
+        "rawCredits": "300",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| | 2 |22csa02pc | DATABASE MANAGEMENT SYSTEMS A 8 300 | |",
+        "code": "22csa02pc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_3",
+        "name": "operaTING SYSTEMS",
+        "rawCredits": "300",
+        "credits": 3,
+        "rawGrade": "A+",
+        "finalGrade": 9,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "| | 3 |22csa03pc | operaTING SYSTEMS a | 9 300 | |",
+        "code": "22csa03pc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "wes TECHNOLOGIES",
+        "rawCredits": "200",
+        "credits": 2,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "| | 4 |22csaospc | wes TECHNOLOGIES o | 10 200 | |",
+        "code": "22csaospc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_5",
+        "name": "sortware encinesring",
+        "rawCredits": "00",
+        "credits": 0,
+        "rawGrade": "F",
+        "finalGrade": 0,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "| | 5 | 22cs40spc| sortware encinesring o | 00 | |",
+        "code": "22cs40spc",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_6",
+        "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+        "rawCredits": "1.00",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| | & |22csa0spc | DATABASE MANAGEMENT SYSTEMS LAB o | 10 1.00",
+        "code": "22csa0spc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_7",
+        "name": "WEB TECHNOLOGIES LAB",
+        "rawCredits": "1.00",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "EE 7 | 22CS407PC | WEB TECHNOLOGIES LAB o 10 1.00 |",
+        "code": "22CS407PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_8",
+        "name": "oama visuaLZATION R PROGRAMMING POWER",
+        "rawCredits": "100",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| | & |22cse0spc | oama visuaLZATION - R PROGRAMMING POWER 81 o | 10 100 | |",
+        "code": "22cse0spc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_9",
+        "name": "REAL IME RESEARCH PROJECT SOCIETAL RELATED",
+        "rawCredits": "on",
+        "credits": 2,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "| | 5 | 2acsaoppc | REAL IME RESEARCH PROJECT/SOCIETAL RELATED a Bh on",
+        "code": "2acsaoppc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_10",
+        "name": "consTTUTION OF NDIA Be",
+        "rawCredits": "000",
+        "credits": 0,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| | 10 |z2enat0mc| consTTUTION OF NDIA Be | 7 000",
+        "code": "z2enat0mc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      }
+    ],
+    "confidence": 94,
+    "warnings": [],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 12,
+      "parsedSubjects": 10,
+      "failedSubjects": 0,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 4,
+          "label": "IV"
+        }
+      ],
+      "parsingIssues": [],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": false,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 10,
+        "passed": 10,
+        "warnings": 0,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 24,
+        "grades": 30,
+        "penalties": 0,
+        "total": 94
+      }
+    },
+    "summary": {
+      "totalCredits": 16,
+      "earnedCredits": 16,
+      "failedCredits": 0,
+      "passedSubjects": 9,
+      "failedSubjects": 1,
+      "semesterStatus": "Partial",
+      "completionPercent": 100,
+      "sgpa": 9.4,
+      "cgpa": 8.51
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

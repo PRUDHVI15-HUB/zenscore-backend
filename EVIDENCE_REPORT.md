@@ -18,7 +18,7 @@ Every numeric metric reported below was directly produced from an executed scrip
 | **Task 1** | Subject Risk Engine | **MEASURED** | Formulas bounded to $[0, 100]$. Old code was **NOT bounded** ($R_c$ reached 150 for 9 credits). 21/21 unit & property tests passed. |
 | **Task 2** | Graduation CGPA Projection | **MEASURED** | Scenario projections (low/expected/high) implemented using student SGPA standard deviation. 14/14 unit tests passed. |
 | **Task 3** | Prediction Confidence & Backtest | **NOT MEASURED** | Insufficient history ($n=1$ student with $\ge 3$ semesters; $n=3$ total walk-forward predictions). Thresholds centralized: low=1, medium=2, high=4. |
-| **Task 4** | Ingestion Evaluation Harness | **NOT MEASURED** | Harness created. Mark sheet directory currently empty ($n=0$ mark sheets; minimum 20 required across 3 universities). |
+| **Task 4** | Ingestion Evaluation Harness | **PRELIMINARY (n = 12)** | Real 14-stage empirical evaluation on 12 verified mark sheets across 2 universities. See Section 11. |
 | **Task 5** | Automated Test Suite & Coverage | **MEASURED** | 12/12 test suites passed, 78/78 tests passed. Rule engine coverage: 93.37% statements, 95.38% lines. Groq guardrails verified. |
 | **Task 6** | SUS & Likert User Study Tooling | **NOT MEASURED** | Tooling and API completed. Production response count $n=0$ ($<5$ threshold). Script outputs `NOT ENOUGH RESPONSES`. |
 | **Task 7** | Paper Publication Assets | **MEASURED** | 4 high-resolution cropped PNGs generated via Playwright ($1440 \times 900$, 2x DPR) with demo account in `paper_assets/`. |
@@ -426,3 +426,68 @@ All seven tasks requested by the conference paper reviewer have been implemented
 5. The automated test suite covers all 5 academic engines, readiness score caps, ATS constraints, auth security, and Groq guardrails (12/12 suites passed, 78/78 tests passed, 93.37% rule engine coverage).
 6. Standard SUS and platform Likert survey tooling is implemented with single-submission enforcement and admin export.
 7. Publication-ready, high-resolution cropped component screenshots have been generated at 2x DPR retina quality.
+
+
+---
+
+## 11. Task 4 Empirical Evidence — 14-Stage Transcript Ingestion Evaluation (PRELIMINARY (n = 12))
+
+**Execution Command:** `node scripts/eval_ingestion.js`  
+**Execution Timestamp:** 2026-10-18T05:25:54.739Z  
+**Git Commit Hash:** `e8cad38536567cd0ff616231b1f0937f60ca904f`  
+**Parser Architecture:** 2.0.0 (14-stage modular pipeline)  
+**OCR Engine:** Tesseract.js ^7.0.0 (LSTM eng.traineddata)  
+**Groq Fallback Model:** openai/gpt-oss-120b  
+**Benchmark Classification:** **PRELIMINARY (n = 12)** (Empirical evaluation on 12 verified mark sheets; fewer than 20 sheets / 3 profiles present, classified as PRELIMINARY per protocol).
+
+### 11.1 Ground-Truth Verification & Dataset Composition
+Every metric below was evaluated strictly against human-certified ground truth. Unverified sheets are strictly excluded.
+
+| Metric | Value | Protocol Notes |
+| :--- | :--- | :--- |
+| **Verified Mark Sheets (Evaluated)** | **12** | Certified with `"verified": true` by human reviewer |
+| **Excluded Mark Sheets** | **0** | None (all candidate sheets certified by human evaluator) |
+| **Total Ground-Truth Subjects** | **113** | Complete subject modules evaluated |
+| **Universities Represented** | **2** | JNTUH, Osmania University |
+| **Curriculum Profiles** | **2** | JNTUH R22, OU CBCS / Autonomous |
+| **Image-Quality Mix** | Clean: 12, Average: 0, Poor: 0 | Human visual assessment |
+
+### 11.2 Evaluation Results: Mode (a) Rule-Only vs. Mode (b) Full Pipeline
+Matching algorithm: Exact normalized **subject code** match first; fallback to **normalized name** (edit distance $\le 2$). Unmatched predictions = false positives; unmatched ground truth = false negatives. Confidence intervals are 95% Wilson score intervals:
+$$CI_{95} = \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1 + \frac{z^2}{n}}, \quad z = 1.96$$
+
+| Metric | Mode (a): Rule Parser Only | Mode (b): Full Pipeline w/ Groq | Status |
+| :--- | :--- | :--- | :--- |
+| **Subject Name Precision** | 71.62% | 71.62% | MEASURED (n = 113) |
+| **Subject Name Recall** | 46.90% | 46.90% | MEASURED (n = 113) |
+| **Subject Name F1 Score** | 56.68% | 56.68% | MEASURED (n = 113) |
+| **Credits F1 Score** | 42.78% | 42.78% | MEASURED (n = 113) |
+| **Grade F1 Score** | 42.78% | 42.78% | MEASURED (n = 113) |
+| **Attendance F1 Score** | NOT APPLICABLE (not printed) | NOT APPLICABLE (not printed) | NOT APPLICABLE |
+| **Subject Exact Match Rate** | **27.43% [20.05%, 36.30%]** | **27.43% [20.05%, 36.30%]** | MEASURED (n = 113) |
+| **Sheet Exact Match Rate** | **0.00% [0.00%, 24.25%]** | **0.00% [0.00%, 24.25%]** | MEASURED (n = 12) |
+| **OCR CER (Character Error Rate)** | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text GT) |
+| **OCR WER (Word Error Rate)** | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text GT) |
+
+### 11.3 Fallback Routing & Operational Diagnostics
+| Metric | Mode (a) Rule Only | Mode (b) Full Pipeline | Operational Meaning |
+| :--- | :--- | :--- | :--- |
+| **Rows Routed to Groq Fallback** | 0.00% (disabled) | **0.00% (0/74 rows)** | Low-confidence subjects (<55) or uncertain table structures |
+| **Sheets Sent to Manual Review** | 2 (16.7%) | 2 (16.7%) | Decision = MANUAL_REVIEW or confidence < 70 |
+| **Mean Sheet Latency** | 6 ms | 4 ms | End-to-end processing time |
+| **Median Sheet Latency** | 4 ms | 4 ms | Median processing time |
+| **Max Sheet Latency** | 28 ms | 7 ms | Maximum observed processing time |
+
+### 11.4 Fallback Impact Audit (Rows Changed by Groq)
+_No field values were altered by the Groq fallback on these verified sheets (rule engine provided deterministic output)._
+
+
+### 11.5 Performance by University & Profile (Full Pipeline)
+| University / Profile | Sheets | Subjects | Subject Exact Match (95% CI) | Sheet Exact Match (95% CI) | Name F1 | Credits F1 | Grade F1 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| JNTUH (JNTUH R22) | 10 | 94 | 32.98% [24.31%, 42.99%] | 0.00% [0.00%, 27.75%] | 63.1% | 47.6% | 47.6% |
+| Osmania University (OU CBCS / Autonomous) | 2 | 19 | 0.00% [0.00%, 16.82%] | 0.00% [0.00%, 65.76%] | 0.0% | 0.0% | 0.0% |
+
+### 11.6 Confidence Calibration & Error Audit
+A total of **216** field extraction errors occurred across all runs. Mean confidence on erroneous fields: **39.8 / 100**.
+See [`results/ingestion_errors.md`](./results/ingestion_errors.md) for the complete failure audit.

@@ -1,0 +1,360 @@
+{
+  "mode": "full_pipeline",
+  "elapsedMs": 5,
+  "rawText": "fa CMR TECHNICAL CAMPUS 2\nol UGC AUTONOMOUS : 5\n= ‘Approved by AICTE & JNTUH: Accredited NBA & NAAC with ‘A’ Grade. E\nR ete cht ow, persed 501401, Telangana Bh N=\nGROUT OF INSTITUTIONS — “3\nivan GRADE CARD {\n| demera <A 060033 .\nSain S728 E\nB.TECH ll SEMESTER , R22 REGULAR ih royine 237R1A0SBR\n| | Bemten COMPUTER SCIENCE AND ENGINEERING ‘I\nSi RUPAM DAS Th) Moat & ear of Bram: DECEMBER 2024 gy\nNome a\n5\n3 COURSE\n£1 CODE\n5 22MA301B5 | COMPUTER ORIENTED STATISTICAL METHODS A | 8s [Pp [400 |\n22EC302ES | DIGITAL ELECTRONICS A 8 P 3.00 |\n= 22CS303PC | PROGRAMMING WITH PYTHON B | 6 | Pp [300\n5 22C$304PC | COMPUTER ORGANIZATION AND ARCHITECTURE B+ Ej P 3.00 |\n| 22CS305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA B+ | 7 | Pp |300]\nF 22CS306PC | PYTHON LAB ° 10 | Pp | 150 |\n= 22CS307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVALAB | © | 10 | P | 1.50 |\np 22CS308PC | NODEJS/REACTIS/DJANGO o | 10] Pp 100]\n= 22EN309MC| GENDER SENSITIZATION LAB a+ | 9 [ p |000\n| | |\n| | |\n0 | |\nE |\n| |\n; es\n{ |\n; | [EE]\nA |\n| [subjectsregistered: 9 Appeared: Passed:9 Toul: 20 |\nMedium of Instruction and Examinations in English\nSemester Grade Point Average (SGPA) : 7.80\n| Cumulative Grade Point Average (CGPA) : 7.57\nHea\neas\ngoo\n— 1s Alt\n03/06/2025 vosuity CONTROLLER OF EXAMINATIONS\nFT RE a. He) ET X xX\n",
+  "cleanedText": "fa CMR TECHNICAL CAMPUS 2\nol UGC AUTONOMOUS : 5\n= Approved by AICTE & JNTUH: Accredited NBA & NAAC with A Grade. E\nR ete cht ow, persed 501401, Telangana Bh N=\nGROUT OF INSTITUTIONS  3\nivan GRADE CARD {\n| demera <A 060033 .\nSain S728 E\nB.TECH ll SEMESTER , R22 REGULAR ih royine 237R1A0SBR\n| | Bemten COMPUTER SCIENCE AND ENGINEERING I\nSi RUPAM DAS Th) Moat & ear of Bram: DECEMBER 2024 gy\nNome a\n5\n3 COURSE\n1 CODE\n5 22MA301B5 | COMPUTER ORIENTED STATISTICAL METHODS A | 8s [Pp [400 |\n22EC302ES | DIGITAL ELECTRONICS A 8 P 3.00 |\n= 22CS303PC | PROGRAMMING WITH PYTHON B | 6 | Pp [300\n5 22C$304PC | COMPUTER ORGANIZATION AND ARCHITECTURE B+ Ej P 3.00 |\n| 22CS305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA B+ | 7 | Pp |300]\nF 22CS306PC | PYTHON LAB  10 | Pp | 150 |\n= 22CS307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVALAB |  | 10 | P | 1.50 |\np 22CS308PC | NODEJS/REACTIS/DJANGO o | 10] Pp 100]\n= 22EN309MC| GENDER SENSITIZATION LAB a+ | 9 [ p |000\n| | |\n| | |\n0 | |\nE |\n| |\n; es\n{ |\n; | [EE]\nA |\n| [subjectsregistered: 9 Appeared: Passed:9 Toul: 20 |\nMedium of Instruction and Examinations in English\nSemester Grade Point Average (SGPA) : 7.80\n| Cumulative Grade Point Average (CGPA) : 7.57\nHea\neas\ngoo\n1s Alt\n03/06/2025 vosuity CONTROLLER OF EXAMINATIONS\nFT RE a. He) ET X xX",
+  "profileId": "JNTUH_R22",
+  "hash": "729bf5a7a63a41d77e05f6d285190b4b682d6710e73f9131a6fd566499fa4449",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "COMPUTER ORIENTED STATISTICAL METHODS",
+      "rawCredits": "400",
+      "credits": 4,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "5 22MA301B5 | COMPUTER ORIENTED STATISTICAL METHODS A | 8s [Pp [400 |",
+      "code": "22MA301B5"
+    },
+    {
+      "id": "subject_2",
+      "name": "DIGITAL ELECTRONICS",
+      "rawCredits": "3.00",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22EC302ES | DIGITAL ELECTRONICS A 8 P 3.00 |",
+      "code": "22EC302ES"
+    },
+    {
+      "id": "subject_3",
+      "name": "PROGRAMMING WITH PYTHON",
+      "rawCredits": "300",
+      "credits": 3,
+      "rawGrade": "B",
+      "finalGrade": 6,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "= 22CS303PC | PROGRAMMING WITH PYTHON B | 6 | Pp [300",
+      "code": "22CS303PC"
+    },
+    {
+      "id": "subject_4",
+      "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA",
+      "rawCredits": "300",
+      "credits": 3,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| 22CS305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA B+ | 7 | Pp |300]",
+      "code": "22CS305PC"
+    },
+    {
+      "id": "subject_5",
+      "name": "PYTHON LAB",
+      "rawCredits": "150",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "F 22CS306PC | PYTHON LAB  10 | Pp | 150 |",
+      "code": "22CS306PC"
+    },
+    {
+      "id": "subject_6",
+      "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVALAB",
+      "rawCredits": "1.50",
+      "credits": 1.5,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "= 22CS307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVALAB |  | 10 | P | 1.50 |",
+      "code": "22CS307PC"
+    },
+    {
+      "id": "subject_7",
+      "name": "NODEJS REACTIS DJANGO",
+      "rawCredits": "100",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "p 22CS308PC | NODEJS/REACTIS/DJANGO o | 10] Pp 100]",
+      "code": "22CS308PC"
+    },
+    {
+      "id": "subject_8",
+      "name": "GENDER SENSITIZATION LAB",
+      "rawCredits": "000",
+      "credits": 0,
+      "rawGrade": "A+",
+      "finalGrade": 9,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "= 22EN309MC| GENDER SENSITIZATION LAB a+ | 9 [ p |000",
+      "code": "22EN309MC"
+    }
+  ],
+  "output": {
+    "semesterNumber": 3,
+    "semesterLabel": "III",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "COMPUTER ORIENTED STATISTICAL METHODS",
+        "rawCredits": "400",
+        "credits": 4,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "5 22MA301B5 | COMPUTER ORIENTED STATISTICAL METHODS A | 8s [Pp [400 |",
+        "code": "22MA301B5",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "DIGITAL ELECTRONICS",
+        "rawCredits": "3.00",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22EC302ES | DIGITAL ELECTRONICS A 8 P 3.00 |",
+        "code": "22EC302ES",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_3",
+        "name": "PROGRAMMING WITH PYTHON",
+        "rawCredits": "300",
+        "credits": 3,
+        "rawGrade": "B",
+        "finalGrade": 6,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "= 22CS303PC | PROGRAMMING WITH PYTHON B | 6 | Pp [300",
+        "code": "22CS303PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA",
+        "rawCredits": "300",
+        "credits": 3,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| 22CS305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA B+ | 7 | Pp |300]",
+        "code": "22CS305PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_5",
+        "name": "PYTHON LAB",
+        "rawCredits": "150",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 87,
+        "originalLine": "F 22CS306PC | PYTHON LAB  10 | Pp | 150 |",
+        "code": "22CS306PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_6",
+        "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVALAB",
+        "rawCredits": "1.50",
+        "credits": 1.5,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 72,
+        "originalLine": "= 22CS307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVALAB |  | 10 | P | 1.50 |",
+        "code": "22CS307PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_7",
+        "name": "NODEJS REACTIS DJANGO",
+        "rawCredits": "100",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "p 22CS308PC | NODEJS/REACTIS/DJANGO o | 10] Pp 100]",
+        "code": "22CS308PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_8",
+        "name": "GENDER SENSITIZATION LAB",
+        "rawCredits": "000",
+        "credits": 0,
+        "rawGrade": "A+",
+        "finalGrade": 9,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "= 22EN309MC| GENDER SENSITIZATION LAB a+ | 9 [ p |000",
+        "code": "22EN309MC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      }
+    ],
+    "confidence": 93,
+    "warnings": [
+      {
+        "type": "CREDITS",
+        "severity": "WARNING",
+        "subjectId": "subject_6",
+        "message": "Credits must be an integer between 0 and 6."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 18,
+      "parsedSubjects": 8,
+      "failedSubjects": 0,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 3,
+          "label": "III"
+        }
+      ],
+      "parsingIssues": [],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 8,
+        "passed": 7,
+        "warnings": 1,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 23,
+        "grades": 30,
+        "penalties": 0,
+        "total": 93
+      }
+    },
+    "summary": {
+      "totalCredits": 16.5,
+      "earnedCredits": 16.5,
+      "failedCredits": 0,
+      "passedSubjects": 8,
+      "failedSubjects": 0,
+      "semesterStatus": "Completed",
+      "completionPercent": 100,
+      "sgpa": 7.8,
+      "cgpa": 7.57
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

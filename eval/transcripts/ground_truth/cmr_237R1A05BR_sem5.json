@@ -1,0 +1,113 @@
+{
+  "sheet_id": "cmr_237R1A05BR_sem5",
+  "filename": "cmr_237R1A05BR_sem5.jpg",
+  "university": "JNTUH",
+  "profile": "JNTUH R22",
+  "institution": "CMR Technical Campus (UGC Autonomous)",
+  "examination": "R22 B TECH V SEMESTER REGULAR",
+  "hall_ticket_no": "237R1A05BR",
+  "student_name": "RUPAM DAS",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "22CS501PC",
+      "name": "DESIGN AND ANALYSIS OF ALGORITHMS",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS502PC",
+      "name": "DEVOPS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS503PC",
+      "name": "COMPUTER NETWORKS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS513PE",
+      "name": "DATA ANALYTICS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B+",
+      "grade_point": 7,
+      "status": "P"
+    },
+    {
+      "code": "22CS525PE",
+      "name": "NATURAL LANGUAGE PROCESSING",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B+",
+      "grade_point": 7,
+      "status": "P"
+    },
+    {
+      "code": "22CS504PC",
+      "name": "DEVOPS LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS505PC",
+      "name": "COMPUTER NETWORKS LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22EN506HS",
+      "name": "ADVANCED ENGLISH COMMUNICATION SKILLS LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS507PC",
+      "name": "UI DESIGN- FLUTTER",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS508MC",
+      "name": "INTELLECTUAL PROPERTY RIGHTS",
+      "credits": 0,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    }
+  ],
+  "summary": {
+    "total_registered": 10,
+    "total_passed": 10,
+    "total_credits": 20.0,
+    "sgpa": 8.05,
+    "cgpa": 7.74
+  },
+  "raw_text": null
+}

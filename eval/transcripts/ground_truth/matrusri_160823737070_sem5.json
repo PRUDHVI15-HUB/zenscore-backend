@@ -1,0 +1,103 @@
+{
+  "sheet_id": "matrusri_160823737070_sem5",
+  "filename": "matrusri_160823737070_sem5.jpg",
+  "university": "Osmania University",
+  "profile": "OU CBCS / Autonomous",
+  "institution": "Matrusri Engineering College",
+  "examination": "B.E. III YEAR V SEM",
+  "hall_ticket_no": "1608-23-737-070",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "PC508ITU23",
+      "name": "Principles of Programming Languages",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "C",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC509ITU23",
+      "name": "Artificial Intelligence",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "C",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC510ITU23",
+      "name": "Operating Systems",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "C",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC511ITU23",
+      "name": "Software Engineering",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC512ITU23",
+      "name": "Full Stack Development",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PE501ITU23",
+      "name": "Object oriented Analysis and Design",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC556ITU23",
+      "name": "Artificial Intelligence Lab",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC557ITU23",
+      "name": "Operating System Lab",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC558ITU23",
+      "name": "Full Stack Development Lab",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": null,
+      "status": "Pass"
+    }
+  ],
+  "summary": {
+    "total_registered": 9,
+    "total_passed": 9,
+    "total_credits": 21.0,
+    "sgpa": 7.95,
+    "cgpa": 7.41
+  },
+  "raw_text": null
+}

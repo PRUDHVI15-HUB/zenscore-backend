@@ -1,0 +1,113 @@
+{
+  "sheet_id": "cmr_237R1A05BR_sem4",
+  "filename": "cmr_237R1A05BR_sem4.jpg",
+  "university": "JNTUH",
+  "profile": "JNTUH R22",
+  "institution": "CMR Technical Campus (UGC Autonomous)",
+  "examination": "BTECH IV SEMESTER, R22 REGULAR",
+  "hall_ticket_no": "237R1A05BR",
+  "student_name": "RUPAM DAS",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "22CS401PC",
+      "name": "DISCRETE MATHEMATICS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS402PC",
+      "name": "DATABASE MANAGEMENT SYSTEMS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": 6,
+      "status": "P"
+    },
+    {
+      "code": "22CS403PC",
+      "name": "OPERATING SYSTEMS",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": 6,
+      "status": "P"
+    },
+    {
+      "code": "22CS404PC",
+      "name": "WEB TECHNOLOGIES",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS405PC",
+      "name": "SOFTWARE ENGINEERING",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS406PC",
+      "name": "DATABASE MANAGEMENT SYSTEMS LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS407PC",
+      "name": "WEB TECHNOLOGIES LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS408PC",
+      "name": "DATA VISUALIZATION - R PROGRAMMING/POWER BI",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS409PC",
+      "name": "REAL TIME RESEARCH PROJECT/SOCIETAL RELATED PROJECTS",
+      "credits": 2,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22EN410MC",
+      "name": "CONSTITUTION OF INDIA",
+      "credits": 0,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": 6,
+      "status": "P"
+    }
+  ],
+  "summary": {
+    "total_registered": 10,
+    "total_passed": 10,
+    "total_credits": 20.0,
+    "sgpa": 7.95,
+    "cgpa": 7.66
+  },
+  "raw_text": null
+}

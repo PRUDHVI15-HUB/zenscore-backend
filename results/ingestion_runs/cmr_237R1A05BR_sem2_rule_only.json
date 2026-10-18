@@ -1,0 +1,272 @@
+{
+  "mode": "rule_only",
+  "elapsedMs": 4,
+  "rawText": "pa TTT fa:\nrn RT BC Tn TR ae a ER\n38 CMATEDHNICAL CAMPUS\nB BR ery AICTE & NTU, Actin MOAB ANC 8K Cre a\n| CM 1 ea STO ered JA BAC HH\n| ome mins\nrenee wi)\n| wre A 048492 fron Re b\nre ATE 74\n| nant «THON # SEMESTER R22 REGULAR Hoh Tike Ho 237R1A05BR f\nRE COMPUTER SCIENCE AND ENGINEERING. 1 Muath B Yous of bun July 2024 oY\noe numba al rewn of\n& [sna] coum cont | NAME OF THE COURSE Grade Trade Townlcoons\n| wn marr ommowear oes | 4180\nE 2 22PH20285 | APPLIED PHYSICS Be b oF 58 4\nCh] 8 | sacs |owmsTRucTURES wl1 |r)\n+ | 2zewaoms | ENGUSH FOR SKILL ENHANCEMENT ARC ROH\ns 22CS2056S {IT WORKSHOP. Be 7 [3 | 15 |\n|| 6 | amos |aepuco prvsics tasorsrory m|o |e ]as|\n3 | nacsaores |oamstrucrunes LasoraToRy Gea\no | 226a08Hs {ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe) 1]\n3 LABORATORY | |\n5 | 22s200Es  |BASICELEMENTS OF ENGINEERING AND TECHNOLOGY | A | sf weber\n1555]\nVol\n| rd\npridposs) eal\n| | |\n| |\n) | |\n| |\nti\n[1 [subject Registered : 3 Appeared: 9 Passed : 9 Total: | | 200 |\nWiedium of Instruction and Examinations In English\n5 ‘Semester Grade Point Average (SPA) : 7.90\nJ; Cumdiptive Grade Point Average (COPA): 7.45\naS\ntime: 010202 Voaty CONTROLLER OF EXAMINATIONS\nEri ves\noa i RG oi\n",
+  "cleanedText": "pa TTT fa:\nrn RT BC Tn TR ae a ER\n38 CMATEDHNICAL CAMPUS\nB BR ery AICTE & NTU, Actin MOAB ANC 8K Cre a\n| CM 1 ea STO ered JA BAC HH\n| ome mins\nrenee wi)\n| wre A 048492 fron Re b\nre ATE 74\n| nant THON # SEMESTER R22 REGULAR Hoh Tike Ho 237R1A05BR f\nRE COMPUTER SCIENCE AND ENGINEERING. 1 Muath B Yous of bun July 2024 oY\noe numba al rewn of\n& [sna] coum cont | NAME OF THE COURSE Grade Trade Townlcoons\n| wn marr ommowear oes | 4180\nE 2 22PH20285 | APPLIED PHYSICS Be b oF 58 4\nCh] 8 | sacs |owmsTRucTURES wl1 |r)\n+ | 2zewaoms | ENGUSH FOR SKILL ENHANCEMENT ARC ROH\ns 22CS2056S {IT WORKSHOP. Be 7 [3 | 15 |\n|| 6 | amos |aepuco prvsics tasorsrory m|o |e ]as|\n3 | nacsaores |oamstrucrunes LasoraToRy Gea\no | 226a08Hs {ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe) 1]\n3 LABORATORY | |\n5 | 22s200Es  |BASICELEMENTS OF ENGINEERING AND TECHNOLOGY | A | sf weber\n1555]\nVol\n| rd\npridposs) eal\n| | |\n| |\n) | |\n| |\nti\n[1 [subject Registered : 3 Appeared: 9 Passed : 9 Total: | | 200 |\nWiedium of Instruction and Examinations In English\n5 Semester Grade Point Average (SPA) : 7.90\nJ; Cumdiptive Grade Point Average (COPA): 7.45\naS\ntime: 010202 Voaty CONTROLLER OF EXAMINATIONS\nEri ves\noa i RG oi",
+  "profileId": "JNTUH_R22",
+  "hash": "54e3d1198adcec9fb244b16d5be28950b813720940abf029d46e80629038715b",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "APPLIED PHYSICS Be",
+      "rawCredits": "4",
+      "credits": 4,
+      "rawGrade": "P",
+      "finalGrade": 4,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "E 2 22PH20285 | APPLIED PHYSICS Be b oF 58 4",
+      "code": "22PH20285"
+    },
+    {
+      "id": "subject_2",
+      "name": "ENGUSH FOR SKILL ENHANCEMENT ARC ROH",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "+ | 2zewaoms | ENGUSH FOR SKILL ENHANCEMENT ARC ROH",
+      "code": "2zewaoms"
+    },
+    {
+      "id": "subject_3",
+      "name": "{IT WORKSHOP. Be",
+      "rawCredits": "15",
+      "credits": 1.5,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "s 22CS2056S {IT WORKSHOP. Be 7 [3 | 15 |",
+      "code": "22CS2056S"
+    },
+    {
+      "id": "subject_4",
+      "name": "{ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe)",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "1",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "o | 226a08Hs {ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe) 1]",
+      "code": "226a08Hs"
+    },
+    {
+      "id": "subject_5",
+      "name": "BASICELEMENTS OF ENGINEERING AND TECHNOLOGY",
+      "rawCredits": "weber",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "5 | 22s200Es  |BASICELEMENTS OF ENGINEERING AND TECHNOLOGY | A | sf weber",
+      "code": "22s200Es"
+    }
+  ],
+  "output": {
+    "semesterNumber": 5,
+    "semesterLabel": "V",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "APPLIED PHYSICS Be",
+        "rawCredits": "4",
+        "credits": 4,
+        "rawGrade": "P",
+        "finalGrade": 4,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "E 2 22PH20285 | APPLIED PHYSICS Be b oF 58 4",
+        "code": "22PH20285",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "ENGUSH FOR SKILL ENHANCEMENT ARC ROH",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "+ | 2zewaoms | ENGUSH FOR SKILL ENHANCEMENT ARC ROH",
+        "code": "2zewaoms",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_3",
+        "name": "{IT WORKSHOP. Be",
+        "rawCredits": "15",
+        "credits": 1.5,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 72,
+        "originalLine": "s 22CS2056S {IT WORKSHOP. Be 7 [3 | 15 |",
+        "code": "22CS2056S",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "{ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe)",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "1",
+        "finalGrade": 1,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 82,
+        "originalLine": "o | 226a08Hs {ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe) 1]",
+        "code": "226a08Hs",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_5",
+        "name": "BASICELEMENTS OF ENGINEERING AND TECHNOLOGY",
+        "rawCredits": "weber",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "5 | 22s200Es  |BASICELEMENTS OF ENGINEERING AND TECHNOLOGY | A | sf weber",
+        "code": "22s200Es",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      }
+    ],
+    "confidence": 84,
+    "warnings": [
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_2",
+        "message": "Missing grade value."
+      },
+      {
+        "type": "CREDITS",
+        "severity": "WARNING",
+        "subjectId": "subject_3",
+        "message": "Credits must be an integer between 0 and 6."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 20,
+      "parsedSubjects": 5,
+      "failedSubjects": 2,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 5,
+          "label": "V"
+        }
+      ],
+      "parsingIssues": [
+        {
+          "line": 5,
+          "reason": "No grade found",
+          "rawLine": "+ | 2zewaoms | ENGUSH FOR SKILL ENHANCEMENT ARC ROH"
+        },
+        {
+          "line": 9,
+          "reason": "No grade found",
+          "rawLine": "o | 226a08Hs {ENGLISH LANGUAGE AND COMMUNICATION SKILLS slo fe) 1]"
+        }
+      ],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 5,
+        "passed": 3,
+        "warnings": 2,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 24,
+        "grades": 24,
+        "penalties": 4,
+        "total": 84
+      }
+    },
+    "summary": {
+      "totalCredits": 14.5,
+      "earnedCredits": 8.5,
+      "failedCredits": 3,
+      "passedSubjects": 3,
+      "failedSubjects": 1,
+      "semesterStatus": "Partial",
+      "completionPercent": 59,
+      "sgpa": 7.9,
+      "cgpa": null
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

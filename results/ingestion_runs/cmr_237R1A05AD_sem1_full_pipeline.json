@@ -1,0 +1,371 @@
+{
+  "mode": "full_pipeline",
+  "elapsedMs": 5,
+  "rawText": "= © Cpr Te mn\ni : | PoE Z\n0 RE a ae\nCMR Avproved by AICTE & INTUM, Accredited by NBA & NAAC with X Grade. mmr S27 |\nGROTH Tons Se El San\nppt 2 pow to Coa i coe\n= ——\nwr A 038506 a HEN mh mt\nna : oe]\nLT Lu —— marae. | 237R1A0SAD | |\nTE i — BE: rain ryan; to]\nBR a rm\nLa Aalto i dhe rea crs\nCHINTHAPALL PRUDHVI Be rs So reas aes\n8228 meen 2 4\nre ome | Sem [Se peed |\n22MA1018S | MATRICES AND CALCULUS. L] 6 a |\n§ 20CHI028S | ENGINEERING CHEMISTRY als « [oh\n% 22C5103€5. PROGRAMMING FOR PROBLEM SOLVING. Be 7 3 {\n3 J0ECI0MES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs « [BK\n% 22MEI05ES | COMPUTER AIDED ENGINEERING GRAPHICS alo 2 |E\n: 22010685 | ENGINEERING CHEMISTRY LAB as |\nrs 22CS107E5 | PROGRAMMING FOR PROBLEM SOLVING LAB a | os 1\nof 22ECI08ES [BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB. Be | 7 1 5\nfi 22CH109MC | ENVIRONMENTAL SCIENCE Be 7 0\nt\nSubject Regiterea 3 peared 5 Fased 3 wor | | | [me]\nMedium of struction nd Examinations i Englih\nz ‘Semester Grade Point Average (SGPA) : 7.15\n% Cumulative Grade Point Average (CGPA) : 7.15 H\ntp Ypuocelbos Ch\n| oi mn Ft §\n",
+  "cleanedText": "=  Cpr Te mn\ni : | PoE Z\n0 RE a ae\nCMR Avproved by AICTE & INTUM, Accredited by NBA & NAAC with X Grade. mmr S27 |\nGROTH Tons Se El San\nppt 2 pow to Coa i coe\n=\nwr A 038506 a HEN mh mt\nna : oe]\nLT Lu  marae. | 237R1A0SAD | |\nTE i  BE: rain ryan; to]\nBR a rm\nLa Aalto i dhe rea crs\nCHINTHAPALL PRUDHVI Be rs So reas aes\n8228 meen 2 4\nre ome | Sem [Se peed |\n22MA1018S | MATRICES AND CALCULUS. L] 6 a |\n20CHI028S | ENGINEERING CHEMISTRY als  [oh\n% 22C51035. PROGRAMMING FOR PROBLEM SOLVING. Be 7 3 {\n3 J0ECI0MES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs  [BK\n% 22MEI05ES | COMPUTER AIDED ENGINEERING GRAPHICS alo 2 |E\n: 22010685 | ENGINEERING CHEMISTRY LAB as |\nrs 22CS107E5 | PROGRAMMING FOR PROBLEM SOLVING LAB a | os 1\nof 22ECI08ES [BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB. Be | 7 1 5\nfi 22CH109MC | ENVIRONMENTAL SCIENCE Be 7 0\nt\nSubject Regiterea 3 peared 5 Fased 3 wor | | | [me]\nMedium of struction nd Examinations i Englih\nz Semester Grade Point Average (SGPA) : 7.15\n% Cumulative Grade Point Average (CGPA) : 7.15 H\ntp Ypuocelbos Ch\n| oi mn Ft",
+  "profileId": "JNTUH_R22",
+  "hash": "5e39f45705ae8c20033cd57faf6c9356024e4cf4187bb6f6dcfc312126d3a8b9",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "MATRICES AND CALCULUS. L",
+      "rawCredits": "6",
+      "credits": 6,
+      "rawGrade": "B",
+      "finalGrade": 6,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22MA1018S | MATRICES AND CALCULUS. L] 6 a |",
+      "code": "22MA1018S"
+    },
+    {
+      "id": "subject_2",
+      "name": "ENGINEERING CHEMISTRY",
+      "rawCredits": "oh",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "20CHI028S | ENGINEERING CHEMISTRY als  [oh",
+      "code": "20CHI028S"
+    },
+    {
+      "id": "subject_3",
+      "name": "PROGRAMMING FOR PROBLEM SOLVING. Be",
+      "rawCredits": "3",
+      "credits": 3,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "% 22C51035. PROGRAMMING FOR PROBLEM SOLVING. Be 7 3 {",
+      "code": "22C51035."
+    },
+    {
+      "id": "subject_4",
+      "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs BK",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "3 J0ECI0MES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs  [BK",
+      "code": "J0ECI0MES"
+    },
+    {
+      "id": "subject_5",
+      "name": "COMPUTER AIDED ENGINEERING GRAPHICS alo",
+      "rawCredits": "E",
+      "credits": 3,
+      "rawGrade": "2",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "% 22MEI05ES | COMPUTER AIDED ENGINEERING GRAPHICS alo 2 |E",
+      "code": "22MEI05ES"
+    },
+    {
+      "id": "subject_6",
+      "name": "PROGRAMMING FOR PROBLEM SOLVING LAB",
+      "rawCredits": "1",
+      "credits": 1,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "rs 22CS107E5 | PROGRAMMING FOR PROBLEM SOLVING LAB a | os 1",
+      "code": "22CS107E5"
+    },
+    {
+      "id": "subject_7",
+      "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB. Be",
+      "rawCredits": "5",
+      "credits": 5,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "of 22ECI08ES [BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB. Be | 7 1 5",
+      "code": "22ECI08ES"
+    },
+    {
+      "id": "subject_8",
+      "name": "ENVIRONMENTAL SCIENCE Be",
+      "rawCredits": "0",
+      "credits": 0,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "fi 22CH109MC | ENVIRONMENTAL SCIENCE Be 7 0",
+      "code": "22CH109MC"
+    }
+  ],
+  "output": {
+    "semesterNumber": 1,
+    "semesterLabel": "I",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "MATRICES AND CALCULUS. L",
+        "rawCredits": "6",
+        "credits": 6,
+        "rawGrade": "B",
+        "finalGrade": 6,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "22MA1018S | MATRICES AND CALCULUS. L] 6 a |",
+        "code": "22MA1018S",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "ENGINEERING CHEMISTRY",
+        "rawCredits": "oh",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 87,
+        "originalLine": "20CHI028S | ENGINEERING CHEMISTRY als  [oh",
+        "code": "20CHI028S",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_3",
+        "name": "PROGRAMMING FOR PROBLEM SOLVING. Be",
+        "rawCredits": "3",
+        "credits": 3,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "% 22C51035. PROGRAMMING FOR PROBLEM SOLVING. Be 7 3 {",
+        "code": "22C51035.",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs BK",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "3 J0ECI0MES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs  [BK",
+        "code": "J0ECI0MES",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_5",
+        "name": "COMPUTER AIDED ENGINEERING GRAPHICS alo",
+        "rawCredits": "E",
+        "credits": 3,
+        "rawGrade": "2",
+        "finalGrade": 2,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 82,
+        "originalLine": "% 22MEI05ES | COMPUTER AIDED ENGINEERING GRAPHICS alo 2 |E",
+        "code": "22MEI05ES",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_6",
+        "name": "PROGRAMMING FOR PROBLEM SOLVING LAB",
+        "rawCredits": "1",
+        "credits": 1,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "rs 22CS107E5 | PROGRAMMING FOR PROBLEM SOLVING LAB a | os 1",
+        "code": "22CS107E5",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_7",
+        "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB. Be",
+        "rawCredits": "5",
+        "credits": 5,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "of 22ECI08ES [BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB. Be | 7 1 5",
+        "code": "22ECI08ES",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_8",
+        "name": "ENVIRONMENTAL SCIENCE Be",
+        "rawCredits": "0",
+        "credits": 0,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "fi 22CH109MC | ENVIRONMENTAL SCIENCE Be 7 0",
+        "code": "22CH109MC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      }
+    ],
+    "confidence": 88,
+    "warnings": [
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_4",
+        "message": "Missing grade value."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 12,
+      "parsedSubjects": 8,
+      "failedSubjects": 2,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 1,
+          "label": "I"
+        }
+      ],
+      "parsingIssues": [
+        {
+          "line": 4,
+          "reason": "No grade found",
+          "rawLine": "3 J0ECI0MES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING bs  [BK"
+        },
+        {
+          "line": 5,
+          "reason": "No grade found",
+          "rawLine": "% 22MEI05ES | COMPUTER AIDED ENGINEERING GRAPHICS alo 2 |E"
+        }
+      ],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 8,
+        "passed": 7,
+        "warnings": 1,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 26,
+        "grades": 26,
+        "penalties": 4,
+        "total": 88
+      }
+    },
+    "summary": {
+      "totalCredits": 24,
+      "earnedCredits": 18,
+      "failedCredits": 3,
+      "passedSubjects": 6,
+      "failedSubjects": 1,
+      "semesterStatus": "Partial",
+      "completionPercent": 75,
+      "sgpa": 7.15,
+      "cgpa": 7.15
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

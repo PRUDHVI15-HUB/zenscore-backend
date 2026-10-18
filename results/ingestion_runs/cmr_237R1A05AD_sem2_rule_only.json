@@ -1,0 +1,283 @@
+{
+  "mode": "rule_only",
+  "elapsedMs": 9,
+  "rawText": "An ee a ME Se SEC\n-~> PMR TEPHNICRI PAMPHE 00 -\nBE = i ae | TECHNICAL CAMPUS ~~ :\n\nEE CS Ed\nacim: ac poms Homa <0 901 Hr re\nSi me COR oy\nTr ST Pe Se SmaI ; -\nel AQARAAS mH A=\nEEE TEs eet\nos ma oi Sn fEmsRE tn Zr\nSnait  o  SoR tems NE\nRr a | aan | EE\nTEE A el RR ie Son, STE TEE Cn ro cars om on he\nSE — fe\nERI fan eae BEE fs Salen me\n\"cum pRuonY EA eee\na Cama i REE x \" =F BUS Clr 1BCTBRCAL CAPSS C1 CCMA a\nLE TT BR Pee |\nEE\nTACOS [ORO DIFFERENTIAL CUATONS AD VECTOR Geiss | e+ | 7 | 7 | + |\n3 2omwaozas | somuco physics alee [8\n2acsaoses oma STRUCTURES A fee li | 8\n: 22EN20045 [ENGLISH FOR SIL ENHANCEMENT mls fos jE\ng 220520565 [IT WORKSHOP offen (Gest 1\n; 2amiaoees | AppuED PHYSICS LABORATORY PN\n22c520765 | oATA STRUCTURES LABORATORY alse] a fd\n226N208HS | ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT\nPp LABORATORY 3\n22C5205E5 | BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY PI I I\n[SobietRegar 3 Aopeasd 8 Pod 3 = a ee EE\noK\nMedium of Instruction and Examinations in English ¥ race, pum tomes I\nSemester Grade Polnt Average (SGPA): 8.45 Sh as Bm om ee\nc Grade Poin Average (CPA): 780 PE ie =o\nrm a = [EE mama\n: 1 wm demi ees\nCB ey AE a Bm OE Cin: om were =\n= 5 a Re Ee\ni: rok i EEE\n= : Epa Fd aml\n= Emre er ty I (po cms ot\niad faut im Times Cm OF Lo Sl VE cade Chis Co TRC Cian i Te al\nCT eh EE CE Re ft Gi ht San on Co co : 4\n1 a Fee Come cn el Ee Co ete Sa oc 7 oe. Cor £m x Coe\n",
+  "cleanedText": "An ee a ME Se SEC\n-~> PMR TEPHNICRI PAMPHE 00 -\nBE = i ae | TECHNICAL CAMPUS ~~ :\nEE CS Ed\nacim: ac poms Homa <0 901 Hr re\nSi me COR oy\nTr ST Pe Se SmaI ; -\nel AQARAAS mH A=\nEEE TEs eet\nos ma oi Sn fEmsRE tn Zr\nSnait  o  SoR tems NE\nRr a | aan | EE\nTEE A el RR ie Son, STE TEE Cn ro cars om on he\nSE  fe\nERI fan eae BEE fs Salen me\n\"cum pRuonY EA eee\na Cama i REE x \" =F BUS Clr 1BCTBRCAL CAPSS C1 CCMA a\nLE TT BR Pee |\nEE\nTACOS [ORO DIFFERENTIAL CUATONS AD VECTOR Geiss | e+ | 7 | 7 | + |\n3 2omwaozas | somuco physics alee [8\n2acsaoses oma STRUCTURES A fee li | 8\n: 22EN20045 [ENGLISH FOR SIL ENHANCEMENT mls fos jE\ng 220520565 [IT WORKSHOP offen (Gest 1\n; 2amiaoees | AppuED PHYSICS LABORATORY PN\n22c520765 | oATA STRUCTURES LABORATORY alse] a fd\n226N208HS | ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT\nPp LABORATORY 3\n22C5205E5 | BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY PI I I\n[SobietRegar 3 Aopeasd 8 Pod 3 = a ee EE\noK\nMedium of Instruction and Examinations in English  race, pum tomes I\nSemester Grade Polnt Average (SGPA): 8.45 Sh as Bm om ee\nc Grade Poin Average (CPA): 780 PE ie =o\nrm a = [EE mama\n: 1 wm demi ees\nCB ey AE a Bm OE Cin: om were =\n= 5 a Re Ee\ni: rok i EEE\n= : Epa Fd aml\n= Emre er ty I (po cms ot\niad faut im Times Cm OF Lo Sl VE cade Chis Co TRC Cian i Te al\nCT eh EE CE Re ft Gi ht San on Co co : 4\n1 a Fee Come cn el Ee Co ete Sa oc 7 oe. Cor m x Coe",
+  "profileId": "JNTUH_R22",
+  "hash": "3cf6f99541ff2438ad7f0be4cc82472cb09336e0ab45f033e776869aef68c84d",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "ENGLISH FOR SIL ENHANCEMENT mls fos jE",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": ": 22EN20045 [ENGLISH FOR SIL ENHANCEMENT mls fos jE",
+      "code": "22EN20045"
+    },
+    {
+      "id": "subject_2",
+      "name": "AppuED PHYSICS LABORATORY PN",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "; 2amiaoees | AppuED PHYSICS LABORATORY PN",
+      "code": "2amiaoees"
+    },
+    {
+      "id": "subject_3",
+      "name": "oATA STRUCTURES LABORATORY alse",
+      "rawCredits": "fd",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22c520765 | oATA STRUCTURES LABORATORY alse] a fd",
+      "code": "22c520765"
+    },
+    {
+      "id": "subject_4",
+      "name": "ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "226N208HS | ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT",
+      "code": "226N208HS"
+    },
+    {
+      "id": "subject_5",
+      "name": "BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY PI I I",
+      "rawCredits": "3",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22C5205E5 | BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY PI I I",
+      "code": "22C5205E5"
+    }
+  ],
+  "output": {
+    "semesterNumber": 2,
+    "semesterLabel": "II",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "ENGLISH FOR SIL ENHANCEMENT mls fos jE",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": ": 22EN20045 [ENGLISH FOR SIL ENHANCEMENT mls fos jE",
+        "code": "22EN20045",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_2",
+        "name": "AppuED PHYSICS LABORATORY PN",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "; 2amiaoees | AppuED PHYSICS LABORATORY PN",
+        "code": "2amiaoees",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_3",
+        "name": "oATA STRUCTURES LABORATORY alse",
+        "rawCredits": "fd",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22c520765 | oATA STRUCTURES LABORATORY alse] a fd",
+        "code": "22c520765",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "226N208HS | ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT",
+        "code": "226N208HS",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_5",
+        "name": "BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY PI I I",
+        "rawCredits": "3",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "22C5205E5 | BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY PI I I",
+        "code": "22C5205E5",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      }
+    ],
+    "confidence": 76,
+    "warnings": [
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_1",
+        "message": "Missing grade value."
+      },
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_2",
+        "message": "Missing grade value."
+      },
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_4",
+        "message": "Missing grade value."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 9,
+      "parsedSubjects": 5,
+      "failedSubjects": 3,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 2,
+          "label": "II"
+        }
+      ],
+      "parsingIssues": [
+        {
+          "line": 1,
+          "reason": "No grade found",
+          "rawLine": ": 22EN20045 [ENGLISH FOR SIL ENHANCEMENT mls fos jE"
+        },
+        {
+          "line": 3,
+          "reason": "No grade found",
+          "rawLine": "; 2amiaoees | AppuED PHYSICS LABORATORY PN"
+        },
+        {
+          "line": 5,
+          "reason": "No grade found",
+          "rawLine": "226N208HS | ENGLISH LANGUAGE AND COMMUNICATION SKILLS Co TT"
+        }
+      ],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 5,
+        "passed": 2,
+        "warnings": 3,
+        "errors": 0
+      },
+      "decision": "GROQ",
+      "shouldUseGroq": true,
+      "nextStage": "GROQ_REPAIR",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 30,
+        "grades": 12,
+        "penalties": 6,
+        "total": 76
+      }
+    },
+    "summary": {
+      "totalCredits": 15,
+      "earnedCredits": 6,
+      "failedCredits": 0,
+      "passedSubjects": 2,
+      "failedSubjects": 0,
+      "semesterStatus": "Unknown",
+      "completionPercent": 40,
+      "sgpa": 8.45,
+      "cgpa": null
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

@@ -1,0 +1,103 @@
+{
+  "sheet_id": "cmr_237R1A05AD_sem2",
+  "filename": "cmr_237R1A05AD_sem2.jpg",
+  "university": "JNTUH",
+  "profile": "JNTUH R22",
+  "institution": "CMR Technical Campus (UGC Autonomous)",
+  "examination": "B.TECH II SEMESTER, R22 REGULAR",
+  "hall_ticket_no": "237R1A05AD",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "22MA201BS",
+      "name": "ORDINARY DIFFERENTIAL EQUATIONS AND VECTOR CALCULUS",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "B+",
+      "grade_point": 7,
+      "status": "P"
+    },
+    {
+      "code": "22PH202BS",
+      "name": "APPLIED PHYSICS",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS203ES",
+      "name": "DATA STRUCTURES",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22EN204HS",
+      "name": "ENGLISH FOR SKILL ENHANCEMENT",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CS205ES",
+      "name": "IT WORKSHOP",
+      "credits": 1.5,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22PH206BS",
+      "name": "APPLIED PHYSICS LABORATORY",
+      "credits": 1.5,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS207ES",
+      "name": "DATA STRUCTURES LABORATORY",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22EN208HS",
+      "name": "ENGLISH LANGUAGE AND COMMUNICATION SKILLS LABORATORY",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    },
+    {
+      "code": "22CS209ES",
+      "name": "BASIC ELEMENTS OF ENGINEERING AND TECHNOLOGY",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "O",
+      "grade_point": 10,
+      "status": "P"
+    }
+  ],
+  "summary": {
+    "total_registered": 9,
+    "total_passed": 9,
+    "total_credits": 20.0,
+    "sgpa": 8.45,
+    "cgpa": 7.80
+  },
+  "raw_text": null
+}

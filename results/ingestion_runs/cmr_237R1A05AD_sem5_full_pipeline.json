@@ -1,0 +1,353 @@
+{
+  "mode": "full_pipeline",
+  "elapsedMs": 3,
+  "rawText": "UGC AUTONOMOUS\nCMR Approved by AICTE & INTUN Accredited by NBA & NAC with ‘A' Grade.\naaAR anekiyn Hodis Rae: tvberebod 501401: elmore SZ\nTR {GRADE CARD |\nLr\n1\n{usminsion | R22 8 TECH V SEMESTER REGULAR MA Tidet Ne. + 237R1ADSAD. |\nBoh couuTen science vo exoneEnwG [TR ——\nBO oii aon ;\nI TB F--1 E-3 C\n; 22CS501PC. | DESIGN AND ANALYSIS OF ALGORITHMS. A |» 3\n2cssozec | DEVOPS 8 | 7\n22CS503PC | COMPUTER NETWORKS ew | 7 ic\n22CSS13PE | DATA ANALYTICS a | i\n22C8525PE | NATURAL LANGUAGE PROCESSING a | i\n2cssope |DEVOPS Las o | 1\n22CS505PC | COMPUTER NETWORKS LAB o | n\n22ENS06HS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB o | n\n22C8507PC | UI DESIGN. FLUTTER o | n\n22CS508MC | INTELLECTUAL PROPERTY RIGHTS o | 1\nET TC RR |\nMedium of Instruction and Examinations in English\n‘Semester Grade Point Average (SGPA): 8.40\n| Cumulative Grade Point Average (CGPA): 8.49 3\n| poe HA\n[& Gfisins I?\nscan tommy |\not _fpoelbss §)\nDate of ome: 30/01/2026 Verh CONTROLLER OF EXAMINATIONS.\n",
+  "cleanedText": "UGC AUTONOMOUS\nCMR Approved by AICTE & INTUN Accredited by NBA & NAC with A' Grade.\naaAR anekiyn Hodis Rae: tvberebod 501401: elmore SZ\nTR {GRADE CARD |\nLr\n1\n{usminsion | R22 8 TECH V SEMESTER REGULAR MA Tidet Ne. + 237R1ADSAD. |\nBoh couuTen science vo exoneEnwG [TR\nBO oii aon ;\nI TB F--1 E-3 C\n; 22CS501PC. | DESIGN AND ANALYSIS OF ALGORITHMS. A | 3\n2cssozec | DEVOPS 8 | 7\n22CS503PC | COMPUTER NETWORKS ew | 7 ic\n22CSS13PE | DATA ANALYTICS a | i\n22C8525PE | NATURAL LANGUAGE PROCESSING a | i\n2cssope |DEVOPS Las o | 1\n22CS505PC | COMPUTER NETWORKS LAB o | n\n22ENS06HS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB o | n\n22C8507PC | UI DESIGN. FLUTTER o | n\n22CS508MC | INTELLECTUAL PROPERTY RIGHTS o | 1\nET TC RR |\nMedium of Instruction and Examinations in English\nSemester Grade Point Average (SGPA): 8.40\n| Cumulative Grade Point Average (CGPA): 8.49 3\n| poe HA\n[& Gfisins I?\nscan tommy |\not _fpoelbss )\nDate of ome: 30/01/2026 Verh CONTROLLER OF EXAMINATIONS.",
+  "profileId": "JNTUH_R22",
+  "hash": "0e824f86433e7793977eb58686718af2cce320fc5462813040a3cec4e3fccb55",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "COMPUTER NETWORKS ew",
+      "rawCredits": "7",
+      "credits": 3,
+      "rawGrade": "B+",
+      "finalGrade": 7,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22CS503PC | COMPUTER NETWORKS ew | 7 ic",
+      "code": "22CS503PC"
+    },
+    {
+      "id": "subject_2",
+      "name": "DATA ANALYTICS",
+      "rawCredits": "i",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22CSS13PE | DATA ANALYTICS a | i",
+      "code": "22CSS13PE"
+    },
+    {
+      "id": "subject_3",
+      "name": "NATURAL LANGUAGE PROCESSING",
+      "rawCredits": "i",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22C8525PE | NATURAL LANGUAGE PROCESSING a | i",
+      "code": "22C8525PE"
+    },
+    {
+      "id": "subject_4",
+      "name": "DEVOPS Las",
+      "rawCredits": "1",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "2cssope |DEVOPS Las o | 1",
+      "code": "2cssope"
+    },
+    {
+      "id": "subject_5",
+      "name": "COMPUTER NETWORKS LAB",
+      "rawCredits": "n",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22CS505PC | COMPUTER NETWORKS LAB o | n",
+      "code": "22CS505PC"
+    },
+    {
+      "id": "subject_6",
+      "name": "ADVANCED ENGLISH COMMUNICATION SKILLS LAB",
+      "rawCredits": "n",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22ENS06HS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB o | n",
+      "code": "22ENS06HS"
+    },
+    {
+      "id": "subject_7",
+      "name": "UI DESIGN. FLUTTER",
+      "rawCredits": "n",
+      "credits": 3,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22C8507PC | UI DESIGN. FLUTTER o | n",
+      "code": "22C8507PC"
+    },
+    {
+      "id": "subject_8",
+      "name": "INTELLECTUAL PROPERTY RIGHTS",
+      "rawCredits": "1",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22CS508MC | INTELLECTUAL PROPERTY RIGHTS o | 1",
+      "code": "22CS508MC"
+    }
+  ],
+  "output": {
+    "semesterNumber": 5,
+    "semesterLabel": "V",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "COMPUTER NETWORKS ew",
+        "rawCredits": "7",
+        "credits": 3,
+        "rawGrade": "B+",
+        "finalGrade": 7,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22CS503PC | COMPUTER NETWORKS ew | 7 ic",
+        "code": "22CS503PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "DATA ANALYTICS",
+        "rawCredits": "i",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 87,
+        "originalLine": "22CSS13PE | DATA ANALYTICS a | i",
+        "code": "22CSS13PE",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_3",
+        "name": "NATURAL LANGUAGE PROCESSING",
+        "rawCredits": "i",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22C8525PE | NATURAL LANGUAGE PROCESSING a | i",
+        "code": "22C8525PE",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "DEVOPS Las",
+        "rawCredits": "1",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "2cssope |DEVOPS Las o | 1",
+        "code": "2cssope",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_5",
+        "name": "COMPUTER NETWORKS LAB",
+        "rawCredits": "n",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22CS505PC | COMPUTER NETWORKS LAB o | n",
+        "code": "22CS505PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_6",
+        "name": "ADVANCED ENGLISH COMMUNICATION SKILLS LAB",
+        "rawCredits": "n",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22ENS06HS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB o | n",
+        "code": "22ENS06HS",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_7",
+        "name": "UI DESIGN. FLUTTER",
+        "rawCredits": "n",
+        "credits": 3,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "22C8507PC | UI DESIGN. FLUTTER o | n",
+        "code": "22C8507PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_8",
+        "name": "INTELLECTUAL PROPERTY RIGHTS",
+        "rawCredits": "1",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "22CS508MC | INTELLECTUAL PROPERTY RIGHTS o | 1",
+        "code": "22CS508MC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      }
+    ],
+    "confidence": 100,
+    "warnings": [],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 9,
+      "parsedSubjects": 8,
+      "failedSubjects": 0,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 5,
+          "label": "V"
+        }
+      ],
+      "parsingIssues": [],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": false,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 8,
+        "passed": 8,
+        "warnings": 0,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 30,
+        "grades": 30,
+        "penalties": 0,
+        "total": 100
+      }
+    },
+    "summary": {
+      "totalCredits": 16,
+      "earnedCredits": 16,
+      "failedCredits": 0,
+      "passedSubjects": 8,
+      "failedSubjects": 0,
+      "semesterStatus": "Completed",
+      "completionPercent": 100,
+      "sgpa": 8.4,
+      "cgpa": 8.49
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

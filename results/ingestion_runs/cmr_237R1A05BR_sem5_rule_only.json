@@ -1,0 +1,387 @@
+{
+  "mode": "rule_only",
+  "elapsedMs": 3,
+  "rawText": "=a = rio\na CMR TECHNICAL CAMPUS a) |\nUGE AUTONOMOUS 5)\nR ove by AICTE & INTUH; Accredited by NBA & AAC with ‘A’ Grade. 4 2\nAo che fom yhersbad - 501401, Telangana 8% |\nGROUTGE INSTITU Tions - - [=\ncn GRADE CARD Si E\n| | pre <A 074103 Pb:\n2 |\nof > rn A\n| Euan + R228 TECH V SEMESTER REGULAR Hea Ti || ZSTRIASSER ;\nfm commen scmca so evonsena Month our of um. NOVEMBER, 2025 y\nI\nCM rumwons\n£\nCO AE\n! 22CSS01PC. | DESIGN AND ANALYSIS OF ALGORITHMS A CE 0\n. 22cssozpc |pevors A |e fen lite\n| z2css03C | coupuTER NETWORKS Alles\nEi 21CSS1IPE | DATA ANALYTICS FE oT 3\n% 22CS525PE | NATURAL LANGUAGE PROCESSING str\n$ 2205504PC | DEVOPS LAB o [mn | ce 1\nEe eee Re Slelol |\nb 22ENSOSHS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee 1\n#1 22CS507PC | UI DESIGN- FLUTTER o 10 P 1\n22CSSOBNC | INTELLECTUAL PROPERTY RIGHTS wl |e] 0\n7\ni\ni\n[\n| [suttoctmagisarea: 10 Appeared 110 passsa: 10 Tota Ele »\n| Medium of instruction and Examinations in English\n| Semester Grade Point Average (SGPA): 8.05\nCumulative Grade Point Average (CGPA): 7.74\n4\n: Chr iAl\nlet ft\niL a\nOfeiS4\n_ sowoveRey\n5 force\n0101/2026 Verb -\n) CONTROLLER OF EXAMINATIONS\n",
+  "cleanedText": "=a = rio\na CMR TECHNICAL CAMPUS a) |\nUGE AUTONOMOUS 5)\nR ove by AICTE & INTUH; Accredited by NBA & AAC with A Grade. 4 2\nAo che fom yhersbad - 501401, Telangana 8% |\nGROUTGE INSTITU Tions - - [=\ncn GRADE CARD Si E\n| | pre <A 074103 Pb:\n2 |\nof > rn A\n| Euan + R228 TECH V SEMESTER REGULAR Hea Ti || ZSTRIASSER ;\nfm commen scmca so evonsena Month our of um. NOVEMBER, 2025 y\nI\nCM rumwons\nCO AE\n! 22CSS01PC. | DESIGN AND ANALYSIS OF ALGORITHMS A CE 0\n. 22cssozpc |pevors A |e fen lite\n| z2css03C | coupuTER NETWORKS Alles\nEi 21CSS1IPE | DATA ANALYTICS FE oT 3\n% 22CS525PE | NATURAL LANGUAGE PROCESSING str\n$ 2205504PC | DEVOPS LAB o [mn | ce 1\nEe eee Re Slelol |\nb 22ENSOSHS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee 1\n#1 22CS507PC | UI DESIGN- FLUTTER o 10 P 1\n22CSSOBNC | INTELLECTUAL PROPERTY RIGHTS wl |e] 0\n7\ni\ni\n[\n| [suttoctmagisarea: 10 Appeared 110 passsa: 10 Tota Ele\n| Medium of instruction and Examinations in English\n| Semester Grade Point Average (SGPA): 8.05\nCumulative Grade Point Average (CGPA): 7.74\n4\n: Chr iAl\nlet ft\niL a\nOfeiS4\n_ sowoveRey\n5 force\n0101/2026 Verb -\n) CONTROLLER OF EXAMINATIONS",
+  "profileId": "JNTUH_R22",
+  "hash": "930db3d7df19159f7085fe9dc3621d492eb08422fd69d97ec01272470ea2b3da",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "pevors",
+      "rawCredits": "lite",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": ". 22cssozpc |pevors A |e fen lite",
+      "code": "22cssozpc"
+    },
+    {
+      "id": "subject_2",
+      "name": "coupuTER NETWORKS Alles",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| z2css03C | coupuTER NETWORKS Alles",
+      "code": "z2css03C"
+    },
+    {
+      "id": "subject_3",
+      "name": "DATA ANALYTICS FE oT",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "3",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "Ei 21CSS1IPE | DATA ANALYTICS FE oT 3",
+      "code": "21CSS1IPE"
+    },
+    {
+      "id": "subject_4",
+      "name": "NATURAL LANGUAGE PROCESSING str",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "% 22CS525PE | NATURAL LANGUAGE PROCESSING str",
+      "code": "22CS525PE"
+    },
+    {
+      "id": "subject_5",
+      "name": "DEVOPS LAB",
+      "rawCredits": "1",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "$ 2205504PC | DEVOPS LAB o [mn | ce 1",
+      "code": "2205504PC"
+    },
+    {
+      "id": "subject_6",
+      "name": "ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee",
+      "rawCredits": null,
+      "credits": 1,
+      "rawGrade": "1",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "b 22ENSOSHS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee 1",
+      "code": "22ENSOSHS"
+    },
+    {
+      "id": "subject_7",
+      "name": "UI DESIGN FLUTTER",
+      "rawCredits": "1",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "#1 22CS507PC | UI DESIGN- FLUTTER o 10 P 1",
+      "code": "22CS507PC"
+    },
+    {
+      "id": "subject_8",
+      "name": "INTELLECTUAL PROPERTY RIGHTS wl e",
+      "rawCredits": "0",
+      "credits": 0,
+      "rawGrade": "F",
+      "finalGrade": 0,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "22CSSOBNC | INTELLECTUAL PROPERTY RIGHTS wl |e] 0",
+      "code": "22CSSOBNC"
+    }
+  ],
+  "output": {
+    "semesterNumber": 5,
+    "semesterLabel": "V",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "pevors",
+        "rawCredits": "lite",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 83,
+        "originalLine": ". 22cssozpc |pevors A |e fen lite",
+        "code": "22cssozpc",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "coupuTER NETWORKS Alles",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "| z2css03C | coupuTER NETWORKS Alles",
+        "code": "z2css03C",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_3",
+        "name": "DATA ANALYTICS FE oT",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "3",
+        "finalGrade": 3,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 82,
+        "originalLine": "Ei 21CSS1IPE | DATA ANALYTICS FE oT 3",
+        "code": "21CSS1IPE",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_4",
+        "name": "NATURAL LANGUAGE PROCESSING str",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "% 22CS525PE | NATURAL LANGUAGE PROCESSING str",
+        "code": "22CS525PE",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_5",
+        "name": "DEVOPS LAB",
+        "rawCredits": "1",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "$ 2205504PC | DEVOPS LAB o [mn | ce 1",
+        "code": "2205504PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_6",
+        "name": "ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee",
+        "rawCredits": null,
+        "credits": 1,
+        "rawGrade": "1",
+        "finalGrade": 1,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 82,
+        "originalLine": "b 22ENSOSHS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee 1",
+        "code": "22ENSOSHS",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_7",
+        "name": "UI DESIGN FLUTTER",
+        "rawCredits": "1",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "#1 22CS507PC | UI DESIGN- FLUTTER o 10 P 1",
+        "code": "22CS507PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_8",
+        "name": "INTELLECTUAL PROPERTY RIGHTS wl e",
+        "rawCredits": "0",
+        "credits": 0,
+        "rawGrade": "F",
+        "finalGrade": 0,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "22CSSOBNC | INTELLECTUAL PROPERTY RIGHTS wl |e] 0",
+        "code": "22CSSOBNC",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      }
+    ],
+    "confidence": 81,
+    "warnings": [
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_2",
+        "message": "Missing grade value."
+      },
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_4",
+        "message": "Missing grade value."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 13,
+      "parsedSubjects": 8,
+      "failedSubjects": 4,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 5,
+          "label": "V"
+        }
+      ],
+      "parsingIssues": [
+        {
+          "line": 2,
+          "reason": "No grade found",
+          "rawLine": "| z2css03C | coupuTER NETWORKS Alles"
+        },
+        {
+          "line": 3,
+          "reason": "No grade found",
+          "rawLine": "Ei 21CSS1IPE | DATA ANALYTICS FE oT 3"
+        },
+        {
+          "line": 4,
+          "reason": "No grade found",
+          "rawLine": "% 22CS525PE | NATURAL LANGUAGE PROCESSING str"
+        },
+        {
+          "line": 7,
+          "reason": "No grade found",
+          "rawLine": "b 22ENSOSHS | ADVANCED ENGLISH COMMUNICATION SKILLS LAB Ant Ae Ee 1"
+        }
+      ],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 8,
+        "passed": 6,
+        "warnings": 2,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 26,
+        "grades": 23,
+        "penalties": 8,
+        "total": 81
+      }
+    },
+    "summary": {
+      "totalCredits": 15,
+      "earnedCredits": 5,
+      "failedCredits": 4,
+      "passedSubjects": 3,
+      "failedSubjects": 3,
+      "semesterStatus": "Partial",
+      "completionPercent": 33,
+      "sgpa": 8.05,
+      "cgpa": 7.74
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

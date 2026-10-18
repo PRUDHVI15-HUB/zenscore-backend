@@ -1,0 +1,103 @@
+{
+  "sheet_id": "cmr_237R1A05AD_sem1",
+  "filename": "cmr_237R1A05AD_sem1.jpg",
+  "university": "JNTUH",
+  "profile": "JNTUH R22",
+  "institution": "CMR Technical Campus (UGC Autonomous)",
+  "examination": "B.TECH I SEMESTER, R22 REGULAR",
+  "hall_ticket_no": "237R1A05AD",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "22MA101BS",
+      "name": "MATRICES AND CALCULUS",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": 6,
+      "status": "P"
+    },
+    {
+      "code": "22CH102BS",
+      "name": "ENGINEERING CHEMISTRY",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS103ES",
+      "name": "PROGRAMMING FOR PROBLEM SOLVING",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B+",
+      "grade_point": 7,
+      "status": "P"
+    },
+    {
+      "code": "22EC104ES",
+      "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "credits": 4,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": 6,
+      "status": "P"
+    },
+    {
+      "code": "22ME105ES",
+      "name": "COMPUTER AIDED ENGINEERING GRAPHICS",
+      "credits": 2,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22CH106BS",
+      "name": "ENGINEERING CHEMISTRY LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": 8,
+      "status": "P"
+    },
+    {
+      "code": "22CS107ES",
+      "name": "PROGRAMMING FOR PROBLEM SOLVING LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A+",
+      "grade_point": 9,
+      "status": "P"
+    },
+    {
+      "code": "22EC108ES",
+      "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "B+",
+      "grade_point": 7,
+      "status": "P"
+    },
+    {
+      "code": "22CH109MC",
+      "name": "ENVIRONMENTAL SCIENCE",
+      "credits": 0,
+      "attendance": null,
+      "grade_or_grade_point": "B+",
+      "grade_point": 7,
+      "status": "P"
+    }
+  ],
+  "summary": {
+    "total_registered": 9,
+    "total_passed": 9,
+    "total_credits": 20.0,
+    "sgpa": 7.15,
+    "cgpa": 7.15
+  },
+  "raw_text": null
+}

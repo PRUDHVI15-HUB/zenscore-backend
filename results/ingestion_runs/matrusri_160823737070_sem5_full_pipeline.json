@@ -1,0 +1,74 @@
+{
+  "mode": "full_pipeline",
+  "elapsedMs": 1,
+  "rawText": "9:04 38 al @D +\n[RA 2 matrusriskolo.in/#/ad + H\n00.\n2 bam pts\nJo]\n[Lo\n",
+  "cleanedText": "9:04 38 al @D +\n[RA 2 matrusriskolo.in/#/ad + H\n00.\n2 bam pts\nJo]\n[Lo",
+  "profileId": "AUTONOMOUS",
+  "hash": "d36da5d6c257adb53a925855c43013a4871cbde96d72ecb34c969a0caae31a0d",
+  "preFallbackSubjects": [],
+  "output": {
+    "semesterNumber": null,
+    "semesterLabel": null,
+    "subjects": [],
+    "confidence": 0,
+    "warnings": [
+      {
+        "type": "SEMESTER",
+        "severity": "WARNING",
+        "subjectId": null,
+        "message": "Semester number is missing."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "AUTONOMOUS",
+      "university": "AUTONOMOUS",
+      "regulation": "UNKNOWN",
+      "totalLines": 6,
+      "parsedSubjects": 0,
+      "failedSubjects": 0,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [],
+      "parsingIssues": [],
+      "confidenceContexts": [],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 0,
+        "passed": 0,
+        "warnings": 1,
+        "errors": 0
+      },
+      "decision": "GROQ",
+      "shouldUseGroq": true,
+      "nextStage": "GROQ_REPAIR",
+      "confidenceBreakdown": {
+        "semester": 0,
+        "subjects": 0,
+        "credits": 0,
+        "grades": 0,
+        "penalties": 0,
+        "total": 0
+      },
+      "groqRepair": false,
+      "repairedFields": []
+    },
+    "summary": {
+      "totalCredits": 0,
+      "earnedCredits": 0,
+      "failedCredits": 0,
+      "passedSubjects": 0,
+      "failedSubjects": 0,
+      "semesterStatus": "Unknown",
+      "completionPercent": 0,
+      "sgpa": null,
+      "cgpa": null
+    }
+  },
+  "groqFallbackInvoked": true,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": true
+}

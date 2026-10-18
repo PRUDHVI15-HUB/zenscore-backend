@@ -1,0 +1,372 @@
+{
+  "mode": "full_pipeline",
+  "elapsedMs": 4,
+  "rawText": "CAR TT TT IES RET PANEER TT ART Ire SR A Re RT TER TE\nTOC AUTONOMOUS _ {(&) |\nCMR Approved by AICTE & JNTU Accredited by NBA & NAAC with ‘A’ Grade. ) =\nSaran [Grave cand 18 ==\n| dre A 060466 >\n{seine 57386 . and\n| B.TECH Ill SEMESTER, R22 REGULAR _ 237R1A0SAD\n| \"COMPUTER SCIENCE AND ENGINEERING A A assests |\nJoma GuvmiaRALL PRUOHV Most Ver of ram: DECEMBER 2024 J\n| me Joc |\nA T\nd course\na ‘CODE\n| [7 2amasorss| compuren omenTeD staTiTicaL ETHODS |v wo\n| | 2 |226caozes | oiomas evecrronics Atlee 300\n3 | 22653030C | PROGRAMMING WITH PYTHON a | 9 200\n4 |22CS304PC | COMPUTER ORGANIZATION AND ARCHITECTURE a |e 200\n5 | 22C5305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA a |e 200\n& | 2zcss0sec | pyion Lag o | 150\n7 |22C5307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB | © | 10 1.50\n© | 22CS208PC | NODEJS/REACTIS/DIANGO o [10 1.00\n9 |226N309MC| GENDER SENSITIZATION LAB o | 000\nEE  —— BE)\nMedium of Instruction and Examinations in English\nSemester Grade Point Average (SGPA) : 9.05\nCumulative Grade Point Average (CGPA) : 8.22\n:\ni On . EY, ei ;\n| Duectiome 03/06/2026 vuinutty CONTROLLER OF EXAMINATIONS |\ni at)\nrp = —\n",
+  "cleanedText": "CAR TT TT IES RET PANEER TT ART Ire SR A Re RT TER TE\nTOC AUTONOMOUS _ {(&) |\nCMR Approved by AICTE & JNTU Accredited by NBA & NAAC with A Grade. ) =\nSaran [Grave cand 18 ==\n| dre A 060466 >\n{seine 57386 . and\n| B.TECH Ill SEMESTER, R22 REGULAR _ 237R1A0SAD\n| \"COMPUTER SCIENCE AND ENGINEERING A A assests |\nJoma GuvmiaRALL PRUOHV Most Ver of ram: DECEMBER 2024 J\n| me Joc |\nA T\nd course\na CODE\n| [7 2amasorss| compuren omenTeD staTiTicaL ETHODS |v wo\n| | 2 |226caozes | oiomas evecrronics Atlee 300\n3 | 22653030C | PROGRAMMING WITH PYTHON a | 9 200\n4 |22CS304PC | COMPUTER ORGANIZATION AND ARCHITECTURE a |e 200\n5 | 22C5305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA a |e 200\n& | 2zcss0sec | pyion Lag o | 150\n7 |22C5307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB |  | 10 1.50\n| 22CS208PC | NODEJS/REACTIS/DIANGO o [10 1.00\n9 |226N309MC| GENDER SENSITIZATION LAB o | 000\nEE   BE)\nMedium of Instruction and Examinations in English\nSemester Grade Point Average (SGPA) : 9.05\nCumulative Grade Point Average (CGPA) : 8.22\n:\ni On . EY, ei ;\n| Duectiome 03/06/2026 vuinutty CONTROLLER OF EXAMINATIONS |\ni at)\nrp =",
+  "profileId": "JNTUH_R22",
+  "hash": "a62db6d249606695aeab26ff8d50947aa05c560f497d8354cb00f97b476c185f",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "oiomas evecrronics Atlee",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "300",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| | 2 |226caozes | oiomas evecrronics Atlee 300",
+      "code": "226caozes"
+    },
+    {
+      "id": "subject_2",
+      "name": "PROGRAMMING WITH PYTHON",
+      "rawCredits": "200",
+      "credits": 2,
+      "rawGrade": "A+",
+      "finalGrade": 9,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "3 | 22653030C | PROGRAMMING WITH PYTHON a | 9 200",
+      "code": "22653030C"
+    },
+    {
+      "id": "subject_3",
+      "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+      "rawCredits": "200",
+      "credits": 2,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "4 |22CS304PC | COMPUTER ORGANIZATION AND ARCHITECTURE a |e 200",
+      "code": "22CS304PC"
+    },
+    {
+      "id": "subject_4",
+      "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA",
+      "rawCredits": "200",
+      "credits": 2,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "5 | 22C5305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA a |e 200",
+      "code": "22C5305PC"
+    },
+    {
+      "id": "subject_5",
+      "name": "pyion Lag",
+      "rawCredits": "150",
+      "credits": 3,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "& | 2zcss0sec | pyion Lag o | 150",
+      "code": "2zcss0sec"
+    },
+    {
+      "id": "subject_6",
+      "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB",
+      "rawCredits": "1.50",
+      "credits": 1.5,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "7 |22C5307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB |  | 10 1.50",
+      "code": "22C5307PC"
+    },
+    {
+      "id": "subject_7",
+      "name": "NODEJS REACTIS DIANGO",
+      "rawCredits": "1.00",
+      "credits": 1,
+      "rawGrade": "O",
+      "finalGrade": 10,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| 22CS208PC | NODEJS/REACTIS/DIANGO o [10 1.00",
+      "code": "22CS208PC"
+    },
+    {
+      "id": "subject_8",
+      "name": "GENDER SENSITIZATION LAB",
+      "rawCredits": "000",
+      "credits": 0,
+      "rawGrade": "F",
+      "finalGrade": 0,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "9 |226N309MC| GENDER SENSITIZATION LAB o | 000",
+      "code": "226N309MC"
+    }
+  ],
+  "output": {
+    "semesterNumber": 2,
+    "semesterLabel": "II",
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "oiomas evecrronics Atlee",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "300",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 82,
+        "originalLine": "| | 2 |226caozes | oiomas evecrronics Atlee 300",
+        "code": "226caozes",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      },
+      {
+        "id": "subject_2",
+        "name": "PROGRAMMING WITH PYTHON",
+        "rawCredits": "200",
+        "credits": 2,
+        "rawGrade": "A+",
+        "finalGrade": 9,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "3 | 22653030C | PROGRAMMING WITH PYTHON a | 9 200",
+        "code": "22653030C",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_3",
+        "name": "COMPUTER ORGANIZATION AND ARCHITECTURE",
+        "rawCredits": "200",
+        "credits": 2,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "4 |22CS304PC | COMPUTER ORGANIZATION AND ARCHITECTURE a |e 200",
+        "code": "22CS304PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA",
+        "rawCredits": "200",
+        "credits": 2,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "5 | 22C5305PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA a |e 200",
+        "code": "22C5305PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_5",
+        "name": "pyion Lag",
+        "rawCredits": "150",
+        "credits": 3,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 87,
+        "originalLine": "& | 2zcss0sec | pyion Lag o | 150",
+        "code": "2zcss0sec",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_6",
+        "name": "OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB",
+        "rawCredits": "1.50",
+        "credits": 1.5,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 72,
+        "originalLine": "7 |22C5307PC | OBJECT ORIENTED PROGRAMMING THROUGH JAVA LAB |  | 10 1.50",
+        "code": "22C5307PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_7",
+        "name": "NODEJS REACTIS DIANGO",
+        "rawCredits": "1.00",
+        "credits": 1,
+        "rawGrade": "O",
+        "finalGrade": 10,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| 22CS208PC | NODEJS/REACTIS/DIANGO o [10 1.00",
+        "code": "22CS208PC",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_8",
+        "name": "GENDER SENSITIZATION LAB",
+        "rawCredits": "000",
+        "credits": 0,
+        "rawGrade": "F",
+        "finalGrade": 0,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "9 |226N309MC| GENDER SENSITIZATION LAB o | 000",
+        "code": "226N309MC",
+        "gradeSource": "NUMERIC",
+        "result": "FAIL"
+      }
+    ],
+    "confidence": 87,
+    "warnings": [
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_1",
+        "message": "Unable to map grade."
+      },
+      {
+        "type": "CREDITS",
+        "severity": "WARNING",
+        "subjectId": "subject_6",
+        "message": "Credits must be an integer between 0 and 6."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 9,
+      "parsedSubjects": 8,
+      "failedSubjects": 1,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [
+        {
+          "num": 2,
+          "label": "II"
+        }
+      ],
+      "parsingIssues": [
+        {
+          "line": 1,
+          "reason": "No grade found",
+          "rawLine": "| | 2 |226caozes | oiomas evecrronics Atlee 300"
+        }
+      ],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": false
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 8,
+        "passed": 6,
+        "warnings": 2,
+        "errors": 0
+      },
+      "decision": "RULE_PARSER",
+      "shouldUseGroq": false,
+      "nextStage": "IMPORT_SESSION",
+      "confidenceBreakdown": {
+        "semester": 20,
+        "subjects": 20,
+        "credits": 23,
+        "grades": 26,
+        "penalties": 2,
+        "total": 87
+      }
+    },
+    "summary": {
+      "totalCredits": 14.5,
+      "earnedCredits": 11.5,
+      "failedCredits": 0,
+      "passedSubjects": 6,
+      "failedSubjects": 1,
+      "semesterStatus": "Partial",
+      "completionPercent": 79,
+      "sgpa": 9.05,
+      "cgpa": 8.22
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

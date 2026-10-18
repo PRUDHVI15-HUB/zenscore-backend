@@ -1,0 +1,262 @@
+{
+  "mode": "rule_only",
+  "elapsedMs": 3,
+  "rawText": "eo! UGC AUTONOMOUS @® /\nAoproved AICTE & INTUR Acrsed ty NBA & ARC wth Grad. 4\nCMR Cee Webchat Road, Hydersbad - 501 401. T 5. << |\nBama [GRADE CARD]\nba\nwere A 039551 es Kk. §\n| sein sen\n| Seton 3 TECH SEMESTER, R22 REGULAR food [)\nTd COMPUTER SCIENCE AND ENGINEERING. Month & Yor of Exam y3nuary 2024\nPRS Sh PY 4\nCo EC A cf\n| 1 22MAI018S | MATRICES AND CALCULUS A 2 [3 4 {\n| 2 | azomoms [ences chemisTaY ARE a\n| ose |srosmmmis ron sos sou le eckiaEs\nry. I 2ECIO4ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING 8 Ce) Lo A\n% 5 22ME10SES COMPUTER AIDED ENGINEERING GRAPHICS. A+ 9 P 2\n|e | moos [avoncennscuemsrar uo seal nt aatbet\n| 7 | css {srosmaumin ror prose sow ae ler | aap eitl\nSE) 226CI08ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB A sulaech eat\n| 5 | 2ciuoevc |environmenTaL scence GH plo]\n| | |\n¢ | |\nél |\nal | |\n| | |\n: |\n|\nA [emenegred: s Teh Gh oar [10s] [Aes fen]\n~ Medium of Instruction and Examinations in English\n‘Semester Grade Point Average (SGPA) : 7.00\nCumulative Grade Point Average (CGPA) : 7.00\nEl\nXN\nfests\n| Bess\nLega\nEA sg Lo\n3 tf _forelbe\nlssse | 23.05-2024. Veried by CONTROLLER OF EXAMINATIONS\ni RB\n",
+  "cleanedText": "eo! UGC AUTONOMOUS @ /\nAoproved AICTE & INTUR Acrsed ty NBA & ARC wth Grad. 4\nCMR Cee Webchat Road, Hydersbad - 501 401. T 5. << |\nBama [GRADE CARD]\nba\nwere A 039551 es Kk.\n| sein sen\n| Seton 3 TECH SEMESTER, R22 REGULAR food [)\nTd COMPUTER SCIENCE AND ENGINEERING. Month & Yor of Exam y3nuary 2024\nPRS Sh PY 4\nCo EC A cf\n| 1 22MAI018S | MATRICES AND CALCULUS A 2 [3 4 {\n| 2 | azomoms [ences chemisTaY ARE a\n| ose |srosmmmis ron sos sou le eckiaEs\nry. I 2ECIO4ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING 8 Ce) Lo A\n% 5 22ME10SES COMPUTER AIDED ENGINEERING GRAPHICS. A+ 9 P 2\n|e | moos [avoncennscuemsrar uo seal nt aatbet\n| 7 | css {srosmaumin ror prose sow ae ler | aap eitl\nSE) 226CI08ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB A sulaech eat\n| 5 | 2ciuoevc |environmenTaL scence GH plo]\n| | |\n| |\nl |\nal | |\n| | |\n: |\n|\nA [emenegred: s Teh Gh oar [10s] [Aes fen]\n~ Medium of Instruction and Examinations in English\nSemester Grade Point Average (SGPA) : 7.00\nCumulative Grade Point Average (CGPA) : 7.00\nEl\nXN\nfests\n| Bess\nLega\nEA sg Lo\n3 tf _forelbe\nlssse | 23.05-2024. Veried by CONTROLLER OF EXAMINATIONS\ni RB",
+  "profileId": "JNTUH_R22",
+  "hash": "be6ab2dbb889f21e87c37c735275c0c715259c1920a1c38ea9b351c7ccb54a15",
+  "preFallbackSubjects": [
+    {
+      "id": "subject_1",
+      "name": "MATRICES AND CALCULUS",
+      "rawCredits": "4",
+      "credits": 4,
+      "rawGrade": "P",
+      "finalGrade": 4,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| 1 22MAI018S | MATRICES AND CALCULUS A 2 [3 4 {",
+      "code": "22MAI018S"
+    },
+    {
+      "id": "subject_2",
+      "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING",
+      "rawCredits": "8",
+      "credits": 3,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "ry. I 2ECIO4ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING 8 Ce) Lo A",
+      "code": "2ECIO4ES"
+    },
+    {
+      "id": "subject_3",
+      "name": "COMPUTER AIDED ENGINEERING GRAPHICS",
+      "rawCredits": "2",
+      "credits": 2,
+      "rawGrade": "A+",
+      "finalGrade": 9,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "% 5 22ME10SES COMPUTER AIDED ENGINEERING GRAPHICS. A+ 9 P 2",
+      "code": "22ME10SES"
+    },
+    {
+      "id": "subject_4",
+      "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB",
+      "rawCredits": "eat",
+      "credits": 1,
+      "rawGrade": "A",
+      "finalGrade": 8,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "SE) 226CI08ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB A sulaech eat",
+      "code": "226CI08ES"
+    },
+    {
+      "id": "subject_5",
+      "name": "environmenTaL scence GH plo",
+      "rawCredits": null,
+      "credits": 3,
+      "rawGrade": "",
+      "finalGrade": null,
+      "duplicate": false,
+      "duplicateGroup": null,
+      "confidence": 0,
+      "originalLine": "| 5 | 2ciuoevc |environmenTaL scence GH plo]",
+      "code": "2ciuoevc"
+    }
+  ],
+  "output": {
+    "semesterNumber": null,
+    "semesterLabel": null,
+    "subjects": [
+      {
+        "id": "subject_1",
+        "name": "MATRICES AND CALCULUS",
+        "rawCredits": "4",
+        "credits": 4,
+        "rawGrade": "P",
+        "finalGrade": 4,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "| 1 22MAI018S | MATRICES AND CALCULUS A 2 [3 4 {",
+        "code": "22MAI018S",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_2",
+        "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING",
+        "rawCredits": "8",
+        "credits": 3,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "ry. I 2ECIO4ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING 8 Ce) Lo A",
+        "code": "2ECIO4ES",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_3",
+        "name": "COMPUTER AIDED ENGINEERING GRAPHICS",
+        "rawCredits": "2",
+        "credits": 2,
+        "rawGrade": "A+",
+        "finalGrade": 9,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 97,
+        "originalLine": "% 5 22ME10SES COMPUTER AIDED ENGINEERING GRAPHICS. A+ 9 P 2",
+        "code": "22ME10SES",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_4",
+        "name": "BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB",
+        "rawCredits": "eat",
+        "credits": 1,
+        "rawGrade": "A",
+        "finalGrade": 8,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 92,
+        "originalLine": "SE) 226CI08ES | BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LAB A sulaech eat",
+        "code": "226CI08ES",
+        "gradeSource": "NUMERIC",
+        "result": "PASS"
+      },
+      {
+        "id": "subject_5",
+        "name": "environmenTaL scence GH plo",
+        "rawCredits": null,
+        "credits": 3,
+        "rawGrade": "",
+        "finalGrade": null,
+        "duplicate": false,
+        "duplicateGroup": null,
+        "confidence": 67,
+        "originalLine": "| 5 | 2ciuoevc |environmenTaL scence GH plo]",
+        "code": "2ciuoevc",
+        "gradeSource": "UNKNOWN",
+        "result": "FAIL"
+      }
+    ],
+    "confidence": 72,
+    "warnings": [
+      {
+        "type": "SEMESTER",
+        "severity": "WARNING",
+        "subjectId": null,
+        "message": "Semester number is missing."
+      },
+      {
+        "type": "GRADE",
+        "severity": "WARNING",
+        "subjectId": "subject_5",
+        "message": "Missing grade value."
+      }
+    ],
+    "source": "Rule-Parser",
+    "metadata": {
+      "profileId": "JNTUH_R22",
+      "university": "JNTUH",
+      "regulation": "R22",
+      "totalLines": 17,
+      "parsedSubjects": 5,
+      "failedSubjects": 1,
+      "duplicateSubjects": 0,
+      "semesterCandidates": [],
+      "parsingIssues": [
+        {
+          "line": 9,
+          "reason": "No grade found",
+          "rawLine": "| 5 | 2ciuoevc |environmenTaL scence GH plo]"
+        }
+      ],
+      "confidenceContexts": [
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": false,
+          "usedFuzzyCredit": false,
+          "gradePointFound": true,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": true
+        },
+        {
+          "usedNameFragment": false,
+          "usedCreditHeuristic": true,
+          "usedFuzzyCredit": false,
+          "gradePointFound": false,
+          "gradeLetterFound": false
+        }
+      ],
+      "parserVersion": "3.1.0",
+      "hasErrors": false,
+      "hasWarnings": true,
+      "canProceed": true,
+      "validationSummary": {
+        "totalSubjects": 5,
+        "passed": 4,
+        "warnings": 2,
+        "errors": 0
+      },
+      "decision": "GROQ",
+      "shouldUseGroq": true,
+      "nextStage": "GROQ_REPAIR",
+      "confidenceBreakdown": {
+        "semester": 0,
+        "subjects": 20,
+        "credits": 30,
+        "grades": 24,
+        "penalties": 2,
+        "total": 72
+      }
+    },
+    "summary": {
+      "totalCredits": 13,
+      "earnedCredits": 10,
+      "failedCredits": 0,
+      "passedSubjects": 4,
+      "failedSubjects": 0,
+      "semesterStatus": "Unknown",
+      "completionPercent": 77,
+      "sgpa": 7,
+      "cgpa": 7
+    }
+  },
+  "groqFallbackInvoked": false,
+  "rowsRoutedToGroq": 0,
+  "fallbackChanges": [],
+  "sentToManualReview": false
+}

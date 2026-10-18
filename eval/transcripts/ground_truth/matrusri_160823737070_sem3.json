@@ -1,0 +1,112 @@
+{
+  "sheet_id": "matrusri_160823737070_sem3",
+  "filename": "matrusri_160823737070_sem3.jpg",
+  "university": "Osmania University",
+  "profile": "OU CBCS / Autonomous",
+  "institution": "Matrusri Engineering College",
+  "examination": "B.E. II YEAR III SEM",
+  "hall_ticket_no": "1608-23-737-070",
+  "image_quality": "clean",
+  "verified": true,
+  "verified_by": "User",
+  "subjects": [
+    {
+      "code": "HS301CMU23",
+      "name": "Finance and Accounting",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "B",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "ES303ECU23",
+      "name": "Basic Electronics",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "D",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "ES304ECU23",
+      "name": "Digital Electronics",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "E",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "ES301ITU23",
+      "name": "Python Programming",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "C",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "ES352ECU23",
+      "name": "Basic Electronics Lab",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "ES351ITU23",
+      "name": "Python Programming Lab",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "HS301EGU23",
+      "name": "Effective Technical Communication In English",
+      "credits": 2,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC302ITU23",
+      "name": "Database Systems",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "D",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC303ITU23",
+      "name": "Discrete Mathematics",
+      "credits": 3,
+      "attendance": null,
+      "grade_or_grade_point": "D",
+      "grade_point": null,
+      "status": "Pass"
+    },
+    {
+      "code": "PC352ITU23",
+      "name": "Database Systems Lab",
+      "credits": 1,
+      "attendance": null,
+      "grade_or_grade_point": "A",
+      "grade_point": null,
+      "status": "Pass"
+    }
+  ],
+  "summary": {
+    "total_registered": 10,
+    "total_passed": 10,
+    "total_credits": 23.0,
+    "sgpa": 6.91,
+    "cgpa": 6.95
+  },
+  "raw_text": null
+}

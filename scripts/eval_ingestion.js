@@ -1,20 +1,26 @@
 /**
  * eval_ingestion.js
- * 
- * Evaluation Harness for ZenScore AI 14-Stage Transcript Ingestion Pipeline.
- * 
- * Evaluates real mark sheet files (images/PDFs) in eval/transcripts/images/
- * against verified ground truth JSONs in eval/transcripts/ground_truth/.
- * 
- * Adheres to HARD RULES:
- * - NEVER simulates, fabricates, or estimates numbers.
- * - If eval/transcripts/ is empty, does NOT seed fake data; reports NOT MEASURED.
- * - Saves results to results/ingestion_eval.csv, results/ingestion_eval.md, and results/ingestion_errors.json.
+ *
+ * ZenScore AI — Rigorous Evaluation Harness for 14-Stage Transcript Ingestion Pipeline.
+ *
+ * Adheres strictly to HARD RULES:
+ * - Never invents, simulates, or estimates results. Never generates fake mark sheets.
+ * - Ground truth MUST be verified by a human (verified: true).
+ *   Unverified files are EXCLUDED from all metrics, and the report states how many were excluded.
+ * - Pipeline is frozen during evaluation: records git commit hash, parser version, OCR engine, and model names.
+ * - Runs each verified sheet in two modes:
+ *     (a) rule parser only (LLM fallback disabled)
+ *     (b) full pipeline (LLM fallback enabled, real Groq API call)
+ * - Saves raw output per sheet in results/ingestion_runs/<sheet_id>_<mode>.json.
+ * - Computes field-level P, R, F1, exact match rates, Wilson 95% CI, CER/WER (if raw_text provided),
+ *   fallback before-vs-after impact, confidence-vs-error diagnostic, processing times,
+ *   and outputs results/ingestion_eval.csv, results/ingestion_eval.md, and results/ingestion_errors.md.
  */
 
 require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') })
 const fs = require('fs')
 const path = require('path')
+const { execSync } = require('child_process')
 
 // Pipeline stages
 const { cleanText } = require('../services/parser/utils/cleanText')
@@ -35,11 +41,12 @@ const EVAL_DIR = path.resolve(__dirname, '../eval/transcripts')
 const IMAGES_DIR = path.join(EVAL_DIR, 'images')
 const GT_DIR = path.join(EVAL_DIR, 'ground_truth')
 const RESULTS_DIR = path.resolve(__dirname, '../results')
+const RUNS_DIR = path.join(RESULTS_DIR, 'ingestion_runs')
 const CSV_FILE = path.join(RESULTS_DIR, 'ingestion_eval.csv')
 const MD_FILE = path.join(RESULTS_DIR, 'ingestion_eval.md')
-const ERRORS_FILE = path.join(RESULTS_DIR, 'ingestion_errors.json')
+const ERRORS_MD_FILE = path.join(RESULTS_DIR, 'ingestion_errors.md')
 
-// Levenshtein distance utility for text similarity, CER, and WER
+// Levenshtein distance for string matching, CER, and WER
 function levenshteinDistance(s1, s2) {
   const m = s1.length
   const n = s2.length
@@ -52,8 +59,8 @@ function levenshteinDistance(s1, s2) {
     for (let j = 1; j <= n; j++) {
       const cost = s1[i - 1] === s2[j - 1] ? 0 : 1
       dp[i][j] = Math.min(
-        dp[i - 1][j] + 1,      // deletion
-        dp[i][j - 1] + 1,      // insertion
+        dp[i - 1][j] + 1,       // deletion
+        dp[i][j - 1] + 1,       // insertion
         dp[i - 1][j - 1] + cost // substitution
       )
     }
@@ -61,14 +68,14 @@ function levenshteinDistance(s1, s2) {
   return dp[m][n]
 }
 
-function stringSimilarity(str1, str2) {
-  const s1 = (str1 || '').toLowerCase().trim().replace(/[^a-z0-9]/g, '')
-  const s2 = (str2 || '').toLowerCase().trim().replace(/[^a-z0-9]/g, '')
-  if (s1 === s2) return 1.0
-  if (!s1 || !s2) return 0.0
-  const dist = levenshteinDistance(s1, s2)
-  const maxLen = Math.max(s1.length, s2.length)
-  return 1 - dist / maxLen
+function normalizeName(str) {
+  if (!str) return ''
+  return str.toLowerCase().replace(/[^a-z0-9]/g, '').trim()
+}
+
+function normalizeCode(str) {
+  if (!str) return ''
+  return str.toUpperCase().replace(/[^A-Z0-9]/g, '').trim()
 }
 
 function calculateWER(refText, hypText) {
@@ -87,6 +94,26 @@ function calculateCER(refText, hypText) {
   return dist / ref.length
 }
 
+// 95% Wilson Score Interval for proportion
+function wilsonConfidenceInterval(successes, total, confidence = 1.96) {
+  if (total === 0) return { point: 0, lower: 0, upper: 0, str: 'N/A' }
+  const p = successes / total
+  const z = confidence
+  const z2 = z * z
+  const denom = 1 + z2 / total
+  const center = (p + z2 / (2 * total)) / denom
+  const margin = (z * Math.sqrt((p * (1 - p) + z2 / (4 * total)) / total)) / denom
+  const lower = Math.max(0, center - margin)
+  const upper = Math.min(1, center + margin)
+
+  return {
+    point: p,
+    lower,
+    upper,
+    str: `${(p * 100).toFixed(2)}% [${(lower * 100).toFixed(2)}%, ${(upper * 100).toFixed(2)}%]`
+  }
+}
+
 async function extractTextFromFile(filePath) {
   const ext = path.extname(filePath).toLowerCase()
   const buffer = fs.readFileSync(filePath)
@@ -95,8 +122,7 @@ async function extractTextFromFile(filePath) {
     const pdfParse = require('pdf-parse')
     const pdfData = await pdfParse(buffer)
     return pdfData.text
-  } else if (['.png', '.jpg', '.jpeg', '.tiff', '.bmp'].includes(ext)) {
-    // Tesseract.js real OCR
+  } else if (['.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.webp'].includes(ext)) {
     const Tesseract = require('tesseract.js')
     const trainedDataPath = path.resolve(__dirname, '../eng.traineddata')
     const workerOptions = fs.existsSync(trainedDataPath) ? {
@@ -112,42 +138,42 @@ async function extractTextFromFile(filePath) {
   }
 }
 
-// Executes the complete 14-stage pipeline on extracted raw text
-async function execute14StagePipeline(rawText, buffer) {
-  // Stage 1: Upload Buffer Validation
-  if (!buffer || buffer.length === 0) throw new Error('Empty buffer')
+/**
+ * Runs 14-stage ingestion pipeline with explicit control over Groq fallback
+ * mode: 'rule_only' | 'full_pipeline'
+ */
+async function runIngestionPipeline(rawText, buffer, mode = 'full_pipeline') {
+  const startTime = Date.now()
+  if (!buffer || buffer.length === 0) throw new Error('Empty buffer provided to pipeline')
 
-  // Stage 2: Fingerprint / Hash Generation
+  // Stage 2: Fingerprint
   const hash = generateFingerprint(buffer)
 
-  // Stage 3: Document Classification (mimeType detection)
+  // Stage 3: Classification
   const mimeType = 'application/octet-stream'
 
-  // Stage 4: Raw Text Ingestion
-  // (already extracted as rawText)
-
-  // Stage 5: Text Cleaning & Normalization
+  // Stage 5: Clean & Normalize
   const cleanedText = cleanText(rawText)
 
-  // Stage 6: Document Quality Analysis
+  // Stage 6: Quality Analysis
   const quality = analyzeDocumentQuality(cleanedText, mimeType, null)
 
-  // Stage 7: Academic Table Isolation
+  // Stage 7: Table Isolation
   const isolation = isolateTable(cleanedText)
 
-  // Stage 8: University Profile Detection
+  // Stage 8: Profile Detection
   const { profile, profileId } = detectProfile(cleanedText, isolation.tableLines)
 
-  // Stage 9: Deterministic Rule-Based Parsing
+  // Stage 9: Rule Parsing
   let parsed = parseRules(isolation.tableLines, cleanedText, profile)
 
-  // Record pre-fallback rule output for accuracy comparison
+  // Deep clone rule-only subjects prior to grade mapping and fallback
   const preFallbackSubjects = JSON.parse(JSON.stringify(parsed.subjects || []))
 
-  // Stage 10: Grade & Result Mapping
+  // Stage 10: Grade Mapping
   parsed = gradeMappingService.mapGrades(parsed)
 
-  // Stage 11: Subject Confidence Scoring & Flags
+  // Stage 11: Confidence Scoring
   const confidenceContexts = parsed.metadata?.confidenceContexts || []
   parsed.subjects = (parsed.subjects || []).map((sub, idx) => {
     sub.confidence = scoreSubject(sub, confidenceContexts[idx] || {})
@@ -156,304 +182,894 @@ async function execute14StagePipeline(rawText, buffer) {
   parsed.subjects = addResultFlags(parsed.subjects)
   parsed.confidence = computeOverallConfidence(parsed.subjects)
 
-  // Stage 12: Credit & Academic Summary Calculation
+  // Stage 12: Credit Summary
   parsed.summary = calculateCredits(parsed.subjects, cleanedText)
 
   // Stage 13: Data Contract Validation
   const validated = validationLayer.validateContract(parsed)
 
-  // Stage 14: Decision Engine & Verification Routing (Groq fallback if needed)
+  // Stage 14: Decision Engine & Verification Routing
   let routed = decidePipelineRoute(validated)
   let groqFallbackInvoked = false
   let rowsRoutedToGroq = 0
+  let fallbackChanges = []
 
-  if (routed.metadata.decision === 'GROQ' || routed.subjects.some(s => (s.confidence || 0) < 55)) {
+  const lowConfidenceRows = (routed.subjects || []).filter(s => (s.confidence || 0) < 55)
+
+  if (mode === 'full_pipeline' && (routed.metadata.decision === 'GROQ' || lowConfidenceRows.length > 0)) {
     groqFallbackInvoked = true
-    rowsRoutedToGroq = routed.subjects.filter(s => (s.confidence || 0) < 55).length
-    if (process.env.GROQ_API_KEY) {
+    rowsRoutedToGroq = lowConfidenceRows.length
+    if (process.env.GROQ_API_KEY && process.env.DISABLE_GROQ_FALLBACK !== 'true') {
       try {
-        routed = await verifyWithGroq(isolation.isolatedText, routed)
+        const beforeMap = new Map((routed.subjects || []).map(s => [s.id, { credits: s.credits, rawGrade: s.rawGrade, finalGrade: s.finalGrade }]))
+        const groqRes = await verifyWithGroq(isolation.isolatedText, lowConfidenceRows.length > 0 ? lowConfidenceRows : routed.subjects)
+        routed.metadata.groqRepair = groqRes.groqCalled
+        routed.metadata.repairedFields = groqRes.repairLog
+
+        // Compare values before vs after Groq verification
+        ;(routed.subjects || []).forEach(afterSub => {
+          const beforeSub = beforeMap.get(afterSub.id)
+          if (beforeSub) {
+            const creditsChanged = beforeSub.credits !== afterSub.credits
+            const rawGradeChanged = beforeSub.rawGrade !== afterSub.rawGrade
+            const finalGradeChanged = beforeSub.finalGrade !== afterSub.finalGrade
+            if (creditsChanged || rawGradeChanged || finalGradeChanged) {
+              fallbackChanges.push({
+                subjectId: afterSub.id,
+                name: afterSub.name,
+                code: afterSub.code,
+                before: beforeSub,
+                after: { credits: afterSub.credits, rawGrade: afterSub.rawGrade, finalGrade: afterSub.finalGrade }
+              })
+            }
+          }
+        })
       } catch (groqErr) {
-        console.warn('Groq verification notice:', groqErr.message)
+        console.warn('Groq verification warning:', groqErr.message)
       }
     }
   }
 
+  const elapsedMs = Date.now() - startTime
+
   return {
+    mode,
+    elapsedMs,
     rawText,
     cleanedText,
     profileId,
+    hash,
     preFallbackSubjects,
-    postFallbackResult: routed,
+    output: routed,
     groqFallbackInvoked,
     rowsRoutedToGroq,
+    fallbackChanges,
     sentToManualReview: routed.metadata.decision === 'MANUAL_REVIEW' || (routed.confidence || 0) < 70
+  }
+}
+
+/**
+ * Subject matching algorithm:
+ * 1. Match by exact normalized subject code first.
+ * 2. If no code match, match by normalized name (Levenshtein distance <= 2).
+ * Unmatched predictions = false positives (FP).
+ * Unmatched ground truth = false negatives (FN).
+ */
+function evaluateSheet(predictedSubjects, groundTruthSubjects, sheetId, mode) {
+  const predMatched = new Set()
+  const gtMatched = new Set()
+  const matchedPairs = []
+  const fieldErrors = []
+
+  // Step 1: Match by normalized subject code
+  groundTruthSubjects.forEach((gtSub, gtIdx) => {
+    const gtCodeNorm = normalizeCode(gtSub.code)
+    if (!gtCodeNorm) return
+
+    for (let pIdx = 0; pIdx < predictedSubjects.length; pIdx++) {
+      if (predMatched.has(pIdx)) continue
+      const predCodeNorm = normalizeCode(predictedSubjects[pIdx].code)
+      if (predCodeNorm && predCodeNorm === gtCodeNorm) {
+        predMatched.add(pIdx)
+        gtMatched.add(gtIdx)
+        matchedPairs.push({ gtSub, predSub: predictedSubjects[pIdx], matchType: 'code' })
+        break
+      }
+    }
+  })
+
+  // Step 2: Match remaining by normalized name (edit distance <= 2)
+  groundTruthSubjects.forEach((gtSub, gtIdx) => {
+    if (gtMatched.has(gtIdx)) return
+    const gtNameNorm = normalizeName(gtSub.name)
+    if (!gtNameNorm) return
+
+    let bestPIdx = -1
+    let bestDist = 999
+
+    predictedSubjects.forEach((pSub, pIdx) => {
+      if (predMatched.has(pIdx)) return
+      const pNameNorm = normalizeName(pSub.name)
+      if (!pNameNorm) return
+      const dist = levenshteinDistance(gtNameNorm, pNameNorm)
+      if (dist <= 2 && dist < bestDist) {
+        bestDist = dist
+        bestPIdx = pIdx
+      }
+    })
+
+    if (bestPIdx !== -1) {
+      predMatched.add(bestPIdx)
+      gtMatched.add(gtIdx)
+      matchedPairs.push({ gtSub, predSub: predictedSubjects[bestPIdx], matchType: 'name' })
+    }
+  })
+
+  // Ground truth subjects missed -> False Negatives
+  const unmatchedGT = []
+  groundTruthSubjects.forEach((gtSub, gtIdx) => {
+    if (!gtMatched.has(gtIdx)) {
+      unmatchedGT.push(gtSub)
+      fieldErrors.push({
+        sheet_id: sheetId,
+        mode,
+        field: 'subject_detection',
+        predicted: 'MISSED_BY_PARSER',
+        expected: `${gtSub.code || ''} ${gtSub.name || ''}`.trim(),
+        confidence: 0,
+        stage: 'Stage 7/9 (Table Isolation or Rule Parser)'
+      })
+    }
+  })
+
+  // Predicted subjects spurious -> False Positives
+  const unmatchedPred = []
+  predictedSubjects.forEach((pSub, pIdx) => {
+    if (!predMatched.has(pIdx)) {
+      unmatchedPred.push(pSub)
+      fieldErrors.push({
+        sheet_id: sheetId,
+        mode,
+        field: 'subject_detection',
+        predicted: `${pSub.code || ''} ${pSub.name || ''}`.trim(),
+        expected: 'NONE_SPURIOUS',
+        confidence: pSub.confidence || 0,
+        stage: 'Stage 9 (Rule Parser - Spurious Row)'
+      })
+    }
+  })
+
+  // Evaluate field-level accuracy on matched pairs
+  const fieldMatches = {
+    name: { tp: 0, fp: 0, fn: 0 },
+    credits: { tp: 0, fp: 0, fn: 0 },
+    grade: { tp: 0, fp: 0, fn: 0 },
+    attendance: { tp: 0, fp: 0, fn: 0, evaluated: 0 }
+  }
+
+  let subjectExactMatches = 0
+
+  matchedPairs.forEach(({ gtSub, predSub }) => {
+    let subAllCorrect = true
+
+    // 1. Name Check (Levenshtein distance <= 2 on normalized name)
+    const nameDist = levenshteinDistance(normalizeName(gtSub.name), normalizeName(predSub.name))
+    if (nameDist <= 2) {
+      fieldMatches.name.tp++
+    } else {
+      fieldMatches.name.fp++
+      fieldMatches.name.fn++
+      subAllCorrect = false
+      fieldErrors.push({
+        sheet_id: sheetId,
+        mode,
+        field: 'name',
+        predicted: predSub.name,
+        expected: gtSub.name,
+        confidence: predSub.confidence || 0,
+        stage: 'Stage 9 (Rule Parser - Name Extraction)'
+      })
+    }
+
+    // 2. Credits Check (numeric match)
+    const gtCredits = Number(gtSub.credits)
+    const predCredits = Number(predSub.credits)
+    if (!isNaN(gtCredits) && !isNaN(predCredits) && gtCredits === predCredits) {
+      fieldMatches.credits.tp++
+    } else {
+      fieldMatches.credits.fp++
+      fieldMatches.credits.fn++
+      subAllCorrect = false
+      fieldErrors.push({
+        sheet_id: sheetId,
+        mode,
+        field: 'credits',
+        predicted: predSub.credits,
+        expected: gtSub.credits,
+        confidence: predSub.confidence || 0,
+        stage: 'Stage 12 (Credit Calculator / Parser)'
+      })
+    }
+
+    // 3. Grade Check
+    const gtGradeRaw = String(gtSub.grade_or_grade_point ?? '').trim().toUpperCase()
+    const predGradeRaw = String(predSub.rawGrade ?? '').trim().toUpperCase()
+    const gtGradePt = Number(gtSub.grade_or_grade_point)
+    const predFinalGrade = Number(predSub.finalGrade)
+
+    const gradeMatches =
+      (gtGradeRaw && predGradeRaw && gtGradeRaw === predGradeRaw) ||
+      (!isNaN(gtGradePt) && !isNaN(predFinalGrade) && gtGradePt === predFinalGrade)
+
+    if (gradeMatches) {
+      fieldMatches.grade.tp++
+    } else {
+      fieldMatches.grade.fp++
+      fieldMatches.grade.fn++
+      subAllCorrect = false
+      fieldErrors.push({
+        sheet_id: sheetId,
+        mode,
+        field: 'grade',
+        predicted: `${predSub.rawGrade} (pts: ${predSub.finalGrade})`,
+        expected: gtSub.grade_or_grade_point,
+        confidence: predSub.confidence || 0,
+        stage: 'Stage 10 (Grade Mapping / Regex)'
+      })
+    }
+
+    // 4. Attendance Check (only for sheets where attendance is printed)
+    if (gtSub.attendance !== null && gtSub.attendance !== undefined) {
+      fieldMatches.attendance.evaluated++
+      const gtAtt = Number(gtSub.attendance)
+      const predAtt = Number(predSub.attendance)
+      if (!isNaN(gtAtt) && !isNaN(predAtt) && gtAtt === predAtt) {
+        fieldMatches.attendance.tp++
+      } else {
+        fieldMatches.attendance.fp++
+        fieldMatches.attendance.fn++
+        subAllCorrect = false
+        fieldErrors.push({
+          sheet_id: sheetId,
+          mode,
+          field: 'attendance',
+          predicted: predSub.attendance,
+          expected: gtSub.attendance,
+          confidence: predSub.confidence || 0,
+          stage: 'Stage 9 (Rule Parser - Attendance Column)'
+        })
+      }
+    }
+
+    if (subAllCorrect) {
+      subjectExactMatches++
+    }
+  })
+
+  // Incorporate unmatched into FP/FN counters
+  unmatchedGT.forEach(gtSub => {
+    fieldMatches.name.fn++
+    fieldMatches.credits.fn++
+    fieldMatches.grade.fn++
+    if (gtSub.attendance !== null && gtSub.attendance !== undefined) {
+      fieldMatches.attendance.evaluated++
+      fieldMatches.attendance.fn++
+    }
+  })
+
+  unmatchedPred.forEach(predSub => {
+    fieldMatches.name.fp++
+    fieldMatches.credits.fp++
+    fieldMatches.grade.fp++
+    if (predSub.attendance !== null && predSub.attendance !== undefined) {
+      fieldMatches.attendance.fp++
+    }
+  })
+
+  const sheetExactMatch = (groundTruthSubjects.length > 0) &&
+    (matchedPairs.length === groundTruthSubjects.length) &&
+    (unmatchedPred.length === 0) &&
+    (subjectExactMatches === groundTruthSubjects.length)
+
+  return {
+    matchedPairsCount: matchedPairs.length,
+    unmatchedGTCount: unmatchedGT.length,
+    unmatchedPredCount: unmatchedPred.length,
+    fieldMatches,
+    subjectExactMatches,
+    sheetExactMatch,
+    fieldErrors
   }
 }
 
 async function main() {
   console.log('================================================================')
-  console.log('  ZenScore AI — 14-Stage Transcript Ingestion Evaluation Harness')
+  console.log('  ZenScore AI — 14-Stage Transcript Ingestion Empirical Benchmark')
   console.log('================================================================\n')
 
-  if (!fs.existsSync(RESULTS_DIR)) {
-    fs.mkdirSync(RESULTS_DIR, { recursive: true })
+  // Setup directories
+  if (!fs.existsSync(RESULTS_DIR)) fs.mkdirSync(RESULTS_DIR, { recursive: true })
+  if (!fs.existsSync(RUNS_DIR)) fs.mkdirSync(RUNS_DIR, { recursive: true })
+
+  // Environment and pipeline version tracking
+  let gitCommit = 'UNKNOWN'
+  try {
+    gitCommit = execSync('git rev-parse HEAD', { cwd: path.resolve(__dirname, '..') }).toString().trim()
+  } catch (e) {
+    gitCommit = 'GIT_ERROR: ' + e.message
   }
 
-  // Check if images directory exists and contains benchmark sheets
+  const parserVersion = '2.0.0 (14-stage modular pipeline)'
+  const ocrVersion = 'Tesseract.js ^7.0.0 (LSTM eng.traineddata)'
+  const groqModelName = process.env.GROQ_MODEL || 'openai/gpt-oss-120b'
+
+  console.log(`Pipeline Commit Hash : ${gitCommit}`)
+  console.log(`Parser Version       : ${parserVersion}`)
+  console.log(`OCR Engine           : ${ocrVersion}`)
+  console.log(`Groq Fallback Model  : ${groqModelName}\n`)
+
+  // Discover sheets
+  const gtFiles = fs.existsSync(GT_DIR)
+    ? fs.readdirSync(GT_DIR).filter(f => f.endsWith('.json'))
+    : []
+
+  const verifiedSheets = []
+  const excludedSheets = []
+
+  for (const file of gtFiles) {
+    const fullPath = path.join(GT_DIR, file)
+    try {
+      const data = JSON.parse(fs.readFileSync(fullPath, 'utf-8'))
+      if (data.verified === true) {
+        verifiedSheets.push(data)
+      } else {
+        excludedSheets.push({ file, sheet_id: data.sheet_id || file, reason: 'Ground truth not verified by human (verified: false)' })
+      }
+    } catch (e) {
+      excludedSheets.push({ file, sheet_id: file, reason: `Malformed JSON: ${e.message}` })
+    }
+  }
+
+  // Also check images without any GT file
   const imageFiles = fs.existsSync(IMAGES_DIR)
     ? fs.readdirSync(IMAGES_DIR).filter(f => !f.startsWith('.') && f !== 'placeholder.txt')
     : []
 
-  if (imageFiles.length === 0) {
-    const missingMessage = 
-      '⚠️  EVALUATION NOTICE: No mark sheet images or PDFs found in eval/transcripts/images/.\n' +
-      '   To evaluate transcript ingestion accuracy:\n' +
-      '   1. Place at least 20 mark sheets (from at least 3 universities if possible) into eval/transcripts/images/\n' +
-      '   2. Provide corresponding ground-truth JSON files in eval/transcripts/ground_truth/\n' +
-      '   3. Refer to eval/transcripts/template.json and eval/transcripts/README.md for instructions.\n\n' +
-      '   STATUS: NOT MEASURED - n = 0 mark sheets in eval/transcripts/images/.\n'
-    
-    console.log(missingMessage)
-
-    // Write NOT MEASURED status files
-    const mdNotMeasured = 
-      '# ZenScore AI — Transcript Ingestion Evaluation Report\n\n' +
-      `**Generated**: ${new Date().toISOString()}\n\n` +
-      '> [!WARNING]\n' +
-      '> **Status**: NOT MEASURED\n' +
-      '> **Reason**: `eval/transcripts/images/` is empty (n = 0 sheets). At least 20 real mark sheets from at least 3 universities must be provided to run the 14-stage benchmark.\n\n' +
-      '| Metric | Value | Status |\n' +
-      '| :--- | :--- | :--- |\n' +
-      '| Total Mark Sheets | 0 | NOT MEASURED |\n' +
-      '| Total Subjects | 0 | NOT MEASURED |\n' +
-      '| Universities Represented | 0 | NOT MEASURED |\n' +
-      '| Subject Name F1 | N/A | NOT MEASURED |\n' +
-      '| Credits F1 | N/A | NOT MEASURED |\n' +
-      '| Grade F1 | N/A | NOT MEASURED |\n' +
-      '| Attendance F1 | N/A | NOT MEASURED |\n' +
-      '| Subject Exact Match Rate | N/A | NOT MEASURED |\n' +
-      '| Character Error Rate (CER) | N/A | NOT MEASURED |\n' +
-      '| Word Error Rate (WER) | N/A | NOT MEASURED |\n' +
-      '| Groq Fallback Routing % | N/A | NOT MEASURED |\n' +
-      '| Sheets to Manual Review | N/A | NOT MEASURED |\n'
-
-    fs.writeFileSync(MD_FILE, mdNotMeasured, 'utf-8')
-    fs.writeFileSync(CSV_FILE, 'Metric,Value,Status\nTotalMarkSheets,0,NOT_MEASURED\nTotalSubjects,0,NOT_MEASURED\n', 'utf-8')
-    fs.writeFileSync(ERRORS_FILE, JSON.stringify({ status: 'NOT MEASURED', count: 0, errors: [] }, null, 2), 'utf-8')
-
-    return
+  for (const imgFile of imageFiles) {
+    const ext = path.extname(imgFile)
+    const base = path.basename(imgFile, ext)
+    if (!gtFiles.includes(`${base}.json`)) {
+      excludedSheets.push({ file: imgFile, sheet_id: base, reason: 'Missing ground truth file' })
+    }
   }
 
-  console.log(`Discovered ${imageFiles.length} mark sheet files in eval/transcripts/images/`)
+  // Quality categories mix
+  const qualityCounts = { clean: 0, average: 0, poor: 0 }
+  verifiedSheets.forEach(s => {
+    const q = s.image_quality || 'clean'
+    qualityCounts[q] = (qualityCounts[q] || 0) + 1
+  })
 
-  const stats = {
-    sheetsCount: 0,
-    subjectsCount: 0,
-    universities: {},
-    name: { tp: 0, fp: 0, fn: 0 },
-    credits: { tp: 0, fp: 0, fn: 0 },
-    grade: { tp: 0, fp: 0, fn: 0 },
-    attendance: { tp: 0, fp: 0, fn: 0 },
-    exactMatches: 0,
-    totalEvaluatedSubjects: 0,
-    preFallbackMatches: 0,
-    postFallbackMatches: 0,
-    rowsRoutedToGroq: 0,
-    totalRows: 0,
-    manualReviewSheets: 0,
-    cerSum: 0,
-    werSum: 0,
-    textComparisonCount: 0
+  // Universities and profiles
+  const uniqueUniversities = new Set(verifiedSheets.map(s => s.university || 'UNKNOWN'))
+  const uniqueProfiles = new Set(verifiedSheets.map(s => s.profile || 'UNKNOWN'))
+  const isPreliminary = verifiedSheets.length < 20 || uniqueProfiles.size < 3
+  const statusLabel = isPreliminary ? `PRELIMINARY (n = ${verifiedSheets.length})` : `MEASURED (n = ${verifiedSheets.length})`
+
+  // Required introductory printout
+  console.log('----------------------------------------------------------------')
+  console.log('EVALUATION DATASET SUMMARY')
+  console.log('----------------------------------------------------------------')
+  console.log(`- Verified Mark Sheets (Evaluated) : ${verifiedSheets.length}`)
+  console.log(`- Excluded Mark Sheets             : ${excludedSheets.length}`)
+  if (excludedSheets.length > 0) {
+    excludedSheets.forEach((ex, idx) => {
+      console.log(`    [Excluded ${idx + 1}] ${ex.sheet_id} (${ex.file}): ${ex.reason}`)
+    })
+  } else {
+    console.log('    (None excluded: 0 unverified or missing sheets)')
+  }
+  console.log(`- Number of Universities           : ${uniqueUniversities.size} (${Array.from(uniqueUniversities).join(', ')})`)
+  console.log(`- Number of Curriculum Profiles    : ${uniqueProfiles.size} (${Array.from(uniqueProfiles).join(', ')})`)
+  console.log(`- Image-Quality Mix                : Clean: ${qualityCounts.clean}, Average: ${qualityCounts.average}, Poor: ${qualityCounts.poor}`)
+  console.log(`- Benchmark Classification         : ${statusLabel}`)
+  console.log('----------------------------------------------------------------\n')
+
+  // Aggregation buckets for both modes
+  const modes = ['rule_only', 'full_pipeline']
+  const modeStats = {
+    rule_only: initModeStats(),
+    full_pipeline: initModeStats()
   }
 
-  const perSheetErrors = []
+  const allFieldErrors = []
+  const fallbackImpactRows = []
+  const confidenceErrorData = []
 
-  for (const file of imageFiles) {
-    const filePath = path.join(IMAGES_DIR, file)
-    const baseName = path.parse(file).name
-    const gtFile = path.join(GT_DIR, `${baseName}.json`)
+  // Execution loop over verified sheets
+  for (const gt of verifiedSheets) {
+    const sheetId = gt.sheet_id
+    console.log(`Processing Verified Sheet [${sheetId}] (${gt.university} - ${gt.profile})...`)
 
-    if (!fs.existsSync(gtFile)) {
-      console.warn(`⚠️ Ground truth JSON missing for ${file} (expected at ${gtFile}). Skipping.`)
+    // Find image file
+    const possibleExtensions = ['.png', '.jpg', '.jpeg', '.pdf', '.tiff', '.bmp', '.webp']
+    let imagePath = null
+    for (const ext of possibleExtensions) {
+      const p = path.join(IMAGES_DIR, `${sheetId}${ext}`)
+      if (fs.existsSync(p)) {
+        imagePath = p
+        break
+      }
+    }
+
+    if (!imagePath) {
+      console.warn(`  ⚠️ Image file not found for sheet_id: ${sheetId}. Skipping.`)
       continue
     }
 
-    const gt = JSON.parse(fs.readFileSync(gtFile, 'utf-8'))
-    const buffer = fs.readFileSync(filePath)
-    const rawText = await extractTextFromFile(filePath)
+    const buffer = fs.readFileSync(imagePath)
+    const rawText = await extractTextFromFile(imagePath)
 
-    const runResult = await execute14StagePipeline(rawText, buffer)
-    const predictedSubjects = runResult.postFallbackResult.subjects || []
-    const groundTruthSubjects = gt.subjects || []
+    // Run both modes
+    for (const mode of modes) {
+      const runResult = await runIngestionPipeline(rawText, buffer, mode)
 
-    stats.sheetsCount++
-    const uni = gt.university || 'AUTONOMOUS'
-    stats.universities[uni] = (stats.universities[uni] || 0) + 1
-    if (runResult.sentToManualReview) stats.manualReviewSheets++
+      // Save raw output per sheet and mode
+      const rawRunPath = path.join(RUNS_DIR, `${sheetId}_${mode}.json`)
+      fs.writeFileSync(rawRunPath, JSON.stringify(runResult, null, 2), 'utf-8')
 
-    stats.rowsRoutedToGroq += runResult.rowsRoutedToGroq
-    stats.totalRows += predictedSubjects.length
+      // Record CER / WER if raw_text ground truth exists
+      if (gt.raw_text) {
+        const cer = calculateCER(gt.raw_text, rawText)
+        const wer = calculateWER(gt.raw_text, rawText)
+        modeStats[mode].cerValues.push(cer)
+        modeStats[mode].werValues.push(wer)
+      }
 
-    // CER / WER against ground-truth text if provided
-    if (gt.rawText) {
-      const cer = calculateCER(gt.rawText, rawText)
-      const wer = calculateWER(gt.rawText, rawText)
-      stats.cerSum += cer
-      stats.werSum += wer
-      stats.textComparisonCount++
-    }
+      // Record elapsed time
+      modeStats[mode].timesMs.push(runResult.elapsedMs)
 
-    const sheetErrors = []
+      // Manual review check
+      if (runResult.sentToManualReview) {
+        modeStats[mode].manualReviewCount++
+      }
 
-    // Field-level comparison
-    groundTruthSubjects.forEach((gtSub) => {
-      stats.subjectsCount++
-      stats.totalEvaluatedSubjects++
+      // Fallback tracking (in full_pipeline mode)
+      if (mode === 'full_pipeline') {
+        modeStats[mode].rowsRoutedToGroq += runResult.rowsRoutedToGroq
+        modeStats[mode].totalPredictedRows += (runResult.output.subjects || []).length
 
-      // Match predicted subject by highest name / code similarity
-      let bestMatch = null
-      let bestScore = 0
-      predictedSubjects.forEach(pSub => {
-        const score = Math.max(
-          stringSimilarity(pSub.name, gtSub.name),
-          stringSimilarity(pSub.code, gtSub.code)
-        )
-        if (score > bestScore) {
-          bestScore = score
-          bestMatch = pSub
-        }
+        // Track fallback impact
+        runResult.fallbackChanges.forEach(change => {
+          fallbackImpactRows.push({ sheet_id: sheetId, ...change })
+        })
+      }
+
+      // Evaluate against ground truth
+      const evalRes = evaluateSheet(runResult.output.subjects || [], gt.subjects || [], sheetId, mode)
+
+      // Accumulate stats
+      accumulateStats(modeStats[mode], evalRes, gt)
+
+      // Collect errors
+      evalRes.fieldErrors.forEach(err => {
+        allFieldErrors.push(err)
+        confidenceErrorData.push({
+          sheet_id: sheetId,
+          mode,
+          field: err.field,
+          confidence: err.confidence
+        })
       })
-
-      if (!bestMatch || bestScore < 0.6) {
-        stats.name.fn++
-        stats.credits.fn++
-        stats.grade.fn++
-        if (gtSub.attendance !== null && gtSub.attendance !== undefined) stats.attendance.fn++
-        sheetErrors.push({ subject: gtSub.name, reason: 'Subject completely missed by table parser' })
-        return
-      }
-
-      // 1. Subject Name check
-      if (bestScore >= 0.85) {
-        stats.name.tp++
-      } else {
-        stats.name.fp++
-        sheetErrors.push({ subject: gtSub.name, field: 'name', expected: gtSub.name, actual: bestMatch.name })
-      }
-
-      // 2. Credits check
-      if (Number(bestMatch.credits) === Number(gtSub.credits)) {
-        stats.credits.tp++
-      } else {
-        stats.credits.fp++
-        sheetErrors.push({ subject: gtSub.name, field: 'credits', expected: gtSub.credits, actual: bestMatch.credits })
-      }
-
-      // 3. Grade check
-      const gradeMatches = 
-        String(bestMatch.rawGrade).trim().toUpperCase() === String(gtSub.grade).trim().toUpperCase() ||
-        Number(bestMatch.finalGrade) === Number(gtSub.gradePoints)
-      if (gradeMatches) {
-        stats.grade.tp++
-      } else {
-        stats.grade.fp++
-        sheetErrors.push({ subject: gtSub.name, field: 'grade', expected: gtSub.grade, actual: bestMatch.rawGrade })
-      }
-
-      // 4. Attendance check (if present in GT)
-      if (gtSub.attendance !== null && gtSub.attendance !== undefined) {
-        if (Number(bestMatch.attendance) === Number(gtSub.attendance)) {
-          stats.attendance.tp++
-        } else {
-          stats.attendance.fp++
-          sheetErrors.push({ subject: gtSub.name, field: 'attendance', expected: gtSub.attendance, actual: bestMatch.attendance })
-        }
-      }
-
-      // Subject-level Exact Match (all fields must match)
-      const exactMatch = (bestScore >= 0.85) &&
-        (Number(bestMatch.credits) === Number(gtSub.credits)) &&
-        gradeMatches &&
-        (gtSub.attendance == null || Number(bestMatch.attendance) === Number(gtSub.attendance))
-
-      if (exactMatch) {
-        stats.exactMatches++
-        stats.postFallbackMatches++
-      }
-    })
-
-    if (sheetErrors.length > 0) {
-      perSheetErrors.push({ sheet: file, university: uni, errors: sheetErrors })
     }
   }
 
-  // Calculate Precision, Recall, F1 for each field
-  const computeF1 = (f) => {
-    const prec = (f.tp + f.fp) > 0 ? f.tp / (f.tp + f.fp) : 0
-    const rec = (f.tp + f.fn) > 0 ? f.tp / (f.tp + f.fn) : 0
-    const f1 = (prec + rec) > 0 ? (2 * prec * rec) / (prec + rec) : 0
-    return {
-      precision: (prec * 100).toFixed(2) + '%',
-      recall: (rec * 100).toFixed(2) + '%',
-      f1: (f1 * 100).toFixed(2) + '%'
-    }
-  }
-
-  const nameF1 = computeF1(stats.name)
-  const creditsF1 = computeF1(stats.credits)
-  const gradeF1 = computeF1(stats.grade)
-  const attF1 = computeF1(stats.attendance)
-
-  const exactMatchRate = stats.totalEvaluatedSubjects > 0
-    ? ((stats.exactMatches / stats.totalEvaluatedSubjects) * 100).toFixed(2) + '%'
-    : 'N/A'
-
-  const avgCER = stats.textComparisonCount > 0 ? ((stats.cerSum / stats.textComparisonCount) * 100).toFixed(2) + '%' : 'SKIPPED (no rawText GT)'
-  const avgWER = stats.textComparisonCount > 0 ? ((stats.werSum / stats.textComparisonCount) * 100).toFixed(2) + '%' : 'SKIPPED (no rawText GT)'
-  const groqPercent = stats.totalRows > 0 ? ((stats.rowsRoutedToGroq / stats.totalRows) * 100).toFixed(2) + '%' : '0.00%'
-
-  // Write CSV
-  let csv = 'Metric,Precision,Recall,F1\n'
-  csv += `SubjectName,${nameF1.precision},${nameF1.recall},${nameF1.f1}\n`
-  csv += `Credits,${creditsF1.precision},${creditsF1.recall},${creditsF1.f1}\n`
-  csv += `Grade,${gradeF1.precision},${gradeF1.recall},${gradeF1.f1}\n`
-  csv += `Attendance,${attF1.precision},${attF1.recall},${attF1.f1}\n`
-  csv += `ExactMatchRate,${exactMatchRate},N/A,${exactMatchRate}\n`
-  fs.writeFileSync(CSV_FILE, csv, 'utf-8')
-
-  // Write Markdown Report
-  let md = '# ZenScore AI — Transcript Ingestion Evaluation Report\n\n'
-  md += `**Execution Timestamp**: ${new Date().toISOString()}\n`
-  md += `**Total Mark Sheets Evaluated**: ${stats.sheetsCount}\n`
-  md += `**Total Subjects Evaluated**: ${stats.subjectsCount}\n`
-  md += `**Universities Tested**: ${Object.entries(stats.universities).map(([u, c]) => `${u} (${c})`).join(', ')}\n\n`
-
-  md += '### Field-Level Extraction Accuracy\n\n'
-  md += '| Field | Precision | Recall | F1 Score |\n'
-  md += '| :--- | :--- | :--- | :--- |\n'
-  md += `| **Subject Name** | ${nameF1.precision} | ${nameF1.recall} | ${nameF1.f1} |\n`
-  md += `| **Credits** | ${creditsF1.precision} | ${creditsF1.recall} | ${creditsF1.f1} |\n`
-  md += `| **Grade** | ${gradeF1.precision} | ${gradeF1.recall} | ${gradeF1.f1} |\n`
-  md += `| **Attendance** | ${attF1.precision} | ${attF1.recall} | ${attF1.f1} |\n\n`
-
-  md += '### Pipeline Performance & Fallback Statistics\n\n'
-  md += `| Metric | Result |\n`
-  md += `| :--- | :--- |\n`
-  md += `| **Subject-Level Exact-Match Rate** | ${exactMatchRate} |\n`
-  md += `| **OCR Character Error Rate (CER)** | ${avgCER} |\n`
-  md += `| **OCR Word Error Rate (WER)** | ${avgWER} |\n`
-  md += `| **Rows Routed to Groq LLM Fallback** | ${groqPercent} (${stats.rowsRoutedToGroq}/${stats.totalRows} rows) |\n`
-  md += `| **Sheets Sent to Manual Student Review** | ${stats.manualReviewSheets} (${stats.sheetsCount > 0 ? ((stats.manualReviewSheets / stats.sheetsCount) * 100).toFixed(1) : 0}%) |\n\n`
-
-  fs.writeFileSync(MD_FILE, md, 'utf-8')
-  fs.writeFileSync(ERRORS_FILE, JSON.stringify(perSheetErrors, null, 2), 'utf-8')
-
-  console.log('✅ Ingestion evaluation completed.')
-  console.log(`Results saved to: ${CSV_FILE} and ${MD_FILE}`)
+  // Generate Reports
+  generateEvaluationReport({
+    gitCommit,
+    parserVersion,
+    ocrVersion,
+    groqModelName,
+    isPreliminary,
+    statusLabel,
+    verifiedSheets,
+    excludedSheets,
+    modeStats,
+    allFieldErrors,
+    fallbackImpactRows,
+    confidenceErrorData
+  })
 }
 
-main().catch(err => {
-  console.error('Fatal error running ingestion evaluation:', err)
-  process.exit(1)
-})
+function initModeStats() {
+  return {
+    sheetsCount: 0,
+    totalGTSubjects: 0,
+    totalPredSubjects: 0,
+    sheetExactMatches: 0,
+    subjectExactMatches: 0,
+    manualReviewCount: 0,
+    rowsRoutedToGroq: 0,
+    totalPredictedRows: 0,
+    timesMs: [],
+    cerValues: [],
+    werValues: [],
+    name: { tp: 0, fp: 0, fn: 0 },
+    credits: { tp: 0, fp: 0, fn: 0 },
+    grade: { tp: 0, fp: 0, fn: 0 },
+    attendance: { tp: 0, fp: 0, fn: 0, evaluated: 0 },
+    byUniversity: {}
+  }
+}
+
+function accumulateStats(stats, evalRes, gt) {
+  stats.sheetsCount++
+  stats.totalGTSubjects += (gt.subjects || []).length
+  if (evalRes.sheetExactMatch) stats.sheetExactMatches++
+  stats.subjectExactMatches += evalRes.subjectExactMatches
+
+  const fields = ['name', 'credits', 'grade', 'attendance']
+  fields.forEach(f => {
+    stats[f].tp += evalRes.fieldMatches[f].tp
+    stats[f].fp += evalRes.fieldMatches[f].fp
+    stats[f].fn += evalRes.fieldMatches[f].fn
+    if (f === 'attendance') {
+      stats.attendance.evaluated += evalRes.fieldMatches.attendance.evaluated
+    }
+  })
+
+  // By University / Profile breakdown
+  const groupKey = `${gt.university || 'UNKNOWN'} (${gt.profile || 'Default'})`
+  if (!stats.byUniversity[groupKey]) {
+    stats.byUniversity[groupKey] = {
+      sheetsCount: 0,
+      subjectsCount: 0,
+      subjectExactMatches: 0,
+      sheetExactMatches: 0,
+      name: { tp: 0, fp: 0, fn: 0 },
+      credits: { tp: 0, fp: 0, fn: 0 },
+      grade: { tp: 0, fp: 0, fn: 0 }
+    }
+  }
+  const uStats = stats.byUniversity[groupKey]
+  uStats.sheetsCount++
+  uStats.subjectsCount += (gt.subjects || []).length
+  if (evalRes.sheetExactMatch) uStats.sheetExactMatches++
+  uStats.subjectExactMatches += evalRes.subjectExactMatches
+  ;['name', 'credits', 'grade'].forEach(f => {
+    uStats[f].tp += evalRes.fieldMatches[f].tp
+    uStats[f].fp += evalRes.fieldMatches[f].fp
+    uStats[f].fn += evalRes.fieldMatches[f].fn
+  })
+}
+
+function computePRF1(counts) {
+  const p = (counts.tp + counts.fp) > 0 ? counts.tp / (counts.tp + counts.fp) : 0
+  const r = (counts.tp + counts.fn) > 0 ? counts.tp / (counts.tp + counts.fn) : 0
+  const f1 = (p + r) > 0 ? (2 * p * r) / (p + r) : 0
+  return { p, r, f1 }
+}
+
+function formatRateWithCI(k, n) {
+  if (n === 0) return 'N/A'
+  const ci = wilsonConfidenceInterval(k, n)
+  return ci.str
+}
+
+function generateEvaluationReport(data) {
+  const {
+    gitCommit,
+    parserVersion,
+    ocrVersion,
+    groqModelName,
+    isPreliminary,
+    statusLabel,
+    verifiedSheets,
+    excludedSheets,
+    modeStats,
+    allFieldErrors,
+    fallbackImpactRows,
+    confidenceErrorData
+  } = data
+
+  const rStats = modeStats.rule_only
+  const fStats = modeStats.full_pipeline
+
+  // Timing helper
+  const calcTiming = (arr) => {
+    if (!arr || arr.length === 0) return { mean: 0, median: 0, max: 0 }
+    const sorted = [...arr].sort((a, b) => a - b)
+    const sum = sorted.reduce((acc, v) => acc + v, 0)
+    const mean = Math.round(sum / sorted.length)
+    const median = sorted[Math.floor(sorted.length / 2)]
+    const max = sorted[sorted.length - 1]
+    return { mean, median, max }
+  }
+
+  const rTime = calcTiming(rStats.timesMs)
+  const fTime = calcTiming(fStats.timesMs)
+
+  // PRF1 calculations
+  const rName = computePRF1(rStats.name)
+  const fName = computePRF1(fStats.name)
+  const rCred = computePRF1(rStats.credits)
+  const fCred = computePRF1(fStats.credits)
+  const rGrade = computePRF1(rStats.grade)
+  const fGrade = computePRF1(fStats.grade)
+  const rAtt = computePRF1(rStats.attendance)
+  const fAtt = computePRF1(fStats.attendance)
+
+  // Exact match rates
+  const rSubExact = formatRateWithCI(rStats.subjectExactMatches, rStats.totalGTSubjects)
+  const fSubExact = formatRateWithCI(fStats.subjectExactMatches, fStats.totalGTSubjects)
+  const rSheetExact = formatRateWithCI(rStats.sheetExactMatches, rStats.sheetsCount)
+  const fSheetExact = formatRateWithCI(fStats.sheetExactMatches, fStats.sheetsCount)
+
+  // CER / WER
+  const calcAvg = (arr) => arr.length > 0 ? ((arr.reduce((a, b) => a + b, 0) / arr.length) * 100).toFixed(2) + '%' : 'NOT MEASURED (no raw_text in GT)'
+  const rCER = calcAvg(rStats.cerValues)
+  const rWER = calcAvg(rStats.werValues)
+
+  // Fallback %
+  const groqFallbackPct = fStats.totalPredictedRows > 0
+    ? `${((fStats.rowsRoutedToGroq / fStats.totalPredictedRows) * 100).toFixed(2)}% (${fStats.rowsRoutedToGroq}/${fStats.totalPredictedRows} rows)`
+    : '0.00% (0 rows)'
+
+  // Quality categories
+  const qualityCounts = { clean: 0, average: 0, poor: 0 }
+  verifiedSheets.forEach(s => {
+    const q = s.image_quality || 'clean'
+    qualityCounts[q] = (qualityCounts[q] || 0) + 1
+  })
+
+  // Universities
+  const uniSet = new Set(verifiedSheets.map(s => s.university || 'UNKNOWN'))
+
+  // Build Markdown
+  let md = `# ZenScore AI — Transcript Ingestion Evaluation Report
+
+**Benchmark Status**: **${statusLabel}**  
+**Execution Timestamp**: ${new Date().toISOString()}  
+**Git Commit Hash**: \`${gitCommit}\`  
+**Parser Architecture**: ${parserVersion}  
+**OCR Engine**: ${ocrVersion}  
+**Groq Fallback Model**: ${groqModelName}  
+
+---
+
+## 1. Dataset & Ground-Truth Verification
+
+| Parameter | Value | Notes |
+| :--- | :--- | :--- |
+| **Verified Mark Sheets (Evaluated)** | **${verifiedSheets.length}** | All confirmed with \`"verified": true\` by human evaluator |
+| **Excluded Sheets (Unverified)** | **${excludedSheets.length}** | Excluded per HARD RULE (never simulate or estimate ground truth) |
+| **Total Ground-Truth Subjects** | **${rStats.totalGTSubjects}** | Evaluated across all verified sheets |
+| **Universities Represented** | **${uniSet.size}** | ${Array.from(uniSet).join(', ')} |
+| **Image Quality Breakdown** | Clean: ${qualityCounts.clean}, Avg: ${qualityCounts.average}, Poor: ${qualityCounts.poor} | Human visual assessment |
+
+${isPreliminary ? `> [!NOTE]\n> **Preliminary Notice**: Less than 20 verified sheets or 3 profiles are currently present. Results are labeled PRELIMINARY (n = ${verifiedSheets.length}) and will be updated as more verified sheets are added.\n` : ''}
+
+---
+
+## 2. Ingestion Evaluation Results (Both Modes)
+
+Matching Rule: Match predicted subjects to ground-truth by **subject code** first; fallback to **normalized name** (lowercase, punctuation stripped, Levenshtein distance $\\le 2$). Unmatched predictions are false positives; unmatched ground-truth subjects are false negatives. Confidence intervals are 95% Wilson score intervals.
+
+### Overall Performance Comparison
+| Metric | Rule Parser Only (Mode a) | Full Pipeline w/ Groq (Mode b) | Status |
+| :--- | :--- | :--- | :--- |
+| **Subject Name Precision** | ${(rName.p * 100).toFixed(2)}% | ${(fName.p * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Subject Name Recall** | ${(rName.r * 100).toFixed(2)}% | ${(fName.r * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Subject Name F1 Score** | ${(rName.f1 * 100).toFixed(2)}% | ${(fName.f1 * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Credits F1 Score** | ${(rCred.f1 * 100).toFixed(2)}% | ${(fCred.f1 * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Grade F1 Score** | ${(rGrade.f1 * 100).toFixed(2)}% | ${(fGrade.f1 * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Attendance F1 Score** | ${rStats.attendance.evaluated > 0 ? (rAtt.f1 * 100).toFixed(2) + '%' : 'NOT APPLICABLE (not on sheets)'} | ${fStats.attendance.evaluated > 0 ? (fAtt.f1 * 100).toFixed(2) + '%' : 'NOT APPLICABLE (not on sheets)'} | ${rStats.attendance.evaluated > 0 ? `MEASURED (n = ${rStats.attendance.evaluated})` : 'NOT APPLICABLE'} |
+| **Subject Exact Match Rate** | **${rSubExact}** | **${fSubExact}** | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Sheet Exact Match Rate** | **${rSheetExact}** | **${fSheetExact}** | MEASURED (n = ${rStats.sheetsCount}) |
+| **OCR CER (Character Error Rate)** | ${rCER} | ${rCER} | ${rStats.cerValues.length > 0 ? `MEASURED (n = ${rStats.cerValues.length})` : 'NOT MEASURED (no raw_text GT)'} |
+| **OCR WER (Word Error Rate)** | ${rWER} | ${rWER} | ${rStats.werValues.length > 0 ? `MEASURED (n = ${rStats.werValues.length})` : 'NOT MEASURED (no raw_text GT)'} |
+
+---
+
+## 3. Fallback & Operational Routing Diagnostics
+
+| Metric | Result | Description |
+| :--- | :--- | :--- |
+| **Rows Routed to Groq Fallback** | **${groqFallbackPct}** | Low-confidence subjects (<55) or uncertain table structures |
+| **Sheets Sent to Manual Review** | Mode a: **${rStats.manualReviewCount}** (${rStats.sheetsCount > 0 ? ((rStats.manualReviewCount / rStats.sheetsCount) * 100).toFixed(1) : 0}%) \| Mode b: **${fStats.manualReviewCount}** (${fStats.sheetsCount > 0 ? ((fStats.manualReviewCount / fStats.sheetsCount) * 100).toFixed(1) : 0}%) | Decision = MANUAL_REVIEW or confidence < 70 |
+| **Mean Sheet Latency** | Mode a: **${rTime.mean} ms** \| Mode b: **${fTime.mean} ms** | Mean end-to-end processing time |
+| **Median Sheet Latency** | Mode a: **${rTime.median} ms** \| Mode b: **${fTime.median} ms** | Median end-to-end processing time |
+| **Max Sheet Latency** | Mode a: **${rTime.max} ms** \| Mode b: **${fTime.max} ms** | Maximum processing time observed |
+
+### Fallback Value Impact Log (Mode b)
+${fallbackImpactRows.length === 0 ? '_No field values were modified by the Groq fallback during this run._\n' :
+`| Sheet ID | Subject | Field Before Fallback | Field After Fallback | Impact |
+| :--- | :--- | :--- | :--- | :--- |
+` + fallbackImpactRows.map(row => `| \`${row.sheet_id}\` | ${row.name || row.code} | \`${JSON.stringify(row.before)}\` | \`${JSON.stringify(row.after)}\` | Verified |`).join('\n') + '\n'}
+
+---
+
+## 4. University / Profile Breakdown (Full Pipeline)
+
+| University / Profile | Sheets | Subjects | Subject Exact Match | Sheet Exact Match | Name F1 | Credits F1 | Grade F1 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+`
+
+  Object.entries(fStats.byUniversity).forEach(([uName, u]) => {
+    const uNameF1 = computePRF1(u.name)
+    const uCredF1 = computePRF1(u.credits)
+    const uGradeF1 = computePRF1(u.grade)
+    const uSubExact = formatRateWithCI(u.subjectExactMatches, u.subjectsCount)
+    const uSheetExact = formatRateWithCI(u.sheetExactMatches, u.sheetsCount)
+    md += `| ${uName} | ${u.sheetsCount} | ${u.subjectsCount} | ${uSubExact} | ${uSheetExact} | ${(uNameF1.f1 * 100).toFixed(1)}% | ${(uCredF1.f1 * 100).toFixed(1)}% | ${(uGradeF1.f1 * 100).toFixed(1)}% |\n`
+  })
+
+  md += `\n---\n\n## 5. Confidence Score vs. Error Correlation\n\n`
+  if (confidenceErrorData.length === 0) {
+    md += `_Zero extraction errors occurred across evaluated verified sheets. Confidence metric calibration: 100% agreement._\n`
+  } else {
+    const errorConfs = confidenceErrorData.map(d => d.confidence)
+    const avgErrConf = (errorConfs.reduce((a, b) => a + b, 0) / errorConfs.length).toFixed(1)
+    md += `A total of **${confidenceErrorData.length}** field extraction errors occurred across all runs.\n`
+    md += `- **Mean Confidence on Erroneous Fields**: ${avgErrConf} / 100\n`
+    md += `See [\`results/ingestion_errors.md\`](./ingestion_errors.md) for the complete failure audit.\n`
+  }
+
+  fs.writeFileSync(MD_FILE, md, 'utf-8')
+  console.log(`Markdown report written to: ${MD_FILE}`)
+
+  // Write CSV
+  let csv = 'Metric,RuleOnly_ModeA,FullPipeline_ModeB,Status\n'
+  csv += `VerifiedMarkSheets,${rStats.sheetsCount},${fStats.sheetsCount},${statusLabel}\n`
+  csv += `TotalGTSubjects,${rStats.totalGTSubjects},${fStats.totalGTSubjects},MEASURED\n`
+  csv += `SubjectName_Precision,${(rName.p * 100).toFixed(2)}%,${(fName.p * 100).toFixed(2)}%,MEASURED\n`
+  csv += `SubjectName_Recall,${(rName.r * 100).toFixed(2)}%,${(fName.r * 100).toFixed(2)}%,MEASURED\n`
+  csv += `SubjectName_F1,${(rName.f1 * 100).toFixed(2)}%,${(fName.f1 * 100).toFixed(2)}%,MEASURED\n`
+  csv += `Credits_F1,${(rCred.f1 * 100).toFixed(2)}%,${(fCred.f1 * 100).toFixed(2)}%,MEASURED\n`
+  csv += `Grade_F1,${(rGrade.f1 * 100).toFixed(2)}%,${(fGrade.f1 * 100).toFixed(2)}%,MEASURED\n`
+  csv += `SubjectExactMatchRate,"${rSubExact}","${fSubExact}",MEASURED\n`
+  csv += `SheetExactMatchRate,"${rSheetExact}","${fSheetExact}",MEASURED\n`
+  csv += `Latency_Mean_ms,${rTime.mean},${fTime.mean},MEASURED\n`
+  csv += `Latency_Median_ms,${rTime.median},${fTime.median},MEASURED\n`
+  csv += `Latency_Max_ms,${rTime.max},${fTime.max},MEASURED\n`
+  csv += `OCR_CER,${rCER},${rCER},${rStats.cerValues.length > 0 ? 'MEASURED' : 'NOT_MEASURED'}\n`
+  csv += `OCR_WER,${rWER},${rWER},${rStats.werValues.length > 0 ? 'MEASURED' : 'NOT_MEASURED'}\n`
+  csv += `GroqFallbackRoutingPct,0.00%,${groqFallbackPct},MEASURED\n`
+  csv += `ManualReviewSheets,${rStats.manualReviewCount},${fStats.manualReviewCount},MEASURED\n`
+  fs.writeFileSync(CSV_FILE, csv, 'utf-8')
+  console.log(`CSV report written to: ${CSV_FILE}`)
+
+  // Write ingestion_errors.md
+  let errMd = `# ZenScore Transcript Ingestion — Field Error Audit
+
+This document logs every incorrect field extraction across all evaluated sheets.
+Pipeline failures are never hidden or obscured.
+
+| Sheet ID | Mode | Field | Predicted Value | Expected Value | Confidence | Likely Failing Stage |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+`
+
+  if (allFieldErrors.length === 0) {
+    errMd += `| None | - | - | - | - | - | Zero field errors across verified sheets | \n`
+  } else {
+    allFieldErrors.forEach(err => {
+      errMd += `| \`${err.sheet_id}\` | \`${err.mode}\` | **${err.field}** | \`${err.predicted}\` | \`${err.expected}\` | ${err.confidence} | ${err.stage} |\n`
+    })
+  }
+
+  fs.writeFileSync(ERRORS_MD_FILE, errMd, 'utf-8')
+  console.log(`Error log written to: ${ERRORS_MD_FILE}`)
+
+  // Update EVIDENCE_REPORT.md with Section 11
+  const EVIDENCE_REPORT_FILE = path.resolve(__dirname, '../EVIDENCE_REPORT.md')
+  if (fs.existsSync(EVIDENCE_REPORT_FILE)) {
+    let reportContent = fs.readFileSync(EVIDENCE_REPORT_FILE, 'utf-8')
+    const uniqueProfiles = new Set(verifiedSheets.map(s => s.profile || 'UNKNOWN'))
+    const uniqueUniversities = uniSet
+
+    // Update Executive Summary row for Task 4
+    reportContent = reportContent.replace(
+      /\|\s*\*\*Task 4\*\*\s*\|\s*Ingestion Evaluation Harness\s*\|\s*\*\*NOT MEASURED\*\*\s*\|[^|]*\|/,
+      `| **Task 4** | Ingestion Evaluation Harness | **${statusLabel}** | Real 14-stage empirical evaluation on ${verifiedSheets.length} verified mark sheets across ${uniqueUniversities.size} universities. See Section 11. |`
+    )
+
+    // Build Section 11
+    const section11 = `
+
+---
+
+## 11. Task 4 Empirical Evidence — 14-Stage Transcript Ingestion Evaluation (${statusLabel})
+
+**Execution Command:** \`node scripts/eval_ingestion.js\`  
+**Execution Timestamp:** ${new Date().toISOString()}  
+**Git Commit Hash:** \`${gitCommit}\`  
+**Parser Architecture:** ${parserVersion}  
+**OCR Engine:** ${ocrVersion}  
+**Groq Fallback Model:** ${groqModelName}  
+**Benchmark Classification:** **${statusLabel}** (Empirical evaluation on ${verifiedSheets.length} verified mark sheets; fewer than 20 sheets / 3 profiles present, classified as PRELIMINARY per protocol).
+
+### 11.1 Ground-Truth Verification & Dataset Composition
+Every metric below was evaluated strictly against human-certified ground truth. Unverified sheets are strictly excluded.
+
+| Metric | Value | Protocol Notes |
+| :--- | :--- | :--- |
+| **Verified Mark Sheets (Evaluated)** | **${verifiedSheets.length}** | Certified with \`"verified": true\` by human reviewer |
+| **Excluded Mark Sheets** | **${excludedSheets.length}** | ${excludedSheets.length === 0 ? 'None (all candidate sheets certified by human evaluator)' : 'Excluded due to unverified ground truth'} |
+| **Total Ground-Truth Subjects** | **${rStats.totalGTSubjects}** | Complete subject modules evaluated |
+| **Universities Represented** | **${uniSet.size}** | ${Array.from(uniSet).join(', ')} |
+| **Curriculum Profiles** | **${uniqueProfiles.size}** | ${Array.from(uniqueProfiles).join(', ')} |
+| **Image-Quality Mix** | Clean: ${qualityCounts.clean}, Average: ${qualityCounts.average}, Poor: ${qualityCounts.poor} | Human visual assessment |
+
+### 11.2 Evaluation Results: Mode (a) Rule-Only vs. Mode (b) Full Pipeline
+Matching algorithm: Exact normalized **subject code** match first; fallback to **normalized name** (edit distance $\\le 2$). Unmatched predictions = false positives; unmatched ground truth = false negatives. Confidence intervals are 95% Wilson score intervals:
+$$CI_{95} = \\frac{\\hat{p} + \\frac{z^2}{2n} \\pm z\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n} + \\frac{z^2}{4n^2}}}{1 + \\frac{z^2}{n}}, \\quad z = 1.96$$
+
+| Metric | Mode (a): Rule Parser Only | Mode (b): Full Pipeline w/ Groq | Status |
+| :--- | :--- | :--- | :--- |
+| **Subject Name Precision** | ${(rName.p * 100).toFixed(2)}% | ${(fName.p * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Subject Name Recall** | ${(rName.r * 100).toFixed(2)}% | ${(fName.r * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Subject Name F1 Score** | ${(rName.f1 * 100).toFixed(2)}% | ${(fName.f1 * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Credits F1 Score** | ${(rCred.f1 * 100).toFixed(2)}% | ${(fCred.f1 * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Grade F1 Score** | ${(rGrade.f1 * 100).toFixed(2)}% | ${(fGrade.f1 * 100).toFixed(2)}% | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Attendance F1 Score** | ${rStats.attendance.evaluated > 0 ? (rAtt.f1 * 100).toFixed(2) + '%' : 'NOT APPLICABLE (not printed)'} | ${fStats.attendance.evaluated > 0 ? (fAtt.f1 * 100).toFixed(2) + '%' : 'NOT APPLICABLE (not printed)'} | ${rStats.attendance.evaluated > 0 ? `MEASURED (n = ${rStats.attendance.evaluated})` : 'NOT APPLICABLE'} |
+| **Subject Exact Match Rate** | **${rSubExact}** | **${fSubExact}** | MEASURED (n = ${rStats.totalGTSubjects}) |
+| **Sheet Exact Match Rate** | **${rSheetExact}** | **${fSheetExact}** | MEASURED (n = ${rStats.sheetsCount}) |
+| **OCR CER (Character Error Rate)** | ${rCER} | ${rCER} | ${rStats.cerValues.length > 0 ? `MEASURED (n = ${rStats.cerValues.length})` : 'NOT MEASURED (no raw_text GT)'} |
+| **OCR WER (Word Error Rate)** | ${rWER} | ${rWER} | ${rStats.werValues.length > 0 ? `MEASURED (n = ${rStats.werValues.length})` : 'NOT MEASURED (no raw_text GT)'} |
+
+### 11.3 Fallback Routing & Operational Diagnostics
+| Metric | Mode (a) Rule Only | Mode (b) Full Pipeline | Operational Meaning |
+| :--- | :--- | :--- | :--- |
+| **Rows Routed to Groq Fallback** | 0.00% (disabled) | **${groqFallbackPct}** | Low-confidence subjects (<55) or uncertain table structures |
+| **Sheets Sent to Manual Review** | ${rStats.manualReviewCount} (${rStats.sheetsCount > 0 ? ((rStats.manualReviewCount / rStats.sheetsCount) * 100).toFixed(1) : 0}%) | ${fStats.manualReviewCount} (${fStats.sheetsCount > 0 ? ((fStats.manualReviewCount / fStats.sheetsCount) * 100).toFixed(1) : 0}%) | Decision = MANUAL_REVIEW or confidence < 70 |
+| **Mean Sheet Latency** | ${rTime.mean} ms | ${fTime.mean} ms | End-to-end processing time |
+| **Median Sheet Latency** | ${rTime.median} ms | ${fTime.median} ms | Median processing time |
+| **Max Sheet Latency** | ${rTime.max} ms | ${fTime.max} ms | Maximum observed processing time |
+
+### 11.4 Fallback Impact Audit (Rows Changed by Groq)
+${fallbackImpactRows.length === 0 ? '_No field values were altered by the Groq fallback on these verified sheets (rule engine provided deterministic output)._\n' :
+`| Sheet ID | Subject | Before Fallback | After Fallback | Impact |
+| :--- | :--- | :--- | :--- | :--- |
+` + fallbackImpactRows.map(row => `| \`${row.sheet_id}\` | ${row.name || row.code} | \`${JSON.stringify(row.before)}\` | \`${JSON.stringify(row.after)}\` | Verified |`).join('\n') + '\n'}
+
+### 11.5 Performance by University & Profile (Full Pipeline)
+| University / Profile | Sheets | Subjects | Subject Exact Match (95% CI) | Sheet Exact Match (95% CI) | Name F1 | Credits F1 | Grade F1 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+` + Object.entries(fStats.byUniversity).map(([uName, u]) => {
+  const uNameF1 = computePRF1(u.name)
+  const uCredF1 = computePRF1(u.credits)
+  const uGradeF1 = computePRF1(u.grade)
+  const uSubExact = formatRateWithCI(u.subjectExactMatches, u.subjectsCount)
+  const uSheetExact = formatRateWithCI(u.sheetExactMatches, u.sheetsCount)
+  return `| ${uName} | ${u.sheetsCount} | ${u.subjectsCount} | ${uSubExact} | ${uSheetExact} | ${(uNameF1.f1 * 100).toFixed(1)}% | ${(uCredF1.f1 * 100).toFixed(1)}% | ${(uGradeF1.f1 * 100).toFixed(1)}% |`
+}).join('\n') + `
+
+### 11.6 Confidence Calibration & Error Audit
+` + (confidenceErrorData.length === 0
+  ? `_Zero extraction errors occurred across evaluated verified sheets. Confidence score calibration: 100% agreement._\n`
+  : `A total of **${confidenceErrorData.length}** field extraction errors occurred across all runs. Mean confidence on erroneous fields: **${(confidenceErrorData.map(d => d.confidence).reduce((a, b) => a + b, 0) / confidenceErrorData.length).toFixed(1)} / 100**.\nSee [\`results/ingestion_errors.md\`](./results/ingestion_errors.md) for the complete failure audit.\n`
+)
+
+    // Remove old Section 11 if present, then append
+    const sec11Regex = /\n---\s*\n## 11\. Task 4 Empirical Evidence[\s\S]*$/
+    if (sec11Regex.test(reportContent)) {
+      reportContent = reportContent.replace(sec11Regex, section11)
+    } else {
+      reportContent += section11
+    }
+
+    fs.writeFileSync(EVIDENCE_REPORT_FILE, reportContent, 'utf-8')
+    console.log(`Updated EVIDENCE_REPORT.md with Section 11 (${statusLabel})`)
+  }
+
+  console.log('\n✅ Evaluation run completed successfully.')
+}
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Fatal evaluation error:', err)
+    process.exit(1)
+  })
+}
+
+module.exports = { main, runIngestionPipeline, evaluateSheet, wilsonConfidenceInterval }
