@@ -8,10 +8,10 @@ Credits_F1,42.78%,42.78%,MEASURED
 Grade_F1,42.78%,42.78%,MEASURED
 SubjectExactMatchRate,"27.43% [20.05%, 36.30%]","27.43% [20.05%, 36.30%]",MEASURED
 SheetExactMatchRate,"0.00% [0.00%, 24.25%]","0.00% [0.00%, 24.25%]",MEASURED
-Latency_Mean_ms,6,4,MEASURED
-Latency_Median_ms,4,4,MEASURED
-Latency_Max_ms,28,7,MEASURED
-OCR_CER,NOT MEASURED (no raw_text in GT),NOT MEASURED (no raw_text in GT),NOT_MEASURED
-OCR_WER,NOT MEASURED (no raw_text in GT),NOT MEASURED (no raw_text in GT),NOT_MEASURED
+Latency_Mean_ms,19,6,MEASURED
+Latency_Median_ms,5,3,MEASURED
+Latency_Max_ms,182,36,MEASURED
+OCR_CER,66.20%,66.20%,MEASURED
+OCR_WER,99.56%,99.56%,MEASURED
 GroqFallbackRoutingPct,0.00%,0.00% (0/74 rows),MEASURED
 ManualReviewSheets,2,2,MEASURED

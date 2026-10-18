@@ -452,13 +452,14 @@ All seven tasks requested by the conference paper reviewer have been implemented
 7. Publication-ready, high-resolution cropped component screenshots have been generated at 2x DPR retina quality.
 
 
+
 ---
 
 ## 11. Task 4 Empirical Evidence — 14-Stage Transcript Ingestion Evaluation (PRELIMINARY (n = 12))
 
 **Execution Command:** `node scripts/eval_ingestion.js`  
-**Execution Timestamp:** 2026-10-18T05:25:54.739Z  
-**Git Commit Hash:** `e8cad38536567cd0ff616231b1f0937f60ca904f`  
+**Execution Timestamp:** 2026-10-18T07:15:23.031Z  
+**Git Commit Hash:** `3c3cb1c98c402f33c99f8549940318d5bc8c18f1`  
 **Parser Architecture:** 2.0.0 (14-stage modular pipeline)  
 **OCR Engine:** Tesseract.js ^7.0.0 (LSTM eng.traineddata)  
 **Groq Fallback Model:** openai/gpt-oss-120b  
@@ -478,7 +479,7 @@ Every metric below was evaluated strictly against human-certified ground truth. 
 
 ### 11.2 Evaluation Results: Mode (a) Rule-Only vs. Mode (b) Full Pipeline
 Matching algorithm: Exact normalized **subject code** match first; fallback to **normalized name** (edit distance $\le 2$). Unmatched predictions = false positives; unmatched ground truth = false negatives. Confidence intervals are 95% Wilson score intervals:
-$$CI_{95} = \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1 + \frac{z^2}{n}}, \quad z = 1.96$$
+$CI_{95} = \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{n} + \frac{z^2}{4n^2}}}{1 + \frac{z^2}{n}}, \quad z = 1.96$
 
 | Metric | Mode (a): Rule Parser Only | Mode (b): Full Pipeline w/ Groq | Status |
 | :--- | :--- | :--- | :--- |
@@ -490,17 +491,17 @@ $$CI_{95} = \frac{\hat{p} + \frac{z^2}{2n} \pm z\sqrt{\frac{\hat{p}(1-\hat{p})}{
 | **Attendance F1 Score** | NOT APPLICABLE (not printed) | NOT APPLICABLE (not printed) | NOT APPLICABLE |
 | **Subject Exact Match Rate** | **27.43% [20.05%, 36.30%]** | **27.43% [20.05%, 36.30%]** | MEASURED (n = 113) |
 | **Sheet Exact Match Rate** | **0.00% [0.00%, 24.25%]** | **0.00% [0.00%, 24.25%]** | MEASURED (n = 12) |
-| **OCR CER (Character Error Rate)** | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text GT) |
-| **OCR WER (Word Error Rate)** | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text in GT) | NOT MEASURED (no raw_text GT) |
+| **OCR CER (Character Error Rate)** | 66.20% | 66.20% | MEASURED (n = 4) |
+| **OCR WER (Word Error Rate)** | 99.56% | 99.56% | MEASURED (n = 4) |
 
 ### 11.3 Fallback Routing & Operational Diagnostics
 | Metric | Mode (a) Rule Only | Mode (b) Full Pipeline | Operational Meaning |
 | :--- | :--- | :--- | :--- |
 | **Rows Routed to Groq Fallback** | 0.00% (disabled) | **0.00% (0/74 rows)** | Low-confidence subjects (<55) or uncertain table structures |
 | **Sheets Sent to Manual Review** | 2 (16.7%) | 2 (16.7%) | Decision = MANUAL_REVIEW or confidence < 70 |
-| **Mean Sheet Latency** | 6 ms | 4 ms | End-to-end processing time |
-| **Median Sheet Latency** | 4 ms | 4 ms | Median processing time |
-| **Max Sheet Latency** | 28 ms | 7 ms | Maximum observed processing time |
+| **Mean Sheet Latency** | 19 ms | 6 ms | End-to-end processing time |
+| **Median Sheet Latency** | 5 ms | 3 ms | Median processing time |
+| **Max Sheet Latency** | 182 ms | 36 ms | Maximum observed processing time |
 
 ### 11.4 Fallback Impact Audit (Rows Changed by Groq)
 _No field values were altered by the Groq fallback on these verified sheets (rule engine provided deterministic output)._
