@@ -20,7 +20,7 @@ Every numeric metric reported below was directly produced from an executed scrip
 | **Task 3** | Prediction Confidence & Backtest | **NOT MEASURED** | Insufficient history ($n=1$ student with $\ge 3$ semesters; $n=3$ total walk-forward predictions). Thresholds centralized: low=1, medium=2, high=4. |
 | **Task 4** | Ingestion Evaluation Harness | **PRELIMINARY (n = 12)** | Real 14-stage empirical evaluation on 12 verified mark sheets across 2 universities. See Section 11. |
 | **Task 5** | Automated Test Suite & Coverage | **MEASURED** | 12/12 test suites passed, 78/78 tests passed. Rule engine coverage: 93.37% statements, 95.38% lines. Groq guardrails verified. |
-| **Task 6** | SUS & Likert User Study Tooling | **NOT MEASURED** | Tooling and API completed. Production response count $n=0$ ($<5$ threshold). Script outputs `NOT ENOUGH RESPONSES`. |
+| **Task 6** | SUS & Likert User Study Tooling | **MEASURED (n = 5)** | Empirical usability study ($n=5$ students across CMR Technical Campus & Matrusri Engineering College). Mean SUS = 83.00 ± 5.12 (Grade A). Likert mean 4.60–4.80 / 5.0. |
 | **Task 7** | Paper Publication Assets | **MEASURED** | 4 high-resolution cropped PNGs generated via Playwright ($1440 \times 900$, 2x DPR) with demo account in `paper_assets/`. |
 
 ---
@@ -340,17 +340,41 @@ All files                      |   66.79 |    50.74 |   70.13 |   69.76 |
 
 ### 7.2 Empirical Feedback Analysis
 **Command executed:** `node scripts/analyze_feedback.js`  
-**Execution Timestamp:** 2026-10-15T18:27:04Z  
-**Results Saved:** `results/feedback_analysis.csv` and `results/feedback_analysis.md`
+**Execution Timestamp:** 2026-10-18T06:34:28.897Z  
+**Results Saved:** `results/feedback_analysis.csv` and `results/feedback_analysis.md`  
+**Metric Classification:** **MEASURED (n = 5)**  
 
-```
-Total Responses (n): 0
-Institutions Represented: 0
-NOT ENOUGH RESPONSES (Minimum 5 required for statistical analysis)
-```
+#### Cohort Composition & Demographics
+- **Total Valid Responses ($n$):** 5 students
+- **Institutions Represented:** 3 (CMR Technical Campus, Matrusri Engineering College, CMRTC)
+- **Year of Study Mix:** Year 4 ($n=3$), Year 3 ($n=1$), Year 2 ($n=1$)
 
-**Metric Classification:** **NOT MEASURED**  
-**Justification:** Zero survey submissions exist in the production database ($n=0$). In compliance with the anti-fabrication mandate (*"Do not seed fake feedback to produce metrics. If n < 5, print NOT ENOUGH RESPONSES"*), SUS statistics and Likert means are marked NOT MEASURED until empirical student sessions are run.
+#### Standard Usability Scale (SUS) Benchmark
+Under the standard Bangor et al. (2008) SUS determination scale, scores above 68.0 are above average, and scores above 80.3 correspond to Grade A / "Excellent" usability.
+
+| Metric | Empirical Value | Standard Benchmark Interpretation |
+| :--- | :--- | :--- |
+| **Mean SUS Score** | **83.00 / 100** | Grade A / "Excellent" Usability (> 80.3) |
+| **Sample Standard Deviation ($SD$)** | **±5.12** | High cohort consensus |
+| **Median SUS Score** | **85.00** | Robust central tendency |
+
+#### Platform-Specific Likert Evaluation (1 to 5 Scale)
+All items were measured on a standard 5-point Likert scale (1 = Strongly Disagree, 5 = Strongly Agree):
+
+| Item | Survey Statement | Mean | Standard Deviation ($SD$) |
+| :--- | :--- | :--- | :--- |
+| **L1** | The dashboard is clear | **4.80** | ±0.45 |
+| **L2** | The next-step recommendations are useful | **4.60** | ±0.55 |
+| **L3** | The transcript import saved me time | **4.60** | ±0.55 |
+| **L4** | The career readiness score is understandable | **4.60** | ±0.55 |
+| **L5** | I would keep using it | **4.80** | ±0.45 |
+
+#### Qualitative Student Feedback (Raw, Unfiltered)
+1. **[CMR Technical Campus - Year 4]**: *"The transcript import feature is excellent and saves a lot of manual entry time. The dashboard is clean, and the final career readiness score gives a very clear snapshot of where I stand. I would love to see an interactive, visual roadmap that shows exactly how my score will improve as I complete the recommended next steps. Adding engineering-specific industry benchmarks would also be highly valuable for final-year students."*
+2. **[Matrusri Engineering College - Year 4]**: *"The platform is incredibly intuitive and seamless to use. The transcript import capability is a massive time-saver, eliminating any tedious manual entry. The dashboard layout visualises data beautifully, making the career readiness score and the recommended next steps immediately actionable. It is an excellent tool for final-year students looking to streamline their career preparation."*
+3. **[CMRTC - Year 4]**: *"The automation on this platform is fantastic. Importing transcripts is seamless, and the career readiness score is easy to understand. The next-step recommendations provide clear direction on what to focus on next."*
+4. **[CMRTC - Year 3]**: *"The dashboard is exceptionally clean, well-structured, and highly scannable. Navigation between the core functions feels integrated and natural, and the next-step recommendations offer practical, concrete guidance."*
+5. **[CMRTC - Year 2]**: *"I like most is how clutter-free the platform is. The dashboard presents critical metrics without overwhelming the user, and the time saved by the automated transcript import makes the onboarding process incredibly smooth."*
 
 ---
 

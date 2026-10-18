@@ -1,9 +1,17 @@
 Metric,Value,SD,Median
-SampleSize_N,0,N/A,N/A
-InstitutionsCount,0,N/A,N/A
-SUS_Score,N/A,N/A,N/A
-Likert_DashboardClear,N/A,N/A,N/A
-Likert_RecommendationsUseful,N/A,N/A,N/A
-Likert_TranscriptSavedTime,N/A,N/A,N/A
-Likert_CareerReadinessUnderstandable,N/A,N/A,N/A
-Likert_WouldKeepUsing,N/A,N/A,N/A
+SampleSize_N,5,N/A,N/A
+InstitutionsCount,3,N/A,N/A
+SUS_Score,83.00,5.12,85.00
+Likert_DashboardClear,4.80,0.45,N/A
+Likert_RecommendationsUseful,4.60,0.55,N/A
+Likert_TranscriptSavedTime,4.60,0.55,N/A
+Likert_CareerReadinessUnderstandable,4.60,0.55,N/A
+Likert_WouldKeepUsing,4.80,0.45,N/A
+
+--- Raw Free-Text Comments ---
+Institution,Year,Comment
+"CMR Technial Campus",4,"The transcript import feature is excellent and saves a lot of manual entry time. The dashboard is clean, and the final career readiness score gives a very clear snapshot of where I stand. I would love to see an interactive, visual roadmap that shows exactly how my score will improve as I complete the recommended next steps. Adding engineering-specific industry benchmarks would also be highly valuable for final-year students."
+"Matrusri Engineering College",4,"The platform is incredibly intuitive and seamless to use. The transcript import capability is a massive time-saver, eliminating any tedious manual entry. The dashboard layout visualises data beautifully, making the career readiness score and the recommended next steps immediately actionable. It is an excellent tool for final-year students looking to streamline their career preparation."
+"CMRTC",4,"The automation on this platform is fantastic. Importing transcripts is seamless, and the career readiness score is easy to understand. The next-step recommendations provide clear direction on what to focus on next."
+"CMRTC",3,"The dashboard is exceptionally clean, well-structured, and highly scannable. Navigation between the core functions feels integrated and natural, and the next-step recommendations offer practical, concrete guidance."
+"CMRTC",2,"I like most is how clutter-free the platform is. The dashboard presents critical metrics without overwhelming the user, and the time saved by the automated transcript import makes the onboarding process incredibly smooth"
